@@ -14,6 +14,10 @@
 		D087501E29D1731A00454A4B /* saveMoneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D087501D29D1731A00454A4B /* saveMoneyTests.swift */; };
 		D087502829D1731A00454A4B /* saveMoneyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D087502729D1731A00454A4B /* saveMoneyUITests.swift */; };
 		D087502A29D1731A00454A4B /* saveMoneyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D087502929D1731A00454A4B /* saveMoneyUITestsLaunchTests.swift */; };
+		D087503829D1740F00454A4B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D087500E29D1731900454A4B /* ContentView.swift */; };
+		D087503929D1740F00454A4B /* saveMoneyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D087500C29D1731900454A4B /* saveMoneyApp.swift */; };
+		D087503C29D1740F00454A4B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D087501329D1731A00454A4B /* Preview Assets.xcassets */; };
+		D087503D29D1740F00454A4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D087501029D1731A00454A4B /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,7 @@
 		D087502329D1731A00454A4B /* saveMoneyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = saveMoneyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D087502729D1731A00454A4B /* saveMoneyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = saveMoneyUITests.swift; sourceTree = "<group>"; };
 		D087502929D1731A00454A4B /* saveMoneyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = saveMoneyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D087504129D1740F00454A4B /* saveMoneyDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = saveMoneyDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +67,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		D087502029D1731A00454A4B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D087503A29D1740F00454A4B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -87,6 +99,7 @@
 				D087500929D1731900454A4B /* saveMoney.app */,
 				D087501929D1731A00454A4B /* saveMoneyTests.xctest */,
 				D087502329D1731A00454A4B /* saveMoneyUITests.xctest */,
+				D087504129D1740F00454A4B /* saveMoneyDev.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -183,6 +196,23 @@
 			productReference = D087502329D1731A00454A4B /* saveMoneyUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		D087503629D1740F00454A4B /* saveMoneyDev */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D087503E29D1740F00454A4B /* Build configuration list for PBXNativeTarget "saveMoneyDev" */;
+			buildPhases = (
+				D087503729D1740F00454A4B /* Sources */,
+				D087503A29D1740F00454A4B /* Frameworks */,
+				D087503B29D1740F00454A4B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = saveMoneyDev;
+			productName = saveMoney;
+			productReference = D087504129D1740F00454A4B /* saveMoneyDev.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -213,12 +243,14 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = D087500029D1731900454A4B;
 			productRefGroup = D087500A29D1731900454A4B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				D087503629D1740F00454A4B /* saveMoneyDev */,
 				D087500829D1731900454A4B /* saveMoney */,
 				D087501829D1731A00454A4B /* saveMoneyTests */,
 				D087502229D1731A00454A4B /* saveMoneyUITests */,
@@ -250,6 +282,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D087503B29D1740F00454A4B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D087503C29D1740F00454A4B /* Preview Assets.xcassets in Resources */,
+				D087503D29D1740F00454A4B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -276,6 +317,15 @@
 			files = (
 				D087502A29D1731A00454A4B /* saveMoneyUITestsLaunchTests.swift in Sources */,
 				D087502829D1731A00454A4B /* saveMoneyUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D087503729D1740F00454A4B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D087503829D1740F00454A4B /* ContentView.swift in Sources */,
+				D087503929D1740F00454A4B /* saveMoneyApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,7 +395,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -399,7 +449,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -420,6 +470,7 @@
 				DEVELOPMENT_TEAM = 29WM9J786L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = SaveMoney;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -449,6 +500,7 @@
 				DEVELOPMENT_TEAM = 29WM9J786L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = SaveMoney;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -543,6 +595,72 @@
 			};
 			name = Release;
 		};
+		D087503F29D1740F00454A4B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"saveMoney/Preview Content\"";
+				DEVELOPMENT_TEAM = 29WM9J786L;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = SaveMoney;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dmitriq.saveMoney;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D087504029D1740F00454A4B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"saveMoney/Preview Content\"";
+				DEVELOPMENT_TEAM = 29WM9J786L;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = SaveMoney;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dmitriq.saveMoney;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -578,6 +696,15 @@
 			buildConfigurations = (
 				D087503429D1731A00454A4B /* Debug */,
 				D087503529D1731A00454A4B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D087503E29D1740F00454A4B /* Build configuration list for PBXNativeTarget "saveMoneyDev" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D087503F29D1740F00454A4B /* Debug */,
+				D087504029D1740F00454A4B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
