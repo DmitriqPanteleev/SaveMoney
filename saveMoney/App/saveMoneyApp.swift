@@ -14,7 +14,7 @@ struct saveMoneyApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            EmptyView()
         }
     }
 }

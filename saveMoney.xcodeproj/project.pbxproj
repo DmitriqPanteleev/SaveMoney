@@ -8,13 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		D087500D29D1731900454A4B /* saveMoneyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D087500C29D1731900454A4B /* saveMoneyApp.swift */; };
-		D087500F29D1731900454A4B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D087500E29D1731900454A4B /* ContentView.swift */; };
 		D087501129D1731A00454A4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D087501029D1731A00454A4B /* Assets.xcassets */; };
 		D087501429D1731A00454A4B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D087501329D1731A00454A4B /* Preview Assets.xcassets */; };
 		D087501E29D1731A00454A4B /* saveMoneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D087501D29D1731A00454A4B /* saveMoneyTests.swift */; };
 		D087502829D1731A00454A4B /* saveMoneyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D087502729D1731A00454A4B /* saveMoneyUITests.swift */; };
 		D087502A29D1731A00454A4B /* saveMoneyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D087502929D1731A00454A4B /* saveMoneyUITestsLaunchTests.swift */; };
-		D087503829D1740F00454A4B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D087500E29D1731900454A4B /* ContentView.swift */; };
 		D087503929D1740F00454A4B /* saveMoneyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D087500C29D1731900454A4B /* saveMoneyApp.swift */; };
 		D087503C29D1740F00454A4B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D087501329D1731A00454A4B /* Preview Assets.xcassets */; };
 		D087503D29D1740F00454A4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D087501029D1731A00454A4B /* Assets.xcassets */; };
@@ -26,6 +24,10 @@
 		D087505A29D1773F00454A4B /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D087505829D1773F00454A4B /* Strings.swift */; };
 		D087505F29D193BC00454A4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D087505E29D193BC00454A4B /* AppDelegate.swift */; };
 		D087506029D193BC00454A4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D087505E29D193BC00454A4B /* AppDelegate.swift */; };
+		D087506429D1948F00454A4B /* CombineExt in Frameworks */ = {isa = PBXBuildFile; productRef = D087506329D1948F00454A4B /* CombineExt */; };
+		D087506729D194AD00454A4B /* Stinsen in Frameworks */ = {isa = PBXBuildFile; productRef = D087506629D194AD00454A4B /* Stinsen */; };
+		D087506A29D194C100454A4B /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = D087506929D194C100454A4B /* Kingfisher */; };
+		D087506D29D194D900454A4B /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = D087506C29D194D900454A4B /* Swinject */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +50,6 @@
 /* Begin PBXFileReference section */
 		D087500929D1731900454A4B /* saveMoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = saveMoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D087500C29D1731900454A4B /* saveMoneyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = saveMoneyApp.swift; sourceTree = "<group>"; };
-		D087500E29D1731900454A4B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D087501029D1731A00454A4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D087501329D1731A00454A4B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D087501929D1731A00454A4B /* saveMoneyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = saveMoneyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,6 +90,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D087506A29D194C100454A4B /* Kingfisher in Frameworks */,
+				D087506429D1948F00454A4B /* CombineExt in Frameworks */,
+				D087506729D194AD00454A4B /* Stinsen in Frameworks */,
+				D087506D29D194D900454A4B /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,11 +126,11 @@
 			children = (
 				D087504429D1767F00454A4B /* App */,
 				D087504329D1767300454A4B /* Resources */,
+				D087506129D1945F00454A4B /* Coordinators */,
 				D087504229D1766A00454A4B /* Helpers */,
 				D087505B29D1776A00454A4B /* Models */,
 				D087505C29D1777200454A4B /* Modules */,
 				D087505D29D1792B00454A4B /* Services */,
-				D087500E29D1731900454A4B /* ContentView.swift */,
 				D087501229D1731A00454A4B /* Preview Content */,
 			);
 			path = saveMoney;
@@ -212,6 +217,13 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		D087506129D1945F00454A4B /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -281,6 +293,12 @@
 			dependencies = (
 			);
 			name = saveMoneyDev;
+			packageProductDependencies = (
+				D087506329D1948F00454A4B /* CombineExt */,
+				D087506629D194AD00454A4B /* Stinsen */,
+				D087506929D194C100454A4B /* Kingfisher */,
+				D087506C29D194D900454A4B /* Swinject */,
+			);
 			productName = saveMoney;
 			productReference = D087504129D1740F00454A4B /* saveMoneyDev.app */;
 			productType = "com.apple.product-type.application";
@@ -318,6 +336,12 @@
 				ru,
 			);
 			mainGroup = D087500029D1731900454A4B;
+			packageReferences = (
+				D087506229D1948F00454A4B /* XCRemoteSwiftPackageReference "CombineExt" */,
+				D087506529D194AD00454A4B /* XCRemoteSwiftPackageReference "stinsen" */,
+				D087506829D194C100454A4B /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				D087506B29D194D900454A4B /* XCRemoteSwiftPackageReference "Swinject" */,
+			);
 			productRefGroup = D087500A29D1731900454A4B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -375,7 +399,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D087506029D193BC00454A4B /* AppDelegate.swift in Sources */,
-				D087500F29D1731900454A4B /* ContentView.swift in Sources */,
 				D087505A29D1773F00454A4B /* Strings.swift in Sources */,
 				D087500D29D1731900454A4B /* saveMoneyApp.swift in Sources */,
 			);
@@ -403,7 +426,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D087505F29D193BC00454A4B /* AppDelegate.swift in Sources */,
-				D087503829D1740F00454A4B /* ContentView.swift in Sources */,
 				D087505929D1773F00454A4B /* Strings.swift in Sources */,
 				D087503929D1740F00454A4B /* saveMoneyApp.swift in Sources */,
 			);
@@ -809,6 +831,64 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D087506229D1948F00454A4B /* XCRemoteSwiftPackageReference "CombineExt" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CombineCommunity/CombineExt";
+			requirement = {
+				kind = exactVersion;
+				version = 1.8.1;
+			};
+		};
+		D087506529D194AD00454A4B /* XCRemoteSwiftPackageReference "stinsen" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rundfunk47/stinsen";
+			requirement = {
+				kind = exactVersion;
+				version = 2.0.9;
+			};
+		};
+		D087506829D194C100454A4B /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = exactVersion;
+				version = 7.6.2;
+			};
+		};
+		D087506B29D194D900454A4B /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject";
+			requirement = {
+				kind = exactVersion;
+				version = 2.8.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D087506329D1948F00454A4B /* CombineExt */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D087506229D1948F00454A4B /* XCRemoteSwiftPackageReference "CombineExt" */;
+			productName = CombineExt;
+		};
+		D087506629D194AD00454A4B /* Stinsen */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D087506529D194AD00454A4B /* XCRemoteSwiftPackageReference "stinsen" */;
+			productName = Stinsen;
+		};
+		D087506929D194C100454A4B /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D087506829D194C100454A4B /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		D087506C29D194D900454A4B /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D087506B29D194D900454A4B /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D087500129D1731900454A4B /* Project object */;
 }
