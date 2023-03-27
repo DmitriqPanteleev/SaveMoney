@@ -24,6 +24,8 @@
 		D087505529D1772800454A4B /* Localizable.ru.strings in Resources */ = {isa = PBXBuildFile; fileRef = D087505729D1772800454A4B /* Localizable.ru.strings */; };
 		D087505929D1773F00454A4B /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D087505829D1773F00454A4B /* Strings.swift */; };
 		D087505A29D1773F00454A4B /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D087505829D1773F00454A4B /* Strings.swift */; };
+		D087505F29D193BC00454A4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D087505E29D193BC00454A4B /* AppDelegate.swift */; };
+		D087506029D193BC00454A4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D087505E29D193BC00454A4B /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,7 @@
 		D087504E29D176F500454A4B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.en.strings; sourceTree = "<group>"; };
 		D087505629D1772800454A4B /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.ru.strings; sourceTree = "<group>"; };
 		D087505829D1773F00454A4B /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		D087505E29D193BC00454A4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				D087500C29D1731900454A4B /* saveMoneyApp.swift */,
+				D087505E29D193BC00454A4B /* AppDelegate.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -370,6 +374,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D087506029D193BC00454A4B /* AppDelegate.swift in Sources */,
 				D087500F29D1731900454A4B /* ContentView.swift in Sources */,
 				D087505A29D1773F00454A4B /* Strings.swift in Sources */,
 				D087500D29D1731900454A4B /* saveMoneyApp.swift in Sources */,
@@ -397,6 +402,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D087505F29D193BC00454A4B /* AppDelegate.swift in Sources */,
 				D087503829D1740F00454A4B /* ContentView.swift in Sources */,
 				D087505929D1773F00454A4B /* Strings.swift in Sources */,
 				D087503929D1740F00454A4B /* saveMoneyApp.swift in Sources */,
