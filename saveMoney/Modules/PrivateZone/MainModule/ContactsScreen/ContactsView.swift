@@ -10,7 +10,7 @@ import Combine
 
 struct ContactsView: View {
     
-    let models: [Contact]
+    @StateObject var viewModel: ContactsViewModel
     
     var body: some View {
         content()
@@ -25,8 +25,8 @@ private extension ContactsView {
     
     var contactList: some View {
         ScrollView {
-            ForEach(models, content: contactCell)
-            AddContactButton(actionPublisher: PassthroughSubject<Void, Never>())
+            ForEach(viewModel.output.contacts, content: contactCell)
+            AddContactButton(actionPublisher: viewModel.input.onAddButtonTap)
         }
     }
     
@@ -42,11 +42,7 @@ private extension ContactsView {
 #if DEBUG
 struct ContactsView_Previews: PreviewProvider {
     static var previews: some View {
-        ContactsView(models: [
-            .mock(),
-            .mock2(),
-            .mock3()
-        ])
+        ContactsView(viewModel: ContactsViewModel(onUpdateTrigger: PassthroughSubject<Void, Never>(), router: nil))
     }
 }
 #endif

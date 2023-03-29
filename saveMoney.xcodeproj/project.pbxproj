@@ -73,6 +73,10 @@
 		D0FE98BF29D466BF00E1C983 /* DeviceContactCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE98BD29D466BF00E1C983 /* DeviceContactCellView.swift */; };
 		D0FE98C829D46C3300E1C983 /* ContactsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE98C729D46C3300E1C983 /* ContactsCoordinator.swift */; };
 		D0FE98C929D46C3300E1C983 /* ContactsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE98C729D46C3300E1C983 /* ContactsCoordinator.swift */; };
+		D0FE98CB29D471BB00E1C983 /* ContactsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE98CA29D471BB00E1C983 /* ContactsViewModel.swift */; };
+		D0FE98CC29D471BB00E1C983 /* ContactsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE98CA29D471BB00E1C983 /* ContactsViewModel.swift */; };
+		D0FE98CE29D4726000E1C983 /* ContactsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE98CD29D4726000E1C983 /* ContactsRouter.swift */; };
+		D0FE98CF29D4726000E1C983 /* ContactsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE98CD29D4726000E1C983 /* ContactsRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +135,8 @@
 		D0FE98B929D45AFC00E1C983 /* Future + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Future + Extensions.swift"; sourceTree = "<group>"; };
 		D0FE98BD29D466BF00E1C983 /* DeviceContactCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceContactCellView.swift; sourceTree = "<group>"; };
 		D0FE98C729D46C3300E1C983 /* ContactsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsCoordinator.swift; sourceTree = "<group>"; };
+		D0FE98CA29D471BB00E1C983 /* ContactsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewModel.swift; sourceTree = "<group>"; };
+		D0FE98CD29D4726000E1C983 /* ContactsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -404,6 +410,8 @@
 			children = (
 				D06B07BC29D432BB0062968D /* Components */,
 				D087508429D19F3800454A4B /* ContactsView.swift */,
+				D0FE98CA29D471BB00E1C983 /* ContactsViewModel.swift */,
+				D0FE98CD29D4726000E1C983 /* ContactsRouter.swift */,
 			);
 			path = ContactsScreen;
 			sourceTree = "<group>";
@@ -675,12 +683,14 @@
 				D06B07D829D437970062968D /* Text + Extensions.swift in Sources */,
 				D06B07B429D2F0A60062968D /* AnalizeCategory.swift in Sources */,
 				D087506029D193BC00454A4B /* AppDelegate.swift in Sources */,
+				D0FE98CC29D471BB00E1C983 /* ContactsViewModel.swift in Sources */,
 				D0FE98B029D43E6D00E1C983 /* ContactsManager.swift in Sources */,
 				D087507629D1970300454A4B /* MainView.swift in Sources */,
 				D087505A29D1773F00454A4B /* Strings.swift in Sources */,
 				D0FE98BF29D466BF00E1C983 /* DeviceContactCellView.swift in Sources */,
 				D0FE98B829D453AA00E1C983 /* AddContactView.swift in Sources */,
 				D087500D29D1731900454A4B /* saveMoneyApp.swift in Sources */,
+				D0FE98CF29D4726000E1C983 /* ContactsRouter.swift in Sources */,
 				D087507F29D19E9400454A4B /* Category.swift in Sources */,
 				D06B07B829D2F1000062968D /* User.swift in Sources */,
 				D06B07CF29D436BD0062968D /* AppImage.swift in Sources */,
@@ -720,6 +730,8 @@
 				D087505929D1773F00454A4B /* Strings.swift in Sources */,
 				D087503929D1740F00454A4B /* saveMoneyApp.swift in Sources */,
 				D06B07C829D435E90062968D /* String + Extensions.swift in Sources */,
+				D0FE98CE29D4726000E1C983 /* ContactsRouter.swift in Sources */,
+				D0FE98CB29D471BB00E1C983 /* ContactsViewModel.swift in Sources */,
 				D06B07CB29D436A00062968D /* Image + Extensions.swift in Sources */,
 				D06B07C129D433C50062968D /* AddContactButton.swift in Sources */,
 				D0FE98BE29D466BF00E1C983 /* DeviceContactCellView.swift in Sources */,

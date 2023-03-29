@@ -15,7 +15,7 @@ struct saveMoneyApp: App {
     
     var body: some Scene {
         WindowGroup {
-            AddContactView(viewModel: AddContactViewModel(contactsManager: ContactsManager(), onBackTrigger: PassthroughSubject<Void, Never>()))
+            ContactsCoordinator(contactsManager: ContactsManager()).view()
         }
     }
 }
