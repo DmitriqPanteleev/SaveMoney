@@ -1,7 +1,9 @@
 /* 
-  Localizable.ru.strings
+  Localizable.strings
   saveMoney
 
   Created by Дмитрий Пантелеев on 27.03.2023.
   
 */
+
+"add" = "Add";

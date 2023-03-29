@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 
 @main
 struct saveMoneyApp: App {
@@ -14,7 +15,7 @@ struct saveMoneyApp: App {
     
     var body: some Scene {
         WindowGroup {
-            EmptyView()
+            AddContactView(viewModel: AddContactViewModel(contactsManager: ContactsManager(), onBackTrigger: PassthroughSubject<Void, Never>()))
         }
     }
 }
