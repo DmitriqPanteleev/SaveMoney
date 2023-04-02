@@ -21,7 +21,10 @@ private extension MainView {
     @ViewBuilder func content() -> some View {
         VStack(spacing: 24) {
             headerView
+                .padding(.bottom, 12)
+            intervalsView
             pieChartView
+            categoriesList
             categoryListView
         }
         .padding(.top, 16)
@@ -57,21 +60,33 @@ private extension MainView {
         TabSectionView(currentSection: viewModel.output.tabSection)
     }
     
+    var intervalsView: some View {
+        IntervalHorizontalView(currentInterval: viewModel.output.interval,
+                               accentColor: mostValuableColor)
+    }
+    
     var pieChartView: some View {
-        ZStack(alignment: .top) {
-            PieChartView(values: categoriesToSums(),
-                         names: categoriesToNames(),
-                         formatter: formatterForChart,
-                         colors: categoriesToColors(),
-                         backgroundColor: .white)
-            .padding(.horizontal, 32)
-            
-            HStack {
-                Spacer()
-                analyticsButton
+        ZStack(alignment: .bottomTrailing) {
+            HStack(spacing: 16) {
+                chevronLeft
+                PieChartView(values: categoriesToSums(),
+                             names: categoriesToNames(),
+                             formatter: formatterForChart,
+                             colors: categoriesToColors(),
+                             backgroundColor: .white)
+                chevronRight
             }
+            .padding(.horizontal)
+            analyticsButton
         }
         .padding(.horizontal, 16)
+    }
+    
+    var categoriesList: some View {
+        CategoryHorizontalListView(models: viewModel.output.categories,
+                                   onDetailAnalizeTap: viewModel.input.onAnalyticsTap)
+        .padding(.horizontal)
+        .padding(.top, 24)
     }
     
     var categoryListView: some View {
@@ -95,8 +110,8 @@ private extension MainView {
             Image(systemName: "plus.circle.fill")
                 .resizable()
                 .scaledToFit()
-                .frame(width: 20,
-                       height: 20)
+                .frame(width: 24,
+                       height: 24)
         }
         .tint(mostValuableColor)
     }
@@ -106,16 +121,37 @@ private extension MainView {
             Image(systemName: "waveform.and.magnifyingglass")
                 .resizable()
                 .scaledToFit()
+                .foregroundColor(mostValuableColor)
                 .frame(width: 24, height: 24)
                 .padding(.leading, 10)
                 .padding([.vertical, .trailing], 8)
                 .background(Color.white)
-                .cornerRadius(12)
+                .cornerRadius(24)
                 .shadow(color: .gray.opacity(0.5),
                         radius: 4,
                         y: 2)
         }
         .tint(.gray)
+    }
+    
+    var chevronLeft: some View {
+        Button(actionPublisher: viewModel.input.onChangeStep,
+        sendableModel: false) {
+            Image(systemName: "chevron.left")
+                .resizable()
+                .frame(width: 10, height: 40)
+                .foregroundColor(.gray)
+        }
+    }
+    
+    var chevronRight: some View {
+        Button(actionPublisher: viewModel.input.onChangeStep,
+        sendableModel: true) {
+            Image(systemName: "chevron.right")
+                .resizable()
+                .frame(width: 10, height: 40)
+                .foregroundColor(.gray)
+        }
     }
 }
 
@@ -144,7 +180,7 @@ private extension MainView {
     }
     
     func formatterForChart(_ value: Double) -> String {
-        String(format: "%.2f ₽", value)
+        String(format: "%.f₽", value)
     }
     
     func randomColorsForChart() -> [Color] {

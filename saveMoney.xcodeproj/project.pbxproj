@@ -95,6 +95,12 @@
 		D0FE98F129D84E2100E1C983 /* CategoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE98EF29D84E2100E1C983 /* CategoryListView.swift */; };
 		D0FE98F329D98D8A00E1C983 /* PaymentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE98F229D98D8A00E1C983 /* PaymentListView.swift */; };
 		D0FE98F429D98D8A00E1C983 /* PaymentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE98F229D98D8A00E1C983 /* PaymentListView.swift */; };
+		D0FE98F629D9D9C600E1C983 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE98F529D9D9C600E1C983 /* MainRouter.swift */; };
+		D0FE98F729D9D9C600E1C983 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE98F529D9D9C600E1C983 /* MainRouter.swift */; };
+		D0FE98FA29DA021D00E1C983 /* CategoryHorizontalListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE98F929DA021D00E1C983 /* CategoryHorizontalListView.swift */; };
+		D0FE98FB29DA021D00E1C983 /* CategoryHorizontalListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE98F929DA021D00E1C983 /* CategoryHorizontalListView.swift */; };
+		D0FE98FD29DA08A400E1C983 /* IntervalHorizontalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE98FC29DA08A400E1C983 /* IntervalHorizontalView.swift */; };
+		D0FE98FE29DA08A400E1C983 /* IntervalHorizontalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE98FC29DA08A400E1C983 /* IntervalHorizontalView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -163,6 +169,9 @@
 		D0FE98EC29D848B000E1C983 /* TabSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabSectionView.swift; sourceTree = "<group>"; };
 		D0FE98EF29D84E2100E1C983 /* CategoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListView.swift; sourceTree = "<group>"; };
 		D0FE98F229D98D8A00E1C983 /* PaymentListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentListView.swift; sourceTree = "<group>"; };
+		D0FE98F529D9D9C600E1C983 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		D0FE98F929DA021D00E1C983 /* CategoryHorizontalListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryHorizontalListView.swift; sourceTree = "<group>"; };
+		D0FE98FC29DA08A400E1C983 /* IntervalHorizontalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalHorizontalView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -380,6 +389,7 @@
 		D087507029D1968400454A4B /* MainModule */ = {
 			isa = PBXGroup;
 			children = (
+				D0FE98F829DA019800E1C983 /* AddCategoryScreen */,
 				D0FE98B229D4538D00E1C983 /* AddContactScreen */,
 				D087508329D19F1E00454A4B /* ContactsScreen */,
 				D087507329D196D500454A4B /*  MainScreen */,
@@ -407,6 +417,7 @@
 				D0FE98EB29D848A200E1C983 /* Components */,
 				D087507529D1970300454A4B /* MainView.swift */,
 				D0FE98D229D59C1700E1C983 /* MainViewModel.swift */,
+				D0FE98F529D9D9C600E1C983 /* MainRouter.swift */,
 			);
 			path = " MainScreen";
 			sourceTree = "<group>";
@@ -564,8 +575,17 @@
 				D0FE98EC29D848B000E1C983 /* TabSectionView.swift */,
 				D0FE98EF29D84E2100E1C983 /* CategoryListView.swift */,
 				D0FE98F229D98D8A00E1C983 /* PaymentListView.swift */,
+				D0FE98F929DA021D00E1C983 /* CategoryHorizontalListView.swift */,
+				D0FE98FC29DA08A400E1C983 /* IntervalHorizontalView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		D0FE98F829DA019800E1C983 /* AddCategoryScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AddCategoryScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -761,10 +781,12 @@
 				D06B07C929D435E90062968D /* String + Extensions.swift in Sources */,
 				D06B07C229D433C50062968D /* AddContactButton.swift in Sources */,
 				D0FE98EA29D73DE000E1C983 /* Color + Extensions.swift in Sources */,
+				D0FE98F729D9D9C600E1C983 /* MainRouter.swift in Sources */,
 				D06B07BB29D2F1C00062968D /* Party.swift in Sources */,
 				D06B07D829D437970062968D /* Text + Extensions.swift in Sources */,
 				D06B07B429D2F0A60062968D /* AnalizeCategory.swift in Sources */,
 				D0FE98F129D84E2100E1C983 /* CategoryListView.swift in Sources */,
+				D0FE98FE29DA08A400E1C983 /* IntervalHorizontalView.swift in Sources */,
 				D087506029D193BC00454A4B /* AppDelegate.swift in Sources */,
 				D0FE98CC29D471BB00E1C983 /* ContactsViewModel.swift in Sources */,
 				D0FE98B029D43E6D00E1C983 /* ContactsManager.swift in Sources */,
@@ -777,6 +799,7 @@
 				D087500D29D1731900454A4B /* saveMoneyApp.swift in Sources */,
 				D0FE98CF29D4726000E1C983 /* ContactsRouter.swift in Sources */,
 				D087507F29D19E9400454A4B /* Category.swift in Sources */,
+				D0FE98FB29DA021D00E1C983 /* CategoryHorizontalListView.swift in Sources */,
 				D06B07B829D2F1000062968D /* User.swift in Sources */,
 				D06B07CF29D436BD0062968D /* AppImage.swift in Sources */,
 				D087508629D19F3800454A4B /* ContactsView.swift in Sources */,
@@ -821,10 +844,12 @@
 				D06B07C829D435E90062968D /* String + Extensions.swift in Sources */,
 				D0FE98CE29D4726000E1C983 /* ContactsRouter.swift in Sources */,
 				D0FE98E929D73DE000E1C983 /* Color + Extensions.swift in Sources */,
+				D0FE98F629D9D9C600E1C983 /* MainRouter.swift in Sources */,
 				D0FE98CB29D471BB00E1C983 /* ContactsViewModel.swift in Sources */,
 				D06B07CB29D436A00062968D /* Image + Extensions.swift in Sources */,
 				D06B07C129D433C50062968D /* AddContactButton.swift in Sources */,
 				D0FE98F029D84E2100E1C983 /* CategoryListView.swift in Sources */,
+				D0FE98FD29DA08A400E1C983 /* IntervalHorizontalView.swift in Sources */,
 				D0FE98BE29D466BF00E1C983 /* DeviceContactCellView.swift in Sources */,
 				D06B07B729D2F1000062968D /* User.swift in Sources */,
 				D0FE98B429D453A100E1C983 /* AddContactViewModel.swift in Sources */,
@@ -837,6 +862,7 @@
 				D0FE98C829D46C3300E1C983 /* ContactsCoordinator.swift in Sources */,
 				D06B07CE29D436BD0062968D /* AppImage.swift in Sources */,
 				D0FE98D529D5ADC500E1C983 /* MainView.swift in Sources */,
+				D0FE98FA29DA021D00E1C983 /* CategoryHorizontalListView.swift in Sources */,
 				D0FE98BA29D45AFC00E1C983 /* Future + Extensions.swift in Sources */,
 				D087508129D19E9900454A4B /* Payment.swift in Sources */,
 				D087508529D19F3800454A4B /* ContactsView.swift in Sources */,

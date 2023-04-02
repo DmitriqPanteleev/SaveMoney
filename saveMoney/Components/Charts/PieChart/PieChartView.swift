@@ -89,7 +89,8 @@ struct PieChartView: View {
                     )
                     Circle()
                         .fill(self.backgroundColor)
-                        .frame(width: widthFraction * geometry.size.width * innerRadiusFraction, height: widthFraction * geometry.size.width * innerRadiusFraction)
+                        .frame(width: widthFraction * geometry.size.width * innerRadiusFraction,
+                               height: widthFraction * geometry.size.width * innerRadiusFraction)
                     
                     VStack(alignment: .center) {
                         Text(activeIndex == -1 ? "Итого" : names[activeIndex])
@@ -102,8 +103,8 @@ struct PieChartView: View {
                                           weight: .semibold))
                             .foregroundColor(.black)
                     }
-                    .frame(width: widthFraction * geometry.size.width * innerRadiusFraction * 0.8,
-                           height: widthFraction * geometry.size.width * innerRadiusFraction)
+                    .frame(width: geometry.size.width * innerRadiusFraction * 0.8,
+                           height: geometry.size.width * innerRadiusFraction * 0.8)
                     .animation(.easeInOut(duration: 0.25),
                                value: activeIndex)
                 }

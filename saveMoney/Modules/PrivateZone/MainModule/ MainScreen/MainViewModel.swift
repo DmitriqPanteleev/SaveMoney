@@ -67,9 +67,13 @@ enum TabSection: Equatable {
     case outcomes
 }
 
-enum AnalitycInterval {
+enum AnalitycInterval {    
     case day
     case week
     case month
     case year
+    
+    static var allCases: [AnalitycInterval] {
+        [.day, .week, .month, .year]
+    }
 }
