@@ -77,6 +77,24 @@
 		D0FE98CC29D471BB00E1C983 /* ContactsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE98CA29D471BB00E1C983 /* ContactsViewModel.swift */; };
 		D0FE98CE29D4726000E1C983 /* ContactsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE98CD29D4726000E1C983 /* ContactsRouter.swift */; };
 		D0FE98CF29D4726000E1C983 /* ContactsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE98CD29D4726000E1C983 /* ContactsRouter.swift */; };
+		D0FE98D329D59C1700E1C983 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE98D229D59C1700E1C983 /* MainViewModel.swift */; };
+		D0FE98D429D59C1700E1C983 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE98D229D59C1700E1C983 /* MainViewModel.swift */; };
+		D0FE98D529D5ADC500E1C983 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D087507529D1970300454A4B /* MainView.swift */; };
+		D0FE98D829D5D14900E1C983 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = D0FE98D729D5D14900E1C983 /* SwiftUICharts */; };
+		D0FE98E029D5D97400E1C983 /* PieSliceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE98DF29D5D97400E1C983 /* PieSliceView.swift */; };
+		D0FE98E129D5D97400E1C983 /* PieSliceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE98DF29D5D97400E1C983 /* PieSliceView.swift */; };
+		D0FE98E329D72C4300E1C983 /* PieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE98E229D72C4300E1C983 /* PieChartView.swift */; };
+		D0FE98E429D72C4300E1C983 /* PieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE98E229D72C4300E1C983 /* PieChartView.swift */; };
+		D0FE98E629D7368D00E1C983 /* ColorsGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE98E529D7368D00E1C983 /* ColorsGenerator.swift */; };
+		D0FE98E729D7368D00E1C983 /* ColorsGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE98E529D7368D00E1C983 /* ColorsGenerator.swift */; };
+		D0FE98E929D73DE000E1C983 /* Color + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE98E829D73DE000E1C983 /* Color + Extensions.swift */; };
+		D0FE98EA29D73DE000E1C983 /* Color + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE98E829D73DE000E1C983 /* Color + Extensions.swift */; };
+		D0FE98ED29D848B000E1C983 /* TabSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE98EC29D848B000E1C983 /* TabSectionView.swift */; };
+		D0FE98EE29D848B000E1C983 /* TabSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE98EC29D848B000E1C983 /* TabSectionView.swift */; };
+		D0FE98F029D84E2100E1C983 /* CategoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE98EF29D84E2100E1C983 /* CategoryListView.swift */; };
+		D0FE98F129D84E2100E1C983 /* CategoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE98EF29D84E2100E1C983 /* CategoryListView.swift */; };
+		D0FE98F329D98D8A00E1C983 /* PaymentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE98F229D98D8A00E1C983 /* PaymentListView.swift */; };
+		D0FE98F429D98D8A00E1C983 /* PaymentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE98F229D98D8A00E1C983 /* PaymentListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,6 +155,14 @@
 		D0FE98C729D46C3300E1C983 /* ContactsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsCoordinator.swift; sourceTree = "<group>"; };
 		D0FE98CA29D471BB00E1C983 /* ContactsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewModel.swift; sourceTree = "<group>"; };
 		D0FE98CD29D4726000E1C983 /* ContactsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsRouter.swift; sourceTree = "<group>"; };
+		D0FE98D229D59C1700E1C983 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		D0FE98DF29D5D97400E1C983 /* PieSliceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieSliceView.swift; sourceTree = "<group>"; };
+		D0FE98E229D72C4300E1C983 /* PieChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartView.swift; sourceTree = "<group>"; };
+		D0FE98E529D7368D00E1C983 /* ColorsGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsGenerator.swift; sourceTree = "<group>"; };
+		D0FE98E829D73DE000E1C983 /* Color + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color + Extensions.swift"; sourceTree = "<group>"; };
+		D0FE98EC29D848B000E1C983 /* TabSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabSectionView.swift; sourceTree = "<group>"; };
+		D0FE98EF29D84E2100E1C983 /* CategoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListView.swift; sourceTree = "<group>"; };
+		D0FE98F229D98D8A00E1C983 /* PaymentListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +195,7 @@
 				D087506429D1948F00454A4B /* CombineExt in Frameworks */,
 				D087506729D194AD00454A4B /* Stinsen in Frameworks */,
 				D087506D29D194D900454A4B /* Swinject in Frameworks */,
+				D0FE98D829D5D14900E1C983 /* SwiftUICharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,6 +219,7 @@
 				D06B07CA29D436A00062968D /* Image + Extensions.swift */,
 				D06B07D629D437970062968D /* Text + Extensions.swift */,
 				D0FE98B929D45AFC00E1C983 /* Future + Extensions.swift */,
+				D0FE98E829D73DE000E1C983 /* Color + Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -227,6 +255,7 @@
 				D087504229D1766A00454A4B /* Helpers */,
 				D087505B29D1776A00454A4B /* Models */,
 				D087505C29D1777200454A4B /* Modules */,
+				D0FE98D029D58C6000E1C983 /* Components */,
 				D087505D29D1792B00454A4B /* Services */,
 				D087501229D1731A00454A4B /* Preview Content */,
 			);
@@ -263,6 +292,7 @@
 			children = (
 				D06B07C329D434940062968D /* Extensions */,
 				D06B07D329D437590062968D /* Language.swift */,
+				D0FE98E529D7368D00E1C983 /* ColorsGenerator.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -292,6 +322,7 @@
 		D087505B29D1776A00454A4B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D0FE98D129D59B7300E1C983 /* Mappers */,
 				D087507829D1988700454A4B /* Server */,
 				D087507729D1987F00454A4B /* Local */,
 			);
@@ -373,7 +404,9 @@
 		D087507329D196D500454A4B /*  MainScreen */ = {
 			isa = PBXGroup;
 			children = (
+				D0FE98EB29D848A200E1C983 /* Components */,
 				D087507529D1970300454A4B /* MainView.swift */,
+				D0FE98D229D59C1700E1C983 /* MainViewModel.swift */,
 			);
 			path = " MainScreen";
 			sourceTree = "<group>";
@@ -493,6 +526,48 @@
 			path = ModuleCoordinators;
 			sourceTree = "<group>";
 		};
+		D0FE98D029D58C6000E1C983 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D0FE98DC29D5D94500E1C983 /* Charts */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		D0FE98D129D59B7300E1C983 /* Mappers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mappers;
+			sourceTree = "<group>";
+		};
+		D0FE98DC29D5D94500E1C983 /* Charts */ = {
+			isa = PBXGroup;
+			children = (
+				D0FE98DD29D5D94D00E1C983 /* PieChart */,
+			);
+			path = Charts;
+			sourceTree = "<group>";
+		};
+		D0FE98DD29D5D94D00E1C983 /* PieChart */ = {
+			isa = PBXGroup;
+			children = (
+				D0FE98DF29D5D97400E1C983 /* PieSliceView.swift */,
+				D0FE98E229D72C4300E1C983 /* PieChartView.swift */,
+			);
+			path = PieChart;
+			sourceTree = "<group>";
+		};
+		D0FE98EB29D848A200E1C983 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D0FE98EC29D848B000E1C983 /* TabSectionView.swift */,
+				D0FE98EF29D84E2100E1C983 /* CategoryListView.swift */,
+				D0FE98F229D98D8A00E1C983 /* PaymentListView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -567,6 +642,7 @@
 				D087506629D194AD00454A4B /* Stinsen */,
 				D087506929D194C100454A4B /* Kingfisher */,
 				D087506C29D194D900454A4B /* Swinject */,
+				D0FE98D729D5D14900E1C983 /* SwiftUICharts */,
 			);
 			productName = saveMoney;
 			productReference = D087504129D1740F00454A4B /* saveMoneyDev.app */;
@@ -610,6 +686,7 @@
 				D087506529D194AD00454A4B /* XCRemoteSwiftPackageReference "stinsen" */,
 				D087506829D194C100454A4B /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				D087506B29D194D900454A4B /* XCRemoteSwiftPackageReference "Swinject" */,
+				D0FE98D629D5D14900E1C983 /* XCRemoteSwiftPackageReference "ChartView" */,
 			);
 			productRefGroup = D087500A29D1731900454A4B /* Products */;
 			projectDirPath = "";
@@ -671,21 +748,29 @@
 				D06B07D229D4371C0062968D /* Colors.swift in Sources */,
 				D0FE98BB29D45AFC00E1C983 /* Future + Extensions.swift in Sources */,
 				D06B07CC29D436A00062968D /* Image + Extensions.swift in Sources */,
+				D0FE98D429D59C1700E1C983 /* MainViewModel.swift in Sources */,
 				D0FE98B529D453A100E1C983 /* AddContactViewModel.swift in Sources */,
 				D087507A29D1993E00454A4B /* Payment.swift in Sources */,
 				D06B07BF29D432EB0062968D /* ContactCellView.swift in Sources */,
 				D0FE98C929D46C3300E1C983 /* ContactsCoordinator.swift in Sources */,
+				D0FE98F429D98D8A00E1C983 /* PaymentListView.swift in Sources */,
+				D0FE98E729D7368D00E1C983 /* ColorsGenerator.swift in Sources */,
 				D06B07D529D437590062968D /* Language.swift in Sources */,
 				D06B07C629D434A40062968D /* Button + Extensions.swift in Sources */,
+				D0FE98E429D72C4300E1C983 /* PieChartView.swift in Sources */,
 				D06B07C929D435E90062968D /* String + Extensions.swift in Sources */,
 				D06B07C229D433C50062968D /* AddContactButton.swift in Sources */,
+				D0FE98EA29D73DE000E1C983 /* Color + Extensions.swift in Sources */,
 				D06B07BB29D2F1C00062968D /* Party.swift in Sources */,
 				D06B07D829D437970062968D /* Text + Extensions.swift in Sources */,
 				D06B07B429D2F0A60062968D /* AnalizeCategory.swift in Sources */,
+				D0FE98F129D84E2100E1C983 /* CategoryListView.swift in Sources */,
 				D087506029D193BC00454A4B /* AppDelegate.swift in Sources */,
 				D0FE98CC29D471BB00E1C983 /* ContactsViewModel.swift in Sources */,
 				D0FE98B029D43E6D00E1C983 /* ContactsManager.swift in Sources */,
 				D087507629D1970300454A4B /* MainView.swift in Sources */,
+				D0FE98E129D5D97400E1C983 /* PieSliceView.swift in Sources */,
+				D0FE98EE29D848B000E1C983 /* TabSectionView.swift in Sources */,
 				D087505A29D1773F00454A4B /* Strings.swift in Sources */,
 				D0FE98BF29D466BF00E1C983 /* DeviceContactCellView.swift in Sources */,
 				D0FE98B829D453AA00E1C983 /* AddContactView.swift in Sources */,
@@ -724,25 +809,34 @@
 				D06B07D729D437970062968D /* Text + Extensions.swift in Sources */,
 				D06B07BE29D432EB0062968D /* ContactCellView.swift in Sources */,
 				D06B07D429D437590062968D /* Language.swift in Sources */,
+				D0FE98D329D59C1700E1C983 /* MainViewModel.swift in Sources */,
 				D06B07D129D4371C0062968D /* Colors.swift in Sources */,
 				D0FE98AF29D43E6D00E1C983 /* ContactsManager.swift in Sources */,
 				D06B07B329D2F0A60062968D /* AnalizeCategory.swift in Sources */,
+				D0FE98F329D98D8A00E1C983 /* PaymentListView.swift in Sources */,
+				D0FE98E629D7368D00E1C983 /* ColorsGenerator.swift in Sources */,
 				D087505929D1773F00454A4B /* Strings.swift in Sources */,
 				D087503929D1740F00454A4B /* saveMoneyApp.swift in Sources */,
+				D0FE98E329D72C4300E1C983 /* PieChartView.swift in Sources */,
 				D06B07C829D435E90062968D /* String + Extensions.swift in Sources */,
 				D0FE98CE29D4726000E1C983 /* ContactsRouter.swift in Sources */,
+				D0FE98E929D73DE000E1C983 /* Color + Extensions.swift in Sources */,
 				D0FE98CB29D471BB00E1C983 /* ContactsViewModel.swift in Sources */,
 				D06B07CB29D436A00062968D /* Image + Extensions.swift in Sources */,
 				D06B07C129D433C50062968D /* AddContactButton.swift in Sources */,
+				D0FE98F029D84E2100E1C983 /* CategoryListView.swift in Sources */,
 				D0FE98BE29D466BF00E1C983 /* DeviceContactCellView.swift in Sources */,
 				D06B07B729D2F1000062968D /* User.swift in Sources */,
 				D0FE98B429D453A100E1C983 /* AddContactViewModel.swift in Sources */,
 				D0FE98B729D453AA00E1C983 /* AddContactView.swift in Sources */,
+				D0FE98E029D5D97400E1C983 /* PieSliceView.swift in Sources */,
+				D0FE98ED29D848B000E1C983 /* TabSectionView.swift in Sources */,
 				D06B07BA29D2F1C00062968D /* Party.swift in Sources */,
 				D06B07C529D434A40062968D /* Button + Extensions.swift in Sources */,
 				D087508029D19E9700454A4B /* Category.swift in Sources */,
 				D0FE98C829D46C3300E1C983 /* ContactsCoordinator.swift in Sources */,
 				D06B07CE29D436BD0062968D /* AppImage.swift in Sources */,
+				D0FE98D529D5ADC500E1C983 /* MainView.swift in Sources */,
 				D0FE98BA29D45AFC00E1C983 /* Future + Extensions.swift in Sources */,
 				D087508129D19E9900454A4B /* Payment.swift in Sources */,
 				D087508529D19F3800454A4B /* ContactsView.swift in Sources */,
@@ -1191,6 +1285,14 @@
 				version = 2.8.3;
 			};
 		};
+		D0FE98D629D5D14900E1C983 /* XCRemoteSwiftPackageReference "ChartView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppPear/ChartView";
+			requirement = {
+				kind = exactVersion;
+				version = 1.5.5;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1213,6 +1315,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D087506B29D194D900454A4B /* XCRemoteSwiftPackageReference "Swinject" */;
 			productName = Swinject;
+		};
+		D0FE98D729D5D14900E1C983 /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D0FE98D629D5D14900E1C983 /* XCRemoteSwiftPackageReference "ChartView" */;
+			productName = SwiftUICharts;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -15,7 +15,8 @@ struct saveMoneyApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContactsCoordinator(contactsManager: ContactsManager()).view()
+//            ContactsCoordinator(contactsManager: ContactsManager()).view()
+            MainView(viewModel: MainViewModel())
         }
     }
 }

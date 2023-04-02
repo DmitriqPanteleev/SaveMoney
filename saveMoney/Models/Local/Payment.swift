@@ -5,14 +5,17 @@
 //  Created by Дмитрий Пантелеев on 27.03.2023.
 //
 
-import Foundation
+import SwiftUI
 
-struct Payment {
+
+// TODO: надо получать всю analize category, чтобы отрисовывать красиво
+struct Payment: Identifiable {
     let id: Int
     let description: String
     let date: Date?
     let sum: Int
     let category: String
+    let categoryColor: Color
     
     var formattedSum: String {
         "\(sum) ₽"
@@ -23,33 +26,30 @@ struct Payment {
         ""
     }
     
-//    func mock1() -> Payment {
-//        Payment(id: 1,
-//                description: "Купил телефон",
-//                sum: 40000)
-//    }
-//
-//    func mock2() -> Payment {
-//        Payment(id: 2,
-//                description: "Новый свитер",
-//                sum: 3000)
-//    }
-//
-//    func mock3() -> Payment {
-//        Payment(id: 3,
-//                description: "Продукты",
-//                sum: 1500)
-//    }
-//
-//    func mock4() -> Payment {
-//        Payment(id: 4,
-//                description: "Пекарня",
-//                sum: 500)
-//    }
-//
-//    func mock5() -> Payment {
-//        Payment(id: 5,
-//                description: "Посуда",
-//                sum: 4000)
-//    }
+    static func mock() -> Payment {
+        Payment(id: 1,
+                description: "На булочки",
+                date: .now,
+                sum: 200,
+                category: "Еда",
+                categoryColor: .init(hex: "38243D"))
+    }
+    
+    static func mock2() -> Payment {
+        Payment(id: 2,
+                description: "",
+                date: .now,
+                sum: 800,
+                category: "Еда",
+                categoryColor: .init(hex: "38243D"))
+    }
+    
+    static func mock3() -> Payment {
+        Payment(id: 3,
+                description: "ЖКХ",
+                date: .now,
+                sum: 2200,
+                category: "Жилье",
+                categoryColor: .init(hex: "AD70BD"))
+    }
 }
