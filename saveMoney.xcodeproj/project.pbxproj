@@ -101,6 +101,10 @@
 		D0FE98FB29DA021D00E1C983 /* CategoryHorizontalListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE98F929DA021D00E1C983 /* CategoryHorizontalListView.swift */; };
 		D0FE98FD29DA08A400E1C983 /* IntervalHorizontalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE98FC29DA08A400E1C983 /* IntervalHorizontalView.swift */; };
 		D0FE98FE29DA08A400E1C983 /* IntervalHorizontalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE98FC29DA08A400E1C983 /* IntervalHorizontalView.swift */; };
+		D0FE990429DAD06300E1C983 /* AddPaymentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE990329DAD06300E1C983 /* AddPaymentViewModel.swift */; };
+		D0FE990529DAD06300E1C983 /* AddPaymentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE990329DAD06300E1C983 /* AddPaymentViewModel.swift */; };
+		D0FE990729DAD06F00E1C983 /* AddPaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE990629DAD06F00E1C983 /* AddPaymentView.swift */; };
+		D0FE990829DAD06F00E1C983 /* AddPaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE990629DAD06F00E1C983 /* AddPaymentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -172,6 +176,8 @@
 		D0FE98F529D9D9C600E1C983 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
 		D0FE98F929DA021D00E1C983 /* CategoryHorizontalListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryHorizontalListView.swift; sourceTree = "<group>"; };
 		D0FE98FC29DA08A400E1C983 /* IntervalHorizontalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalHorizontalView.swift; sourceTree = "<group>"; };
+		D0FE990329DAD06300E1C983 /* AddPaymentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPaymentViewModel.swift; sourceTree = "<group>"; };
+		D0FE990629DAD06F00E1C983 /* AddPaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPaymentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -389,6 +395,7 @@
 		D087507029D1968400454A4B /* MainModule */ = {
 			isa = PBXGroup;
 			children = (
+				D0FE990229DAD04B00E1C983 /* AddPaymentScreen */,
 				D0FE98F829DA019800E1C983 /* AddCategoryScreen */,
 				D0FE98B229D4538D00E1C983 /* AddContactScreen */,
 				D087508329D19F1E00454A4B /* ContactsScreen */,
@@ -586,6 +593,15 @@
 			children = (
 			);
 			path = AddCategoryScreen;
+			sourceTree = "<group>";
+		};
+		D0FE990229DAD04B00E1C983 /* AddPaymentScreen */ = {
+			isa = PBXGroup;
+			children = (
+				D0FE990329DAD06300E1C983 /* AddPaymentViewModel.swift */,
+				D0FE990629DAD06F00E1C983 /* AddPaymentView.swift */,
+			);
+			path = AddPaymentScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -788,6 +804,7 @@
 				D0FE98F129D84E2100E1C983 /* CategoryListView.swift in Sources */,
 				D0FE98FE29DA08A400E1C983 /* IntervalHorizontalView.swift in Sources */,
 				D087506029D193BC00454A4B /* AppDelegate.swift in Sources */,
+				D0FE990829DAD06F00E1C983 /* AddPaymentView.swift in Sources */,
 				D0FE98CC29D471BB00E1C983 /* ContactsViewModel.swift in Sources */,
 				D0FE98B029D43E6D00E1C983 /* ContactsManager.swift in Sources */,
 				D087507629D1970300454A4B /* MainView.swift in Sources */,
@@ -795,6 +812,7 @@
 				D0FE98EE29D848B000E1C983 /* TabSectionView.swift in Sources */,
 				D087505A29D1773F00454A4B /* Strings.swift in Sources */,
 				D0FE98BF29D466BF00E1C983 /* DeviceContactCellView.swift in Sources */,
+				D0FE990529DAD06300E1C983 /* AddPaymentViewModel.swift in Sources */,
 				D0FE98B829D453AA00E1C983 /* AddContactView.swift in Sources */,
 				D087500D29D1731900454A4B /* saveMoneyApp.swift in Sources */,
 				D0FE98CF29D4726000E1C983 /* ContactsRouter.swift in Sources */,
@@ -851,6 +869,7 @@
 				D0FE98F029D84E2100E1C983 /* CategoryListView.swift in Sources */,
 				D0FE98FD29DA08A400E1C983 /* IntervalHorizontalView.swift in Sources */,
 				D0FE98BE29D466BF00E1C983 /* DeviceContactCellView.swift in Sources */,
+				D0FE990729DAD06F00E1C983 /* AddPaymentView.swift in Sources */,
 				D06B07B729D2F1000062968D /* User.swift in Sources */,
 				D0FE98B429D453A100E1C983 /* AddContactViewModel.swift in Sources */,
 				D0FE98B729D453AA00E1C983 /* AddContactView.swift in Sources */,
@@ -858,6 +877,7 @@
 				D0FE98ED29D848B000E1C983 /* TabSectionView.swift in Sources */,
 				D06B07BA29D2F1C00062968D /* Party.swift in Sources */,
 				D06B07C529D434A40062968D /* Button + Extensions.swift in Sources */,
+				D0FE990429DAD06300E1C983 /* AddPaymentViewModel.swift in Sources */,
 				D087508029D19E9700454A4B /* Category.swift in Sources */,
 				D0FE98C829D46C3300E1C983 /* ContactsCoordinator.swift in Sources */,
 				D06B07CE29D436BD0062968D /* AppImage.swift in Sources */,

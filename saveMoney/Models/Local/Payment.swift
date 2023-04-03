@@ -26,6 +26,15 @@ struct Payment: Identifiable {
         ""
     }
     
+    static func empty() -> Payment {
+        Payment(id: UUID().hashValue,
+                description: "",
+                date: .now,
+                sum: 0,
+                category: "",
+                categoryColor: .black)
+    }
+    
     static func mock() -> Payment {
         Payment(id: 1,
                 description: "На булочки",
