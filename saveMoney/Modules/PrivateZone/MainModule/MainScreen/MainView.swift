@@ -13,7 +13,8 @@ struct MainView: View {
     @StateObject var viewModel: MainViewModel
     
     var body: some View {
-        content()
+        LoadableView(state: .content,
+                     content: content)
     }
 }
 
@@ -53,7 +54,7 @@ private extension MainView {
                 .frame(width: 20,
                        height: 20)
         }
-        .tint(mostValuableColor)
+        .tint(ColorsPalette.shared.beige)
     }
     
     var tabSectionView: some View {
@@ -62,7 +63,7 @@ private extension MainView {
     
     var intervalsView: some View {
         IntervalHorizontalView(currentInterval: viewModel.output.interval,
-                               accentColor: mostValuableColor)
+                               accentColor: ColorsPalette.shared.beige)
         .padding(.horizontal)
     }
     
@@ -114,7 +115,7 @@ private extension MainView {
                 .frame(width: 24,
                        height: 24)
         }
-        .tint(mostValuableColor)
+        .tint(ColorsPalette.shared.beige)
     }
     
     var analyticsButton: some View {
@@ -122,7 +123,7 @@ private extension MainView {
             Image(systemName: "waveform.and.magnifyingglass")
                 .resizable()
                 .scaledToFit()
-                .foregroundColor(mostValuableColor)
+                .foregroundColor(ColorsPalette.shared.lightOrange)
                 .frame(width: 24, height: 24)
                 .padding(.leading, 10)
                 .padding([.vertical, .trailing], 8)

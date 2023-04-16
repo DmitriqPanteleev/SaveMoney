@@ -20,10 +20,10 @@ struct ColorsPalette {
     }
     
     var lightOrange: Color {
-        .init(hex: "ECCIA1")
+        .init(hex: "ECC1A1")
     }
     
     var lightGray: Color {
-        .init(hex: "F5FTEE")
+        .init(hex: "F5F1EE")
     }
 }
