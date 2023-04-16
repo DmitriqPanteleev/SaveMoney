@@ -6,33 +6,58 @@
 //
 
 import SwiftUI
+import Combine
 
 struct AddPaymentView: View {
     
     @StateObject var viewModel: AddPaymentViewModel
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        content()
+            .overlay(content: keyboardPanel)
     }
 }
 
 private extension AddPaymentView {
     func content() -> some View {
-        VStack(spacing: 16) {
-            
+        VStack(spacing: 0) {
+            topBlock
+            categoriesControl
+            Spacer()
         }
+        .padding(.horizontal)
     }
     
-    var desriptionTextField: some View {
-        HStack {
+    var topBlock: some View {
+        VStack(spacing: 8) {
+            Text(viewModel.output.date.formatted(date: .complete,
+                                                 time: .shortened))
+            .foregroundColor(.appGray)
+            .font(.system(size: 12))
             
+            Text(viewModel.output.sum.isEmpty ? "\(0)₽" : "\(viewModel.output.sum)₽")
+            .foregroundColor(.black)
+            .font(.system(size: 42, weight: .semibold))
+            
+            Text(viewModel.output.description)
+            .foregroundColor(.appGray)
+            .font(.system(size: 12))
+            .padding(.horizontal, 32)
+            .lineLimit(1)
         }
+        .padding(.vertical, 72)
     }
     
-    var desriptionTextField: some View {
-        HStack {
-            
-        }
+    var categoriesControl: some View {
+        CategoryPickerView(models: viewModel.output.categories,
+                           onCategoryChange: viewModel.input.onCategoryChange)
+    }
+    
+    func keyboardPanel() -> some View {
+        KeyboardControlView(sum: $viewModel.output.sum,
+                            onTypeChange: viewModel.input.onTabSectionChange,
+                            onSumChange: viewModel.input.onSumChange,
+                            onDoneTap: viewModel.input.onSaveButtonTap)
     }
 }
 

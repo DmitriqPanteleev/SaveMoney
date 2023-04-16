@@ -12,6 +12,7 @@ import SwiftUI
 extension Color {
     enum Name: String {
         case appGreen
+        case appGray
         
         var path: String { rawValue }
     }
@@ -23,6 +24,7 @@ extension Color {
     }
     
     static let appGreen = Color(.appGreen)
+    static let appGray = Color(.appGray)
 }
 
 extension UIColor {

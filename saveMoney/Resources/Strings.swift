@@ -8,5 +8,7 @@
 import Foundation
 
 enum Strings: String {
+    // MARK: - Simple
     case add
+    case retry
 }

@@ -25,7 +25,7 @@ private extension MainView {
             intervalsView
             pieChartView
             categoriesList
-            categoryListView
+            paymentListView
         }
         .padding(.top, 16)
     }
@@ -63,6 +63,7 @@ private extension MainView {
     var intervalsView: some View {
         IntervalHorizontalView(currentInterval: viewModel.output.interval,
                                accentColor: mostValuableColor)
+        .padding(.horizontal)
     }
     
     var pieChartView: some View {
@@ -74,9 +75,9 @@ private extension MainView {
                              formatter: formatterForChart,
                              colors: categoriesToColors(),
                              backgroundColor: .white)
+                .padding(.horizontal)
                 chevronRight
             }
-            .padding(.horizontal)
             analyticsButton
         }
         .padding(.horizontal, 16)
@@ -89,7 +90,7 @@ private extension MainView {
         .padding(.top, 24)
     }
     
-    var categoryListView: some View {
+    var paymentListView: some View {
         VStack(alignment: .leading, spacing: 16) {
             HStack(spacing: 4){
                 Text("РАСХОДЫ")

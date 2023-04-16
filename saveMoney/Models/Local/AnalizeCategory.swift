@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AnalizeCategory: Identifiable, Comparable {
+struct AnalizeCategory: Identifiable, Comparable, Hashable {
     let id: Int
     let name: String
     let sum: Int

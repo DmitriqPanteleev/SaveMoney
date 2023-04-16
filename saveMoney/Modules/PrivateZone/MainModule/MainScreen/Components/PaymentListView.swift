@@ -30,8 +30,8 @@ private extension PaymentListView {
             HStack(spacing: 10) {
                 coloredRingView(model)
                 VStack(alignment: .leading, spacing: 4) {
-                    Text(model.category)
-                    Text(model.date?.formatted(date: .abbreviated,
+                    Text(model.categoryName)
+                    Text(model.date.formatted(date: .abbreviated,
                                                time: .shortened) ?? "")
                         .font(.footnote)
                         .foregroundColor(.gray)

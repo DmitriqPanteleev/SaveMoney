@@ -62,11 +62,6 @@ extension MainViewModel {
     }
 }
 
-enum TabSection: Equatable {
-    case incomes
-    case outcomes
-}
-
 enum AnalitycInterval {    
     case day
     case week

@@ -7,18 +7,17 @@
 
 import SwiftUI
 
-
-// TODO: надо получать всю analize category, чтобы отрисовывать красиво
 struct Payment: Identifiable {
     let id: Int
     let description: String
-    let date: Date?
+    let date: Date
     let sum: Int
-    let category: String
+    let categoryId: Int
+    let categoryName: String
     let categoryColor: Color
     
     var formattedSum: String {
-        "\(sum) ₽"
+        "\(sum.separatedNumber) ₽"
     }
     
     // TODO: - date formatters
@@ -31,7 +30,8 @@ struct Payment: Identifiable {
                 description: "",
                 date: .now,
                 sum: 0,
-                category: "",
+                categoryId: 1,
+                categoryName: "",
                 categoryColor: .black)
     }
     
@@ -40,7 +40,8 @@ struct Payment: Identifiable {
                 description: "На булочки",
                 date: .now,
                 sum: 200,
-                category: "Еда",
+                categoryId: 1,
+                categoryName: "Еда",
                 categoryColor: .init(hex: "38243D"))
     }
     
@@ -49,7 +50,8 @@ struct Payment: Identifiable {
                 description: "",
                 date: .now,
                 sum: 800,
-                category: "Еда",
+                categoryId: 1,
+                categoryName: "Еда",
                 categoryColor: .init(hex: "38243D"))
     }
     
@@ -58,7 +60,8 @@ struct Payment: Identifiable {
                 description: "ЖКХ",
                 date: .now,
                 sum: 2200,
-                category: "Жилье",
+                categoryId: 2,
+                categoryName: "Жилье",
                 categoryColor: .init(hex: "AD70BD"))
     }
 }

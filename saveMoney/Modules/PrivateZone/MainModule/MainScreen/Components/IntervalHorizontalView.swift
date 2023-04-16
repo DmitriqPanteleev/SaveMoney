@@ -18,7 +18,6 @@ struct IntervalHorizontalView: View {
                     id: \.self,
                     content: intervalCell)
         }
-        .padding(.horizontal)
     }
 }
 
@@ -62,6 +61,7 @@ private extension IntervalHorizontalView {
         }
         .padding(.vertical, currentInterval == model ? 8 : 4)
         .padding(.horizontal, currentInterval == model ? 16 : 8)
+        .frame(maxWidth: .infinity)
         .background(currentInterval == model ? accentColor : Color.white)
         .cornerRadius(10)
         .shadow(color: .gray.opacity(0.5),
