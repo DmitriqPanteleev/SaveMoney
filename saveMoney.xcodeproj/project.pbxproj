@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D0102B7329EDA72400997BC5 /* SwiftKeychainWrapper in Frameworks */ = {isa = PBXBuildFile; productRef = D0102B7229EDA72400997BC5 /* SwiftKeychainWrapper */; };
+		D0102B7529EDA73A00997BC5 /* KeychainKeyStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0102B7429EDA73A00997BC5 /* KeychainKeyStorage.swift */; };
+		D0102B7629EDA73A00997BC5 /* KeychainKeyStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0102B7429EDA73A00997BC5 /* KeychainKeyStorage.swift */; };
+		D0102B7829EDA74800997BC5 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0102B7729EDA74800997BC5 /* KeychainManager.swift */; };
+		D0102B7929EDA74800997BC5 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0102B7729EDA74800997BC5 /* KeychainManager.swift */; };
 		D0141AD129DB0D9F00ABCBDA /* QuestionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0141AD029DB0D9F00ABCBDA /* QuestionButton.swift */; };
 		D0141AD229DB0D9F00ABCBDA /* QuestionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0141AD029DB0D9F00ABCBDA /* QuestionButton.swift */; };
 		D0141AD429DC2A8300ABCBDA /* CategoryPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0141AD329DC2A8300ABCBDA /* CategoryPickerView.swift */; };
@@ -55,6 +60,18 @@
 		D03F496C29EC6E6A0024B5C5 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03F496A29EC6E6A0024B5C5 /* Token.swift */; };
 		D03F496E29EC700B0024B5C5 /* ServerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03F496D29EC700B0024B5C5 /* ServerResponse.swift */; };
 		D03F496F29EC700B0024B5C5 /* ServerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03F496D29EC700B0024B5C5 /* ServerResponse.swift */; };
+		D03F497329EC79610024B5C5 /* CreateProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03F497229EC79610024B5C5 /* CreateProfileView.swift */; };
+		D03F497429EC79610024B5C5 /* CreateProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03F497229EC79610024B5C5 /* CreateProfileView.swift */; };
+		D03F497629EC796A0024B5C5 /* CreateProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03F497529EC796A0024B5C5 /* CreateProfileViewModel.swift */; };
+		D03F497729EC796A0024B5C5 /* CreateProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03F497529EC796A0024B5C5 /* CreateProfileViewModel.swift */; };
+		D03F497A29EC7B1F0024B5C5 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03F497929EC7B1F0024B5C5 /* AuthenticationService.swift */; };
+		D03F497B29EC7B1F0024B5C5 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03F497929EC7B1F0024B5C5 /* AuthenticationService.swift */; };
+		D03F497D29EC7B2A0024B5C5 /* AuthenticationEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03F497C29EC7B2A0024B5C5 /* AuthenticationEndpoint.swift */; };
+		D03F497E29EC7B2A0024B5C5 /* AuthenticationEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03F497C29EC7B2A0024B5C5 /* AuthenticationEndpoint.swift */; };
+		D03F498329EC81600024B5C5 /* RegistrationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03F498229EC81600024B5C5 /* RegistrationResponse.swift */; };
+		D03F498429EC81600024B5C5 /* RegistrationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03F498229EC81600024B5C5 /* RegistrationResponse.swift */; };
+		D03F498629ED64AB0024B5C5 /* EmptyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03F498529ED64AB0024B5C5 /* EmptyResponse.swift */; };
+		D03F498729ED64AB0024B5C5 /* EmptyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03F498529ED64AB0024B5C5 /* EmptyResponse.swift */; };
 		D06B07B329D2F0A60062968D /* AnalizeCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06B07B229D2F0A60062968D /* AnalizeCategory.swift */; };
 		D06B07B429D2F0A60062968D /* AnalizeCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06B07B229D2F0A60062968D /* AnalizeCategory.swift */; };
 		D06B07B729D2F1000062968D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06B07B629D2F1000062968D /* User.swift */; };
@@ -185,6 +202,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D0102B7429EDA73A00997BC5 /* KeychainKeyStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainKeyStorage.swift; sourceTree = "<group>"; };
+		D0102B7729EDA74800997BC5 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		D0141AD029DB0D9F00ABCBDA /* QuestionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionButton.swift; sourceTree = "<group>"; };
 		D0141AD329DC2A8300ABCBDA /* CategoryPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPickerView.swift; sourceTree = "<group>"; };
 		D0141AD629DC314100ABCBDA /* View + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View + Extensions.swift"; sourceTree = "<group>"; };
@@ -209,6 +228,12 @@
 		D03F496729EC6E4A0024B5C5 /* AuthorizationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationState.swift; sourceTree = "<group>"; };
 		D03F496A29EC6E6A0024B5C5 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		D03F496D29EC700B0024B5C5 /* ServerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerResponse.swift; sourceTree = "<group>"; };
+		D03F497229EC79610024B5C5 /* CreateProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileView.swift; sourceTree = "<group>"; };
+		D03F497529EC796A0024B5C5 /* CreateProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileViewModel.swift; sourceTree = "<group>"; };
+		D03F497929EC7B1F0024B5C5 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
+		D03F497C29EC7B2A0024B5C5 /* AuthenticationEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationEndpoint.swift; sourceTree = "<group>"; };
+		D03F498229EC81600024B5C5 /* RegistrationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationResponse.swift; sourceTree = "<group>"; };
+		D03F498529ED64AB0024B5C5 /* EmptyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyResponse.swift; sourceTree = "<group>"; };
 		D06B07B229D2F0A60062968D /* AnalizeCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalizeCategory.swift; sourceTree = "<group>"; };
 		D06B07B629D2F1000062968D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D06B07B929D2F1C00062968D /* Party.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Party.swift; sourceTree = "<group>"; };
@@ -298,6 +323,7 @@
 			files = (
 				D087506A29D194C100454A4B /* Kingfisher in Frameworks */,
 				D087506429D1948F00454A4B /* CombineExt in Frameworks */,
+				D0102B7329EDA72400997BC5 /* SwiftKeychainWrapper in Frameworks */,
 				D087506729D194AD00454A4B /* Stinsen in Frameworks */,
 				D087506D29D194D900454A4B /* Swinject in Frameworks */,
 				D0FE98D829D5D14900E1C983 /* SwiftUICharts in Frameworks */,
@@ -307,6 +333,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D0102B6F29EDA6D500997BC5 /* BiometricService */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BiometricService;
+			sourceTree = "<group>";
+		};
+		D0102B7029EDA6E100997BC5 /* KeychainManager */ = {
+			isa = PBXGroup;
+			children = (
+				D0102B7429EDA73A00997BC5 /* KeychainKeyStorage.swift */,
+				D0102B7729EDA74800997BC5 /* KeychainManager.swift */,
+			);
+			path = KeychainManager;
+			sourceTree = "<group>";
+		};
 		D0141ACC29DB0D7500ABCBDA /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
@@ -391,9 +433,44 @@
 				D03F496329EC6DE30024B5C5 /* AuthToken.swift */,
 				D03F496729EC6E4A0024B5C5 /* AuthorizationState.swift */,
 				D03F496A29EC6E6A0024B5C5 /* Token.swift */,
-				D03F496D29EC700B0024B5C5 /* ServerResponse.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		D03F497029EC792B0024B5C5 /* RegistrationModule */ = {
+			isa = PBXGroup;
+			children = (
+				D03F497129EC79500024B5C5 /* CreateProfileScreen */,
+			);
+			path = RegistrationModule;
+			sourceTree = "<group>";
+		};
+		D03F497129EC79500024B5C5 /* CreateProfileScreen */ = {
+			isa = PBXGroup;
+			children = (
+				D03F497229EC79610024B5C5 /* CreateProfileView.swift */,
+				D03F497529EC796A0024B5C5 /* CreateProfileViewModel.swift */,
+			);
+			path = CreateProfileScreen;
+			sourceTree = "<group>";
+		};
+		D03F497829EC7A7F0024B5C5 /* AuthenticationAPIService */ = {
+			isa = PBXGroup;
+			children = (
+				D03F497929EC7B1F0024B5C5 /* AuthenticationService.swift */,
+				D03F497C29EC7B2A0024B5C5 /* AuthenticationEndpoint.swift */,
+			);
+			path = AuthenticationAPIService;
+			sourceTree = "<group>";
+		};
+		D03F498B29ED6A420024B5C5 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				D03F498229EC81600024B5C5 /* RegistrationResponse.swift */,
+				D03F496D29EC700B0024B5C5 /* ServerResponse.swift */,
+				D03F498529ED64AB0024B5C5 /* EmptyResponse.swift */,
+			);
+			path = Responses;
 			sourceTree = "<group>";
 		};
 		D06B07BC29D432BB0062968D /* Components */ = {
@@ -559,6 +636,7 @@
 		D087506E29D1967100454A4B /* PublicZone */ = {
 			isa = PBXGroup;
 			children = (
+				D03F497029EC792B0024B5C5 /* RegistrationModule */,
 			);
 			path = PublicZone;
 			sourceTree = "<group>";
@@ -634,6 +712,7 @@
 		D087507829D1988700454A4B /* Server */ = {
 			isa = PBXGroup;
 			children = (
+				D03F498B29ED6A420024B5C5 /* Responses */,
 			);
 			path = Server;
 			sourceTree = "<group>";
@@ -720,6 +799,8 @@
 		D0FE98AC29D43E5500E1C983 /* Local */ = {
 			isa = PBXGroup;
 			children = (
+				D0102B7029EDA6E100997BC5 /* KeychainManager */,
+				D0102B6F29EDA6D500997BC5 /* BiometricService */,
 			);
 			path = Local;
 			sourceTree = "<group>";
@@ -727,6 +808,7 @@
 		D0FE98AD29D43E5A00E1C983 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				D03F497829EC7A7F0024B5C5 /* AuthenticationAPIService */,
 				D03F493A29EC69690024B5C5 /* NetworkService */,
 			);
 			path = Network;
@@ -935,6 +1017,7 @@
 				D087506929D194C100454A4B /* Kingfisher */,
 				D087506C29D194D900454A4B /* Swinject */,
 				D0FE98D729D5D14900E1C983 /* SwiftUICharts */,
+				D0102B7229EDA72400997BC5 /* SwiftKeychainWrapper */,
 			);
 			productName = saveMoney;
 			productReference = D087504129D1740F00454A4B /* saveMoneyDev.app */;
@@ -979,6 +1062,7 @@
 				D087506829D194C100454A4B /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				D087506B29D194D900454A4B /* XCRemoteSwiftPackageReference "Swinject" */,
 				D0FE98D629D5D14900E1C983 /* XCRemoteSwiftPackageReference "ChartView" */,
+				D0102B7129EDA72400997BC5 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */,
 			);
 			productRefGroup = D087500A29D1731900454A4B /* Products */;
 			projectDirPath = "";
@@ -1054,6 +1138,7 @@
 				D03F493629EC31530024B5C5 /* ErrorView.swift in Sources */,
 				D0FE98F429D98D8A00E1C983 /* PaymentListView.swift in Sources */,
 				D0FE98E729D7368D00E1C983 /* ColorsGenerator.swift in Sources */,
+				D03F497729EC796A0024B5C5 /* CreateProfileViewModel.swift in Sources */,
 				D06B07D529D437590062968D /* Language.swift in Sources */,
 				D03F495029EC6CC30024B5C5 /* URLRequest + Extensions.swift in Sources */,
 				D03F492729EC2E060024B5C5 /* LoadableView.swift in Sources */,
@@ -1070,6 +1155,7 @@
 				D03F495929EC6D160024B5C5 /* AuthManager.swift in Sources */,
 				D06B07C929D435E90062968D /* String + Extensions.swift in Sources */,
 				D03F496229EC6D7E0024B5C5 /* RequestError.swift in Sources */,
+				D0102B7929EDA74800997BC5 /* KeychainManager.swift in Sources */,
 				D06B07C229D433C50062968D /* AddContactButton.swift in Sources */,
 				D0FE98EA29D73DE000E1C983 /* Color + Extensions.swift in Sources */,
 				D0FE98F729D9D9C600E1C983 /* MainRouter.swift in Sources */,
@@ -1086,6 +1172,7 @@
 				D03F496F29EC700B0024B5C5 /* ServerResponse.swift in Sources */,
 				D0FE990829DAD06F00E1C983 /* AddPaymentView.swift in Sources */,
 				D0FE98CC29D471BB00E1C983 /* ContactsViewModel.swift in Sources */,
+				D03F498429EC81600024B5C5 /* RegistrationResponse.swift in Sources */,
 				D0FE98B029D43E6D00E1C983 /* ContactsManager.swift in Sources */,
 				D03F493229EC30A90024B5C5 /* LoadingView.swift in Sources */,
 				D0FE990B29DAEAAE00E1C983 /* Int + Extensions.swift in Sources */,
@@ -1094,6 +1181,8 @@
 				D03F495C29EC6D280024B5C5 /* HTTPClient.swift in Sources */,
 				D0FE98EE29D848B000E1C983 /* TabSectionView.swift in Sources */,
 				D087505A29D1773F00454A4B /* Strings.swift in Sources */,
+				D03F497B29EC7B1F0024B5C5 /* AuthenticationService.swift in Sources */,
+				D0102B7629EDA73A00997BC5 /* KeychainKeyStorage.swift in Sources */,
 				D0FE98BF29D466BF00E1C983 /* DeviceContactCellView.swift in Sources */,
 				D0FE990529DAD06300E1C983 /* AddPaymentViewModel.swift in Sources */,
 				D0FE98B829D453AA00E1C983 /* AddContactView.swift in Sources */,
@@ -1102,7 +1191,10 @@
 				D087507F29D19E9400454A4B /* Category.swift in Sources */,
 				D0DA429329DDF64F00A947F8 /* KeyboardControlView.swift in Sources */,
 				D0141AD229DB0D9F00ABCBDA /* QuestionButton.swift in Sources */,
+				D03F497429EC79610024B5C5 /* CreateProfileView.swift in Sources */,
 				D0FE98FB29DA021D00E1C983 /* CategoryHorizontalListView.swift in Sources */,
+				D03F498729ED64AB0024B5C5 /* EmptyResponse.swift in Sources */,
+				D03F497E29EC7B2A0024B5C5 /* AuthenticationEndpoint.swift in Sources */,
 				D06B07B829D2F1000062968D /* User.swift in Sources */,
 				D06B07CF29D436BD0062968D /* AppImage.swift in Sources */,
 				D03F492B29EC2E5A0024B5C5 /* LoadableViewState.swift in Sources */,
@@ -1149,6 +1241,7 @@
 				D03F493529EC31530024B5C5 /* ErrorView.swift in Sources */,
 				D0FE98F329D98D8A00E1C983 /* PaymentListView.swift in Sources */,
 				D0DA429629DE00F200A947F8 /* AppKeyboardView.swift in Sources */,
+				D03F497629EC796A0024B5C5 /* CreateProfileViewModel.swift in Sources */,
 				D0FE98E629D7368D00E1C983 /* ColorsGenerator.swift in Sources */,
 				D03F494F29EC6CC30024B5C5 /* URLRequest + Extensions.swift in Sources */,
 				D03F492829EC2E0A0024B5C5 /* LoadableView.swift in Sources */,
@@ -1165,6 +1258,7 @@
 				D03F495829EC6D160024B5C5 /* AuthManager.swift in Sources */,
 				D06B07C829D435E90062968D /* String + Extensions.swift in Sources */,
 				D03F496129EC6D7E0024B5C5 /* RequestError.swift in Sources */,
+				D0102B7829EDA74800997BC5 /* KeychainManager.swift in Sources */,
 				D0FE98CE29D4726000E1C983 /* ContactsRouter.swift in Sources */,
 				D0FE98E929D73DE000E1C983 /* Color + Extensions.swift in Sources */,
 				D0FE98F629D9D9C600E1C983 /* MainRouter.swift in Sources */,
@@ -1181,6 +1275,7 @@
 				D03F496E29EC700B0024B5C5 /* ServerResponse.swift in Sources */,
 				D0FE990729DAD06F00E1C983 /* AddPaymentView.swift in Sources */,
 				D06B07B729D2F1000062968D /* User.swift in Sources */,
+				D03F498329EC81600024B5C5 /* RegistrationResponse.swift in Sources */,
 				D0FE98B429D453A100E1C983 /* AddContactViewModel.swift in Sources */,
 				D03F493129EC30A90024B5C5 /* LoadingView.swift in Sources */,
 				D0FE990A29DAEAAE00E1C983 /* Int + Extensions.swift in Sources */,
@@ -1189,6 +1284,8 @@
 				D03F495B29EC6D280024B5C5 /* HTTPClient.swift in Sources */,
 				D0FE98E029D5D97400E1C983 /* PieSliceView.swift in Sources */,
 				D0FE98ED29D848B000E1C983 /* TabSectionView.swift in Sources */,
+				D03F497A29EC7B1F0024B5C5 /* AuthenticationService.swift in Sources */,
+				D0102B7529EDA73A00997BC5 /* KeychainKeyStorage.swift in Sources */,
 				D06B07BA29D2F1C00062968D /* Party.swift in Sources */,
 				D06B07C529D434A40062968D /* Button + Extensions.swift in Sources */,
 				D0FE990429DAD06300E1C983 /* AddPaymentViewModel.swift in Sources */,
@@ -1197,7 +1294,10 @@
 				D06B07CE29D436BD0062968D /* AppImage.swift in Sources */,
 				D0FE98D529D5ADC500E1C983 /* MainView.swift in Sources */,
 				D0141AD129DB0D9F00ABCBDA /* QuestionButton.swift in Sources */,
+				D03F497329EC79610024B5C5 /* CreateProfileView.swift in Sources */,
 				D0FE98FA29DA021D00E1C983 /* CategoryHorizontalListView.swift in Sources */,
+				D03F498629ED64AB0024B5C5 /* EmptyResponse.swift in Sources */,
+				D03F497D29EC7B2A0024B5C5 /* AuthenticationEndpoint.swift in Sources */,
 				D0FE98BA29D45AFC00E1C983 /* Future + Extensions.swift in Sources */,
 				D087508129D19E9900454A4B /* Payment.swift in Sources */,
 				D03F492A29EC2E5A0024B5C5 /* LoadableViewState.swift in Sources */,
@@ -1615,6 +1715,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		D0102B7129EDA72400997BC5 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jrendel/SwiftKeychainWrapper";
+			requirement = {
+				kind = exactVersion;
+				version = 4.0.1;
+			};
+		};
 		D087506229D1948F00454A4B /* XCRemoteSwiftPackageReference "CombineExt" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/CombineCommunity/CombineExt";
@@ -1658,6 +1766,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		D0102B7229EDA72400997BC5 /* SwiftKeychainWrapper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D0102B7129EDA72400997BC5 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */;
+			productName = SwiftKeychainWrapper;
+		};
 		D087506329D1948F00454A4B /* CombineExt */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D087506229D1948F00454A4B /* XCRemoteSwiftPackageReference "CombineExt" */;

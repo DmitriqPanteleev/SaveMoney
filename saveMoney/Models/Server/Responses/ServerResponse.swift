@@ -7,6 +7,10 @@
 
 import Foundation
 
-struct ServerResponse<T: Decodable>: Decodable {
+struct ServerResponse<T: Codable>: Codable {
     let data: T
+}
+
+struct LogoutResponse: Codable {
+    let message: String?
 }
