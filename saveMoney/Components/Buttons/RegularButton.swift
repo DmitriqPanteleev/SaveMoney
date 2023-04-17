@@ -10,11 +10,12 @@ import Combine
 
 struct RegularButton: View {
     
+    let title: Strings
     let onTapAction: PassthroughSubject<Void, Never>
     
     var body: some View {
         Button(actionPublisher: onTapAction) {
-            Text(.retry)
+            Text(title)
                 .frame(width: UIScreen.main.bounds.width - 32,
                        height: 44)
                 .background(ColorsPalette.shared.beige)
@@ -24,8 +25,11 @@ struct RegularButton: View {
     }
 }
 
+#if DEBUG
 struct RegularButton_Previews: PreviewProvider {
     static var previews: some View {
-        RegularButton(onTapAction: PassthroughSubject<Void, Never>())
+        RegularButton(title: .retry,
+                      onTapAction: PassthroughSubject<Void, Never>())
     }
 }
+#endif

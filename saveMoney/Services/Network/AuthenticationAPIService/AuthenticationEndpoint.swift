@@ -22,13 +22,13 @@ extension AuthenticationEndpoint: Endpoint {
     var path: String {
         switch self {
         case .registr:
-            return "api/security/registarion"
+            return "/api/security/registarion"
         case .login:
-            return "api/security"
+            return "/api/security/login"
         case .logout:
-            return "api/security/logout"
+            return "/api/security/logout"
         case .changePassword:
-            return "api/security/changePassword"
+            return "/api/security/changePassword"
         }
     }
     

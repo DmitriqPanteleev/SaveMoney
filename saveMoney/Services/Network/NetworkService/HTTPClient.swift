@@ -8,11 +8,11 @@
 import Foundation
 import Combine
 
-public protocol HTTPClient {
+protocol HTTPClient {
     func sendRequest<T: Codable>(endpoint: Endpoint, responseModel: T.Type) async throws -> T
 }
 
-public class HTTPClientAuthImpl: HTTPClient {
+class HTTPClientAuthImpl: HTTPClient {
     
     private let authManager: AuthManager
     private let connectionManager: ConnectionManager = ConnectionManager()
@@ -80,7 +80,7 @@ public class HTTPClientAuthImpl: HTTPClient {
         return request
     }
     
-    public func sendRequest<T: Codable>(
+    func sendRequest<T: Codable>(
         endpoint: Endpoint,
         responseModel: T.Type
     ) async throws -> T {
@@ -125,11 +125,9 @@ public class HTTPClientAuthImpl: HTTPClient {
     }
 }
 
-public class HTTPClientImpl: HTTPClient {
+class HTTPClientImpl: HTTPClient {
     
     private let connectionManager: ConnectionManager = ConnectionManager()
-    
-    public init() {}
     
     private func load(_ endpoint: Endpoint, allowRetry: Bool = true) async throws -> (Data, URLResponse) {
         let request = try await request(from: endpoint)
@@ -147,9 +145,9 @@ public class HTTPClientImpl: HTTPClient {
         var urlComponents = URLComponents()
         urlComponents.scheme = endpoint.scheme
         urlComponents.host = endpoint.host
-        urlComponents.port = 8080
+        urlComponents.port = 49460
         urlComponents.path = endpoint.path
-        print(urlComponents)
+        
         if let queryDict = endpoint.query {
             urlComponents.queryItems = []
             for query in queryDict {
@@ -175,7 +173,7 @@ public class HTTPClientImpl: HTTPClient {
         return request
     }
     
-    public func sendRequest<T: Codable>(
+    func sendRequest<T: Codable>(
         endpoint: Endpoint,
         responseModel: T.Type
     ) async throws -> T {

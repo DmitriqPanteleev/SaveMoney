@@ -13,6 +13,7 @@ final class CreateProfileViewModel: ObservableObject {
     
     // MARK: Services
     let apiService: RegistrationApiProtocol
+    weak var router: CreateProfileRouter?
     
     // MARK: - Variables
     let input: Input
@@ -20,8 +21,9 @@ final class CreateProfileViewModel: ObservableObject {
     
     private var cancellable = Set<AnyCancellable>()
     
-    init(apiService: RegistrationApiProtocol) {
+    init(apiService: RegistrationApiProtocol, router: CreateProfileRouter?) {
         self.apiService = apiService
+        self.router = router
         
         self.input = Input()
         self.output = Output()
@@ -42,6 +44,13 @@ private extension CreateProfileViewModel {
     
     func bindEmail() {
         input.onChangeEmail
+            .handleEvents(receiveOutput: { [weak self] in
+                if $0.correctEmail() {
+                    self?.output.emailState = .success
+                } else {
+                    self?.output.emailState = .editing
+                }
+            })
             .sink { [weak self] in
                 self?.output.email = $0
             }
@@ -50,6 +59,13 @@ private extension CreateProfileViewModel {
     
     func bindPassword() {
         input.onChangePassword
+            .handleEvents(receiveOutput: { [weak self] in
+                if $0.count >= 8 {
+                    self?.output.passwordState = .success
+                } else {
+                    self?.output.passwordState = .editing
+                }
+            })
             .sink { [weak self] in
                 self?.output.password = $0
             }
@@ -58,6 +74,13 @@ private extension CreateProfileViewModel {
     
     func bindSurname() {
         input.onChangeSurname
+            .handleEvents(receiveOutput: { [weak self] in
+                if $0.count >= 2 {
+                    self?.output.surnameState = .success
+                } else {
+                    self?.output.surnameState = .editing
+                }
+            })
             .sink { [weak self] in
                 self?.output.surname = $0
             }
@@ -66,6 +89,13 @@ private extension CreateProfileViewModel {
     
     func bindName() {
         input.onChangeName
+            .handleEvents(receiveOutput: { [weak self] in
+                if $0.count >= 2 {
+                    self?.output.nameState = .success
+                } else {
+                    self?.output.nameState = .editing
+                }
+            })
             .sink { [weak self] in
                 self?.output.name = $0
             }
@@ -74,6 +104,13 @@ private extension CreateProfileViewModel {
     
     func bindPhone() {
         input.onChangePhone
+            .handleEvents(receiveOutput: { [weak self] in
+                if $0.toServerPhone().count == 11 {
+                    self?.output.phoneState = .success
+                } else {
+                    self?.output.phoneState = .editing
+                }
+            })
             .sink { [weak self] in
                 self?.output.phone = $0
             }
@@ -82,31 +119,48 @@ private extension CreateProfileViewModel {
     
     func bindSaveTap() {
         let request = input.onSaveTap
+            .handleEvents(receiveOutput: { [weak self] in
+                self?.output.screenState = .processing
+            })
             .map { [unowned self] in
                 Future {
                     try await self.apiService.registration(email: self.output.email,
                                                            password: self.output.password,
                                                            name: self.output.name,
                                                            surname: self.output.surname,
-                                                           phone: self.output.phone)
+                                                           phone: self.output.phone.toServerPhone())
                 }
                 .materialize()
             }
             .switchToLatest()
-            .eraseToAnyPublisher()
+            .share()
             .receive(on: DispatchQueue.main)
         
         request
             .failures()
             .sink { [weak self] error in
-                print(error)
+                if let error = error as? RequestError {
+                    print(error)
+                    switch error {
+                    case let .unexpectedStatusCode(_, message):
+                        if let message = message {
+                            self?.output.errorMessage = message
+                            self?.output.isShowingErrorAlert = true
+                        }
+                    default:
+                        break
+                    }
+                } else {
+                    self?.output.errorMessage = "Что-то пошло не так. Проверьте введенные данные"
+                    self?.output.isShowingErrorAlert = true
+                }
             }
             .store(in: &cancellable)
             
         request
             .values()
-            .sink { [weak self] s in
-                
+            .sink { [weak self] response in
+                self?.router?.pushToCreatePin(with: Token(accessToken: response.token))
             }
             .store(in: &cancellable)
     }
@@ -132,7 +186,14 @@ extension CreateProfileViewModel {
         var name = ""
         var phone = ""
         
-        var isButtonDisabled = true
+        var emailState: TextFieldState = .editing
+        var passwordState: TextFieldState = .editing
+        var surnameState: TextFieldState = .editing
+        var nameState: TextFieldState = .editing
+        var phoneState: TextFieldState = .editing
+        
         var isShowingErrorAlert = false
+        
+        var errorMessage = ""
     }
 }

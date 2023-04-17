@@ -12,6 +12,30 @@
 		D0102B7629EDA73A00997BC5 /* KeychainKeyStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0102B7429EDA73A00997BC5 /* KeychainKeyStorage.swift */; };
 		D0102B7829EDA74800997BC5 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0102B7729EDA74800997BC5 /* KeychainManager.swift */; };
 		D0102B7929EDA74800997BC5 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0102B7729EDA74800997BC5 /* KeychainManager.swift */; };
+		D0102B7B29EDA84D00997BC5 /* PinCodeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0102B7A29EDA84D00997BC5 /* PinCodeManager.swift */; };
+		D0102B7C29EDA84D00997BC5 /* PinCodeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0102B7A29EDA84D00997BC5 /* PinCodeManager.swift */; };
+		D0102B7E29EDA86900997BC5 /* BiometricAuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0102B7D29EDA86900997BC5 /* BiometricAuthenticationService.swift */; };
+		D0102B7F29EDA86900997BC5 /* BiometricAuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0102B7D29EDA86900997BC5 /* BiometricAuthenticationService.swift */; };
+		D0102B8129EDA87D00997BC5 /* BiometricAuthenticationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0102B8029EDA87D00997BC5 /* BiometricAuthenticationError.swift */; };
+		D0102B8229EDA87D00997BC5 /* BiometricAuthenticationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0102B8029EDA87D00997BC5 /* BiometricAuthenticationError.swift */; };
+		D0102B8429EDB2AD00997BC5 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0102B8329EDB2AD00997BC5 /* AppCoordinator.swift */; };
+		D0102B8529EDB2AD00997BC5 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0102B8329EDB2AD00997BC5 /* AppCoordinator.swift */; };
+		D0102B8729EDB71300997BC5 /* RegistrationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0102B8629EDB71300997BC5 /* RegistrationCoordinator.swift */; };
+		D0102B8829EDB71300997BC5 /* RegistrationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0102B8629EDB71300997BC5 /* RegistrationCoordinator.swift */; };
+		D0102B8A29EDB96A00997BC5 /* CreateProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0102B8929EDB96A00997BC5 /* CreateProfileRouter.swift */; };
+		D0102B8B29EDB96A00997BC5 /* CreateProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0102B8929EDB96A00997BC5 /* CreateProfileRouter.swift */; };
+		D0102B8E29EDBAED00997BC5 /* Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0102B8D29EDBAED00997BC5 /* Registration.swift */; };
+		D0102B8F29EDBAED00997BC5 /* Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0102B8D29EDBAED00997BC5 /* Registration.swift */; };
+		D0102B9129EDBB1E00997BC5 /* RegistrationModelMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0102B9029EDBB1E00997BC5 /* RegistrationModelMapper.swift */; };
+		D0102B9229EDBB1E00997BC5 /* RegistrationModelMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0102B9029EDBB1E00997BC5 /* RegistrationModelMapper.swift */; };
+		D0102B9429EDBB3B00997BC5 /* BaseModelMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0102B9329EDBB3B00997BC5 /* BaseModelMapper.swift */; };
+		D0102B9529EDBB3B00997BC5 /* BaseModelMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0102B9329EDBB3B00997BC5 /* BaseModelMapper.swift */; };
+		D0102B9829EDC14A00997BC5 /* EmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0102B9729EDC14A00997BC5 /* EmailTextField.swift */; };
+		D0102B9929EDC14A00997BC5 /* EmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0102B9729EDC14A00997BC5 /* EmailTextField.swift */; };
+		D0102B9B29EDC4A200997BC5 /* NameTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0102B9A29EDC4A200997BC5 /* NameTextField.swift */; };
+		D0102B9C29EDC4A200997BC5 /* NameTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0102B9A29EDC4A200997BC5 /* NameTextField.swift */; };
+		D0102B9E29EDC61300997BC5 /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0102B9D29EDC61300997BC5 /* PasswordTextField.swift */; };
+		D0102B9F29EDC61300997BC5 /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0102B9D29EDC61300997BC5 /* PasswordTextField.swift */; };
 		D0141AD129DB0D9F00ABCBDA /* QuestionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0141AD029DB0D9F00ABCBDA /* QuestionButton.swift */; };
 		D0141AD229DB0D9F00ABCBDA /* QuestionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0141AD029DB0D9F00ABCBDA /* QuestionButton.swift */; };
 		D0141AD429DC2A8300ABCBDA /* CategoryPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0141AD329DC2A8300ABCBDA /* CategoryPickerView.swift */; };
@@ -132,6 +156,26 @@
 		D0DA429F29E3634300A947F8 /* TransactionTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DA429D29E3634300A947F8 /* TransactionTabView.swift */; };
 		D0DA42A229E363F800A947F8 /* TabSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DA42A129E363F800A947F8 /* TabSection.swift */; };
 		D0DA42A329E363F800A947F8 /* TabSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DA42A129E363F800A947F8 /* TabSection.swift */; };
+		D0F6E76929EDDB2D004D153F /* PhoneTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6E76829EDDB2D004D153F /* PhoneTextField.swift */; };
+		D0F6E76A29EDDE5D004D153F /* PhoneTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6E76829EDDB2D004D153F /* PhoneTextField.swift */; };
+		D0F6E76C29EDE668004D153F /* AppearanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6E76B29EDE668004D153F /* AppearanceManager.swift */; };
+		D0F6E76D29EDE6FF004D153F /* AppearanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6E76B29EDE668004D153F /* AppearanceManager.swift */; };
+		D0F6E77029EDEF8D004D153F /* CreatePinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6E76F29EDEF8D004D153F /* CreatePinView.swift */; };
+		D0F6E77129EDEF8D004D153F /* CreatePinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6E76F29EDEF8D004D153F /* CreatePinView.swift */; };
+		D0F6E77329EDEFDA004D153F /* CreatePinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6E77229EDEFDA004D153F /* CreatePinViewModel.swift */; };
+		D0F6E77429EDEFDA004D153F /* CreatePinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6E77229EDEFDA004D153F /* CreatePinViewModel.swift */; };
+		D0F6E77629EDEFFE004D153F /* CreatePinRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6E77529EDEFFE004D153F /* CreatePinRouter.swift */; };
+		D0F6E77729EDEFFE004D153F /* CreatePinRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6E77529EDEFFE004D153F /* CreatePinRouter.swift */; };
+		D0F6E77A29EDF284004D153F /* PinCodePadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6E77929EDF284004D153F /* PinCodePadView.swift */; };
+		D0F6E77B29EDF284004D153F /* PinCodePadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6E77929EDF284004D153F /* PinCodePadView.swift */; };
+		D0F6E77E29EDF297004D153F /* PinCodePadCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6E77D29EDF297004D153F /* PinCodePadCellView.swift */; };
+		D0F6E77F29EDF297004D153F /* PinCodePadCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6E77D29EDF297004D153F /* PinCodePadCellView.swift */; };
+		D0F6E78129EDF2A2004D153F /* PinCodeInputStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6E78029EDF2A2004D153F /* PinCodeInputStatusView.swift */; };
+		D0F6E78229EDF2A2004D153F /* PinCodeInputStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6E78029EDF2A2004D153F /* PinCodeInputStatusView.swift */; };
+		D0F6E78429EDF2B1004D153F /* PinCodeStatusLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6E78329EDF2B1004D153F /* PinCodeStatusLoadingView.swift */; };
+		D0F6E78529EDF2B1004D153F /* PinCodeStatusLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6E78329EDF2B1004D153F /* PinCodeStatusLoadingView.swift */; };
+		D0F6E78729EDF37E004D153F /* FaceIdButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6E78629EDF37D004D153F /* FaceIdButton.swift */; };
+		D0F6E78829EDF37E004D153F /* FaceIdButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6E78629EDF37D004D153F /* FaceIdButton.swift */; };
 		D0FE98AA29D43B7E00E1C983 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0FE98A829D43B7E00E1C983 /* Localizable.strings */; };
 		D0FE98AB29D43B8000E1C983 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0FE98A829D43B7E00E1C983 /* Localizable.strings */; };
 		D0FE98AF29D43E6D00E1C983 /* ContactsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE98AE29D43E6D00E1C983 /* ContactsManager.swift */; };
@@ -204,6 +248,18 @@
 /* Begin PBXFileReference section */
 		D0102B7429EDA73A00997BC5 /* KeychainKeyStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainKeyStorage.swift; sourceTree = "<group>"; };
 		D0102B7729EDA74800997BC5 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
+		D0102B7A29EDA84D00997BC5 /* PinCodeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinCodeManager.swift; sourceTree = "<group>"; };
+		D0102B7D29EDA86900997BC5 /* BiometricAuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricAuthenticationService.swift; sourceTree = "<group>"; };
+		D0102B8029EDA87D00997BC5 /* BiometricAuthenticationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricAuthenticationError.swift; sourceTree = "<group>"; };
+		D0102B8329EDB2AD00997BC5 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		D0102B8629EDB71300997BC5 /* RegistrationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationCoordinator.swift; sourceTree = "<group>"; };
+		D0102B8929EDB96A00997BC5 /* CreateProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileRouter.swift; sourceTree = "<group>"; };
+		D0102B8D29EDBAED00997BC5 /* Registration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registration.swift; sourceTree = "<group>"; };
+		D0102B9029EDBB1E00997BC5 /* RegistrationModelMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationModelMapper.swift; sourceTree = "<group>"; };
+		D0102B9329EDBB3B00997BC5 /* BaseModelMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModelMapper.swift; sourceTree = "<group>"; };
+		D0102B9729EDC14A00997BC5 /* EmailTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTextField.swift; sourceTree = "<group>"; };
+		D0102B9A29EDC4A200997BC5 /* NameTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameTextField.swift; sourceTree = "<group>"; };
+		D0102B9D29EDC61300997BC5 /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
 		D0141AD029DB0D9F00ABCBDA /* QuestionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionButton.swift; sourceTree = "<group>"; };
 		D0141AD329DC2A8300ABCBDA /* CategoryPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPickerView.swift; sourceTree = "<group>"; };
 		D0141AD629DC314100ABCBDA /* View + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View + Extensions.swift"; sourceTree = "<group>"; };
@@ -268,6 +324,16 @@
 		D0DA429529DE00F200A947F8 /* AppKeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppKeyboardView.swift; sourceTree = "<group>"; };
 		D0DA429D29E3634300A947F8 /* TransactionTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTabView.swift; sourceTree = "<group>"; };
 		D0DA42A129E363F800A947F8 /* TabSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabSection.swift; sourceTree = "<group>"; };
+		D0F6E76829EDDB2D004D153F /* PhoneTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneTextField.swift; sourceTree = "<group>"; };
+		D0F6E76B29EDE668004D153F /* AppearanceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceManager.swift; sourceTree = "<group>"; };
+		D0F6E76F29EDEF8D004D153F /* CreatePinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePinView.swift; sourceTree = "<group>"; };
+		D0F6E77229EDEFDA004D153F /* CreatePinViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePinViewModel.swift; sourceTree = "<group>"; };
+		D0F6E77529EDEFFE004D153F /* CreatePinRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePinRouter.swift; sourceTree = "<group>"; };
+		D0F6E77929EDF284004D153F /* PinCodePadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinCodePadView.swift; sourceTree = "<group>"; };
+		D0F6E77D29EDF297004D153F /* PinCodePadCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinCodePadCellView.swift; sourceTree = "<group>"; };
+		D0F6E78029EDF2A2004D153F /* PinCodeInputStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinCodeInputStatusView.swift; sourceTree = "<group>"; };
+		D0F6E78329EDF2B1004D153F /* PinCodeStatusLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinCodeStatusLoadingView.swift; sourceTree = "<group>"; };
+		D0F6E78629EDF37D004D153F /* FaceIdButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceIdButton.swift; sourceTree = "<group>"; };
 		D0FE98A929D43B7E00E1C983 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = Localizable.strings; sourceTree = "<group>"; };
 		D0FE98AE29D43E6D00E1C983 /* ContactsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsManager.swift; sourceTree = "<group>"; };
 		D0FE98B129D44B2200E1C983 /* saveMoneyDev-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "saveMoneyDev-Info.plist"; sourceTree = "<group>"; };
@@ -336,6 +402,8 @@
 		D0102B6F29EDA6D500997BC5 /* BiometricService */ = {
 			isa = PBXGroup;
 			children = (
+				D0102B7D29EDA86900997BC5 /* BiometricAuthenticationService.swift */,
+				D0102B8029EDA87D00997BC5 /* BiometricAuthenticationError.swift */,
 			);
 			path = BiometricService;
 			sourceTree = "<group>";
@@ -349,11 +417,31 @@
 			path = KeychainManager;
 			sourceTree = "<group>";
 		};
+		D0102B8C29EDBADC00997BC5 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				D0102B8D29EDBAED00997BC5 /* Registration.swift */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
+		D0102B9629EDC13C00997BC5 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D0102B9729EDC14A00997BC5 /* EmailTextField.swift */,
+				D0102B9A29EDC4A200997BC5 /* NameTextField.swift */,
+				D0102B9D29EDC61300997BC5 /* PasswordTextField.swift */,
+				D0F6E76829EDDB2D004D153F /* PhoneTextField.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		D0141ACC29DB0D7500ABCBDA /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
 				D0141AD029DB0D9F00ABCBDA /* QuestionButton.swift */,
 				D03F493729EC646B0024B5C5 /* RegularButton.swift */,
+				D0F6E78629EDF37D004D153F /* FaceIdButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -441,6 +529,7 @@
 			isa = PBXGroup;
 			children = (
 				D03F497129EC79500024B5C5 /* CreateProfileScreen */,
+				D0F6E76E29EDEF56004D153F /* CreatePinScreen */,
 			);
 			path = RegistrationModule;
 			sourceTree = "<group>";
@@ -448,8 +537,10 @@
 		D03F497129EC79500024B5C5 /* CreateProfileScreen */ = {
 			isa = PBXGroup;
 			children = (
+				D0102B9629EDC13C00997BC5 /* Components */,
 				D03F497229EC79610024B5C5 /* CreateProfileView.swift */,
 				D03F497529EC796A0024B5C5 /* CreateProfileViewModel.swift */,
+				D0102B8929EDB96A00997BC5 /* CreateProfileRouter.swift */,
 			);
 			path = CreateProfileScreen;
 			sourceTree = "<group>";
@@ -618,6 +709,7 @@
 				D0FE98AD29D43E5A00E1C983 /* Network */,
 				D0FE98AC29D43E5500E1C983 /* Local */,
 				D0FE98AE29D43E6D00E1C983 /* ContactsManager.swift */,
+				D0F6E76B29EDE668004D153F /* AppearanceManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -627,7 +719,7 @@
 			children = (
 				D0FE98C129D46BBF00E1C983 /* PublicCoordinators */,
 				D0FE98C229D46BC600E1C983 /* TabBarCoordinator */,
-				D0FE98C029D46BB700E1C983 /* MainCoordinator */,
+				D0FE98C029D46BB700E1C983 /* AppCoordinator */,
 				D0FE98C429D46BEE00E1C983 /* ModuleCoordinators */,
 			);
 			path = Coordinators;
@@ -699,6 +791,7 @@
 		D087507729D1987F00454A4B /* Local */ = {
 			isa = PBXGroup;
 			children = (
+				D0102B8C29EDBADC00997BC5 /* Responses */,
 				D087507C29D19C1D00454A4B /* Contact.swift */,
 				D087507E29D19E9400454A4B /* Category.swift */,
 				D06B07B229D2F0A60062968D /* AnalizeCategory.swift */,
@@ -780,6 +873,27 @@
 			path = Config;
 			sourceTree = "<group>";
 		};
+		D0F6E76E29EDEF56004D153F /* CreatePinScreen */ = {
+			isa = PBXGroup;
+			children = (
+				D0F6E76F29EDEF8D004D153F /* CreatePinView.swift */,
+				D0F6E77229EDEFDA004D153F /* CreatePinViewModel.swift */,
+				D0F6E77529EDEFFE004D153F /* CreatePinRouter.swift */,
+			);
+			path = CreatePinScreen;
+			sourceTree = "<group>";
+		};
+		D0F6E77829EDF273004D153F /* PinCodeControl */ = {
+			isa = PBXGroup;
+			children = (
+				D0F6E77929EDF284004D153F /* PinCodePadView.swift */,
+				D0F6E77D29EDF297004D153F /* PinCodePadCellView.swift */,
+				D0F6E78029EDF2A2004D153F /* PinCodeInputStatusView.swift */,
+				D0F6E78329EDF2B1004D153F /* PinCodeStatusLoadingView.swift */,
+			);
+			path = PinCodeControl;
+			sourceTree = "<group>";
+		};
 		D0FE98A629D43B4B00E1C983 /* ru.lproj */ = {
 			isa = PBXGroup;
 			children = (
@@ -801,6 +915,7 @@
 			children = (
 				D0102B7029EDA6E100997BC5 /* KeychainManager */,
 				D0102B6F29EDA6D500997BC5 /* BiometricService */,
+				D0102B7A29EDA84D00997BC5 /* PinCodeManager.swift */,
 			);
 			path = Local;
 			sourceTree = "<group>";
@@ -832,16 +947,18 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
-		D0FE98C029D46BB700E1C983 /* MainCoordinator */ = {
+		D0FE98C029D46BB700E1C983 /* AppCoordinator */ = {
 			isa = PBXGroup;
 			children = (
+				D0102B8329EDB2AD00997BC5 /* AppCoordinator.swift */,
 			);
-			path = MainCoordinator;
+			path = AppCoordinator;
 			sourceTree = "<group>";
 		};
 		D0FE98C129D46BBF00E1C983 /* PublicCoordinators */ = {
 			isa = PBXGroup;
 			children = (
+				D0102B8629EDB71300997BC5 /* RegistrationCoordinator.swift */,
 			);
 			path = PublicCoordinators;
 			sourceTree = "<group>";
@@ -864,6 +981,7 @@
 		D0FE98D029D58C6000E1C983 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				D0F6E77829EDF273004D153F /* PinCodeControl */,
 				D0CD3F4829EC2D8B00AEEC97 /* CustomViews */,
 				D0DA429929E309F700A947F8 /* CategoryPicker */,
 				D0DA429129DDF63600A947F8 /* KeyboardControl */,
@@ -876,6 +994,8 @@
 		D0FE98D129D59B7300E1C983 /* Mappers */ = {
 			isa = PBXGroup;
 			children = (
+				D0102B9029EDBB1E00997BC5 /* RegistrationModelMapper.swift */,
+				D0102B9329EDBB3B00997BC5 /* BaseModelMapper.swift */,
 			);
 			path = Mappers;
 			sourceTree = "<group>";
@@ -1120,22 +1240,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0102B7F29EDA86900997BC5 /* BiometricAuthenticationService.swift in Sources */,
+				D0102B9529EDBB3B00997BC5 /* BaseModelMapper.swift in Sources */,
 				D087507D29D19C1D00454A4B /* Contact.swift in Sources */,
 				D03F495629EC6CF30024B5C5 /* NetworkMonitor.swift in Sources */,
 				D03F492F29EC2F380024B5C5 /* ColorsPalette.swift in Sources */,
 				D06B07D229D4371C0062968D /* Colors.swift in Sources */,
 				D03F494129EC69C10024B5C5 /* RefreshTokenEndpoint.swift in Sources */,
 				D03F496529EC6DE30024B5C5 /* AuthToken.swift in Sources */,
+				D0F6E78229EDF2A2004D153F /* PinCodeInputStatusView.swift in Sources */,
 				D0FE98BB29D45AFC00E1C983 /* Future + Extensions.swift in Sources */,
+				D0102B9F29EDC61300997BC5 /* PasswordTextField.swift in Sources */,
 				D03F494729EC6B570024B5C5 /* RequestMethod.swift in Sources */,
 				D03F493929EC646B0024B5C5 /* RegularButton.swift in Sources */,
 				D06B07CC29D436A00062968D /* Image + Extensions.swift in Sources */,
 				D0FE98D429D59C1700E1C983 /* MainViewModel.swift in Sources */,
 				D0FE98B529D453A100E1C983 /* AddContactViewModel.swift in Sources */,
 				D087507A29D1993E00454A4B /* Payment.swift in Sources */,
+				D0102B8F29EDBAED00997BC5 /* Registration.swift in Sources */,
 				D06B07BF29D432EB0062968D /* ContactCellView.swift in Sources */,
 				D0FE98C929D46C3300E1C983 /* ContactsCoordinator.swift in Sources */,
 				D03F493629EC31530024B5C5 /* ErrorView.swift in Sources */,
+				D0102B8529EDB2AD00997BC5 /* AppCoordinator.swift in Sources */,
 				D0FE98F429D98D8A00E1C983 /* PaymentListView.swift in Sources */,
 				D0FE98E729D7368D00E1C983 /* ColorsGenerator.swift in Sources */,
 				D03F497729EC796A0024B5C5 /* CreateProfileViewModel.swift in Sources */,
@@ -1145,13 +1271,18 @@
 				D03F495F29EC6D690024B5C5 /* Refresher.swift in Sources */,
 				D0FE991029DAFABF00E1C983 /* AppTextField.swift in Sources */,
 				D0DA429F29E3634300A947F8 /* TransactionTabView.swift in Sources */,
+				D0102B9929EDC14A00997BC5 /* EmailTextField.swift in Sources */,
+				D0F6E76C29EDE668004D153F /* AppearanceManager.swift in Sources */,
 				D0DA429729DE00F200A947F8 /* AppKeyboardView.swift in Sources */,
+				D0102B8229EDA87D00997BC5 /* BiometricAuthenticationError.swift in Sources */,
 				D0141AD529DC2A8300ABCBDA /* CategoryPickerView.swift in Sources */,
 				D0141AD829DC314100ABCBDA /* View + Extensions.swift in Sources */,
 				D03F494A29EC6B780024B5C5 /* Data + Extensions.swift in Sources */,
+				D0102B8B29EDB96A00997BC5 /* CreateProfileRouter.swift in Sources */,
 				D03F495329EC6CE50024B5C5 /* KeychainManagerProtocol.swift in Sources */,
 				D06B07C629D434A40062968D /* Button + Extensions.swift in Sources */,
 				D0FE98E429D72C4300E1C983 /* PieChartView.swift in Sources */,
+				D0102B8829EDB71300997BC5 /* RegistrationCoordinator.swift in Sources */,
 				D03F495929EC6D160024B5C5 /* AuthManager.swift in Sources */,
 				D06B07C929D435E90062968D /* String + Extensions.swift in Sources */,
 				D03F496229EC6D7E0024B5C5 /* RequestError.swift in Sources */,
@@ -1160,12 +1291,16 @@
 				D0FE98EA29D73DE000E1C983 /* Color + Extensions.swift in Sources */,
 				D0FE98F729D9D9C600E1C983 /* MainRouter.swift in Sources */,
 				D06B07BB29D2F1C00062968D /* Party.swift in Sources */,
+				D0102B9C29EDC4A200997BC5 /* NameTextField.swift in Sources */,
 				D06B07D829D437970062968D /* Text + Extensions.swift in Sources */,
+				D0102B9229EDBB1E00997BC5 /* RegistrationModelMapper.swift in Sources */,
 				D03F494429EC6A170024B5C5 /* Endpoint.swift in Sources */,
 				D0DA42A329E363F800A947F8 /* TabSection.swift in Sources */,
+				D0F6E76929EDDB2D004D153F /* PhoneTextField.swift in Sources */,
 				D06B07B429D2F0A60062968D /* AnalizeCategory.swift in Sources */,
 				D03F496929EC6E4A0024B5C5 /* AuthorizationState.swift in Sources */,
 				D0FE98F129D84E2100E1C983 /* CategoryListView.swift in Sources */,
+				D0F6E78529EDF2B1004D153F /* PinCodeStatusLoadingView.swift in Sources */,
 				D0FE98FE29DA08A400E1C983 /* IntervalHorizontalView.swift in Sources */,
 				D087506029D193BC00454A4B /* AppDelegate.swift in Sources */,
 				D03F496C29EC6E6A0024B5C5 /* Token.swift in Sources */,
@@ -1174,13 +1309,17 @@
 				D0FE98CC29D471BB00E1C983 /* ContactsViewModel.swift in Sources */,
 				D03F498429EC81600024B5C5 /* RegistrationResponse.swift in Sources */,
 				D0FE98B029D43E6D00E1C983 /* ContactsManager.swift in Sources */,
+				D0F6E77F29EDF297004D153F /* PinCodePadCellView.swift in Sources */,
 				D03F493229EC30A90024B5C5 /* LoadingView.swift in Sources */,
 				D0FE990B29DAEAAE00E1C983 /* Int + Extensions.swift in Sources */,
 				D087507629D1970300454A4B /* MainView.swift in Sources */,
 				D0FE98E129D5D97400E1C983 /* PieSliceView.swift in Sources */,
 				D03F495C29EC6D280024B5C5 /* HTTPClient.swift in Sources */,
 				D0FE98EE29D848B000E1C983 /* TabSectionView.swift in Sources */,
+				D0102B7C29EDA84D00997BC5 /* PinCodeManager.swift in Sources */,
 				D087505A29D1773F00454A4B /* Strings.swift in Sources */,
+				D0F6E77129EDEF8D004D153F /* CreatePinView.swift in Sources */,
+				D0F6E77729EDEFFE004D153F /* CreatePinRouter.swift in Sources */,
 				D03F497B29EC7B1F0024B5C5 /* AuthenticationService.swift in Sources */,
 				D0102B7629EDA73A00997BC5 /* KeychainKeyStorage.swift in Sources */,
 				D0FE98BF29D466BF00E1C983 /* DeviceContactCellView.swift in Sources */,
@@ -1189,10 +1328,13 @@
 				D087500D29D1731900454A4B /* saveMoneyApp.swift in Sources */,
 				D0FE98CF29D4726000E1C983 /* ContactsRouter.swift in Sources */,
 				D087507F29D19E9400454A4B /* Category.swift in Sources */,
+				D0F6E77B29EDF284004D153F /* PinCodePadView.swift in Sources */,
 				D0DA429329DDF64F00A947F8 /* KeyboardControlView.swift in Sources */,
+				D0F6E77429EDEFDA004D153F /* CreatePinViewModel.swift in Sources */,
 				D0141AD229DB0D9F00ABCBDA /* QuestionButton.swift in Sources */,
 				D03F497429EC79610024B5C5 /* CreateProfileView.swift in Sources */,
 				D0FE98FB29DA021D00E1C983 /* CategoryHorizontalListView.swift in Sources */,
+				D0F6E78829EDF37E004D153F /* FaceIdButton.swift in Sources */,
 				D03F498729ED64AB0024B5C5 /* EmptyResponse.swift in Sources */,
 				D03F497E29EC7B2A0024B5C5 /* AuthenticationEndpoint.swift in Sources */,
 				D06B07B829D2F1000062968D /* User.swift in Sources */,
@@ -1223,22 +1365,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0102B7E29EDA86900997BC5 /* BiometricAuthenticationService.swift in Sources */,
+				D0102B9429EDBB3B00997BC5 /* BaseModelMapper.swift in Sources */,
 				D087508229D19E9C00454A4B /* Contact.swift in Sources */,
 				D03F495529EC6CF30024B5C5 /* NetworkMonitor.swift in Sources */,
 				D03F492E29EC2F380024B5C5 /* ColorsPalette.swift in Sources */,
 				D087505F29D193BC00454A4B /* AppDelegate.swift in Sources */,
 				D03F494029EC69C10024B5C5 /* RefreshTokenEndpoint.swift in Sources */,
 				D03F496429EC6DE30024B5C5 /* AuthToken.swift in Sources */,
+				D0F6E78129EDF2A2004D153F /* PinCodeInputStatusView.swift in Sources */,
 				D06B07D729D437970062968D /* Text + Extensions.swift in Sources */,
+				D0102B9E29EDC61300997BC5 /* PasswordTextField.swift in Sources */,
 				D03F494629EC6B570024B5C5 /* RequestMethod.swift in Sources */,
 				D03F493829EC646B0024B5C5 /* RegularButton.swift in Sources */,
 				D06B07BE29D432EB0062968D /* ContactCellView.swift in Sources */,
 				D06B07D429D437590062968D /* Language.swift in Sources */,
 				D0FE98D329D59C1700E1C983 /* MainViewModel.swift in Sources */,
 				D06B07D129D4371C0062968D /* Colors.swift in Sources */,
+				D0102B8E29EDBAED00997BC5 /* Registration.swift in Sources */,
 				D0FE98AF29D43E6D00E1C983 /* ContactsManager.swift in Sources */,
 				D06B07B329D2F0A60062968D /* AnalizeCategory.swift in Sources */,
 				D03F493529EC31530024B5C5 /* ErrorView.swift in Sources */,
+				D0102B8429EDB2AD00997BC5 /* AppCoordinator.swift in Sources */,
 				D0FE98F329D98D8A00E1C983 /* PaymentListView.swift in Sources */,
 				D0DA429629DE00F200A947F8 /* AppKeyboardView.swift in Sources */,
 				D03F497629EC796A0024B5C5 /* CreateProfileViewModel.swift in Sources */,
@@ -1248,13 +1396,18 @@
 				D03F495E29EC6D690024B5C5 /* Refresher.swift in Sources */,
 				D087505929D1773F00454A4B /* Strings.swift in Sources */,
 				D0DA429E29E3634300A947F8 /* TransactionTabView.swift in Sources */,
+				D0102B9829EDC14A00997BC5 /* EmailTextField.swift in Sources */,
+				D0F6E76D29EDE6FF004D153F /* AppearanceManager.swift in Sources */,
 				D0FE990F29DAFABF00E1C983 /* AppTextField.swift in Sources */,
+				D0102B8129EDA87D00997BC5 /* BiometricAuthenticationError.swift in Sources */,
 				D0141AD429DC2A8300ABCBDA /* CategoryPickerView.swift in Sources */,
 				D0141AD729DC314100ABCBDA /* View + Extensions.swift in Sources */,
 				D03F494929EC6B780024B5C5 /* Data + Extensions.swift in Sources */,
+				D0102B8A29EDB96A00997BC5 /* CreateProfileRouter.swift in Sources */,
 				D03F495229EC6CE50024B5C5 /* KeychainManagerProtocol.swift in Sources */,
 				D087503929D1740F00454A4B /* saveMoneyApp.swift in Sources */,
 				D0FE98E329D72C4300E1C983 /* PieChartView.swift in Sources */,
+				D0102B8729EDB71300997BC5 /* RegistrationCoordinator.swift in Sources */,
 				D03F495829EC6D160024B5C5 /* AuthManager.swift in Sources */,
 				D06B07C829D435E90062968D /* String + Extensions.swift in Sources */,
 				D03F496129EC6D7E0024B5C5 /* RequestError.swift in Sources */,
@@ -1263,12 +1416,16 @@
 				D0FE98E929D73DE000E1C983 /* Color + Extensions.swift in Sources */,
 				D0FE98F629D9D9C600E1C983 /* MainRouter.swift in Sources */,
 				D0FE98CB29D471BB00E1C983 /* ContactsViewModel.swift in Sources */,
+				D0102B9B29EDC4A200997BC5 /* NameTextField.swift in Sources */,
 				D06B07CB29D436A00062968D /* Image + Extensions.swift in Sources */,
+				D0102B9129EDBB1E00997BC5 /* RegistrationModelMapper.swift in Sources */,
 				D03F494329EC6A170024B5C5 /* Endpoint.swift in Sources */,
 				D0DA42A229E363F800A947F8 /* TabSection.swift in Sources */,
+				D0F6E76A29EDDE5D004D153F /* PhoneTextField.swift in Sources */,
 				D06B07C129D433C50062968D /* AddContactButton.swift in Sources */,
 				D03F496829EC6E4A0024B5C5 /* AuthorizationState.swift in Sources */,
 				D0FE98F029D84E2100E1C983 /* CategoryListView.swift in Sources */,
+				D0F6E78429EDF2B1004D153F /* PinCodeStatusLoadingView.swift in Sources */,
 				D0FE98FD29DA08A400E1C983 /* IntervalHorizontalView.swift in Sources */,
 				D0FE98BE29D466BF00E1C983 /* DeviceContactCellView.swift in Sources */,
 				D03F496B29EC6E6A0024B5C5 /* Token.swift in Sources */,
@@ -1277,13 +1434,17 @@
 				D06B07B729D2F1000062968D /* User.swift in Sources */,
 				D03F498329EC81600024B5C5 /* RegistrationResponse.swift in Sources */,
 				D0FE98B429D453A100E1C983 /* AddContactViewModel.swift in Sources */,
+				D0F6E77E29EDF297004D153F /* PinCodePadCellView.swift in Sources */,
 				D03F493129EC30A90024B5C5 /* LoadingView.swift in Sources */,
 				D0FE990A29DAEAAE00E1C983 /* Int + Extensions.swift in Sources */,
 				D0FE98B729D453AA00E1C983 /* AddContactView.swift in Sources */,
 				D0DA429829DE00F600A947F8 /* KeyboardControlView.swift in Sources */,
 				D03F495B29EC6D280024B5C5 /* HTTPClient.swift in Sources */,
 				D0FE98E029D5D97400E1C983 /* PieSliceView.swift in Sources */,
+				D0102B7B29EDA84D00997BC5 /* PinCodeManager.swift in Sources */,
 				D0FE98ED29D848B000E1C983 /* TabSectionView.swift in Sources */,
+				D0F6E77029EDEF8D004D153F /* CreatePinView.swift in Sources */,
+				D0F6E77629EDEFFE004D153F /* CreatePinRouter.swift in Sources */,
 				D03F497A29EC7B1F0024B5C5 /* AuthenticationService.swift in Sources */,
 				D0102B7529EDA73A00997BC5 /* KeychainKeyStorage.swift in Sources */,
 				D06B07BA29D2F1C00062968D /* Party.swift in Sources */,
@@ -1292,10 +1453,13 @@
 				D087508029D19E9700454A4B /* Category.swift in Sources */,
 				D0FE98C829D46C3300E1C983 /* ContactsCoordinator.swift in Sources */,
 				D06B07CE29D436BD0062968D /* AppImage.swift in Sources */,
+				D0F6E77A29EDF284004D153F /* PinCodePadView.swift in Sources */,
 				D0FE98D529D5ADC500E1C983 /* MainView.swift in Sources */,
+				D0F6E77329EDEFDA004D153F /* CreatePinViewModel.swift in Sources */,
 				D0141AD129DB0D9F00ABCBDA /* QuestionButton.swift in Sources */,
 				D03F497329EC79610024B5C5 /* CreateProfileView.swift in Sources */,
 				D0FE98FA29DA021D00E1C983 /* CategoryHorizontalListView.swift in Sources */,
+				D0F6E78729EDF37E004D153F /* FaceIdButton.swift in Sources */,
 				D03F498629ED64AB0024B5C5 /* EmptyResponse.swift in Sources */,
 				D03F497D29EC7B2A0024B5C5 /* AuthenticationEndpoint.swift in Sources */,
 				D0FE98BA29D45AFC00E1C983 /* Future + Extensions.swift in Sources */,

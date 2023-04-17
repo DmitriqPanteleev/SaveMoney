@@ -7,7 +7,7 @@
 
 import Foundation
 
-public protocol Endpoint {
+protocol Endpoint {
     
     var scheme: String { get }
     var host: String { get }
@@ -18,13 +18,13 @@ public protocol Endpoint {
     var body: Any? { get }
 }
 
-public extension Endpoint {
+extension Endpoint {
     var scheme: String {
-        return "http"
+        return "https"
     }
 
     var host: String {
-        "beta-cms.profsoft.online"
+        "saveumoney.ru"
     }
     
     var query: [String : String]? {

@@ -7,22 +7,18 @@
 
 import Foundation
 
-public struct Token {
-    public let accessToken: String
-    public let refreshToken: String
-    public let expiresIn: Double
+struct Token {
+    let accessToken: String
     
-    public var isEmpty: Bool {
+    var isEmpty: Bool {
         accessToken.isEmpty
     }
     
-    public init(accessToken: String, refreshToken: String, expiresIn: Double) {
+    init(accessToken: String) {
         self.accessToken = accessToken
-        self.refreshToken = refreshToken
-        self.expiresIn = expiresIn
     }
 
     static func empty() -> Token {
-        return Token(accessToken: "", refreshToken: "", expiresIn: 0.0)
+        return Token(accessToken: "")
     }
 }

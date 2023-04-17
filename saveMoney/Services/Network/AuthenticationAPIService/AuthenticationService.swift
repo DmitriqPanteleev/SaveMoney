@@ -8,7 +8,7 @@
 import Foundation
 
 protocol AuthApiProtocol {
-    func login(email: String, password: String) async throws -> RegistrationResponse
+    func login(email: String, password: String) async throws -> RegistrationModel
 }
 
 protocol RegistrationApiProtocol {
@@ -16,7 +16,7 @@ protocol RegistrationApiProtocol {
                       password: String,
                       name: String,
                       surname: String,
-                      phone: String) async throws -> RegistrationResponse
+                      phone: String) async throws -> RegistrationModel
     
 }
 
@@ -34,9 +34,10 @@ struct AuthenticationService {
 }
 
 extension AuthenticationService: AuthApiProtocol {
-    func login(email: String, password: String) async throws -> RegistrationResponse {
-        try await self.client.sendRequest(endpoint: AuthenticationEndpoint.login(email: email, password: password),
+    func login(email: String, password: String) async throws -> RegistrationModel {
+        let response = try await self.client.sendRequest(endpoint: AuthenticationEndpoint.login(email: email, password: password),
                                 responseModel: RegistrationResponse.self)
+        return RegistrationModelMapper().toLocal(serverEntity: response)
     }
 }
 
@@ -45,13 +46,15 @@ extension AuthenticationService: RegistrationApiProtocol {
                       password: String,
                       name: String,
                       surname: String,
-                      phone: String) async throws -> RegistrationResponse {
-        try await self.client.sendRequest(endpoint: AuthenticationEndpoint.registr(email: email,
+                      phone: String) async throws -> RegistrationModel {
+       let response = try await self.client.sendRequest(endpoint: AuthenticationEndpoint.registr(email: email,
                                                                                    password: password,
                                                                                    name: name,
                                                                                    surname: surname,
                                                                                    phone: phone),
                                           responseModel: RegistrationResponse.self)
+        
+        return RegistrationModelMapper().toLocal(serverEntity: response)
     }
 }
 

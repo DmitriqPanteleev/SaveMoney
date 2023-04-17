@@ -18,7 +18,7 @@ struct ErrorView: View {
             Spacer()
             Text(errorMesssage)
             Spacer()
-            RegularButton(onTapAction: onTapAction)
+            RegularButton(title: .retry, onTapAction: onTapAction)
         }
         .padding(.bottom, 10)
     }

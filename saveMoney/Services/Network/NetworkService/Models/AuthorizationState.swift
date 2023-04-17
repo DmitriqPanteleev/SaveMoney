@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum AuthorizationState {
+enum AuthorizationState {
     case unauthorized
     case authorized(token: Token?)
 }
