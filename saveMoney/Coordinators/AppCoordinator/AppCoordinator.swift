@@ -18,16 +18,21 @@ final class AppCoordinator: NavigationCoordinatable {
     
     private let authorizationState = CurrentValueSubject<AuthorizationState, Never>(.unauthorized)
     private let keychainService = KeychainManger(serviceName: KeychainKeyStorage.get())
+    private let biometricService = BiometricAuthenticationService()
     private var cancellable = Set<AnyCancellable>()
     
     init() {
         if let _ = keychainService.token {
             stack = NavigationStack(initial: \AppCoordinator.tabBar)
         } else {
-            if PinCodeManager.shared.pinCode.isEmpty {
-                stack = NavigationStack(initial: \AppCoordinator.registration)
+            if let pin = keychainService.userPinCode {
+                if pin.isEmpty {
+                    stack = NavigationStack(initial: \AppCoordinator.registration)
+                } else {
+                    stack = NavigationStack(initial: \AppCoordinator.authorization)
+                }
             } else {
-                stack = NavigationStack(initial: \AppCoordinator.authorization)
+                stack = NavigationStack(initial: \AppCoordinator.registration)
             }
         }
         
@@ -40,11 +45,7 @@ final class AppCoordinator: NavigationCoordinatable {
                 switch state {
                 case .unauthorized:
                     self.saveToken(token: nil)
-                    if PinCodeManager.shared.pinCode.isEmpty {
-                        self.root(\.registration)
-                    } else {
-                        self.root(\.authorization)
-                    }
+                    self.root(\.registration)
                 case .authorized(let token):
                     if let token = token {
                         self.saveToken(token: token)
@@ -65,8 +66,10 @@ final class AppCoordinator: NavigationCoordinatable {
 }
 
 extension AppCoordinator {
-    func makeAuthorization() -> some View {
-        Text("Авторизация")
+    func makeAuthorization() -> NavigationViewCoordinator<AuthorizationCoordinator> {
+        NavigationViewCoordinator(AuthorizationCoordinator(keychainManager: keychainService,
+                                                           biometricService: biometricService,
+                                                           authorizationState: authorizationState))
     }
     
     func makeRegistration() -> NavigationViewCoordinator<RegistrationCoordinator> {

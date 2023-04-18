@@ -176,6 +176,16 @@
 		D0F6E78529EDF2B1004D153F /* PinCodeStatusLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6E78329EDF2B1004D153F /* PinCodeStatusLoadingView.swift */; };
 		D0F6E78729EDF37E004D153F /* FaceIdButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6E78629EDF37D004D153F /* FaceIdButton.swift */; };
 		D0F6E78829EDF37E004D153F /* FaceIdButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6E78629EDF37D004D153F /* FaceIdButton.swift */; };
+		D0F6E78A29EDF505004D153F /* AuthorizationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6E78929EDF505004D153F /* AuthorizationCoordinator.swift */; };
+		D0F6E78B29EDF505004D153F /* AuthorizationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6E78929EDF505004D153F /* AuthorizationCoordinator.swift */; };
+		D0F6E78E29EDF61A004D153F /* SubmitPinCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6E78D29EDF61A004D153F /* SubmitPinCodeViewModel.swift */; };
+		D0F6E78F29EDF61A004D153F /* SubmitPinCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6E78D29EDF61A004D153F /* SubmitPinCodeViewModel.swift */; };
+		D0F6E79129EDF688004D153F /* SubmitPinCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6E79029EDF688004D153F /* SubmitPinCodeView.swift */; };
+		D0F6E79229EDF688004D153F /* SubmitPinCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6E79029EDF688004D153F /* SubmitPinCodeView.swift */; };
+		D0F6E79429EDF6F7004D153F /* SubmitPinRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6E79329EDF6F7004D153F /* SubmitPinRouter.swift */; };
+		D0F6E79529EDF6F7004D153F /* SubmitPinRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6E79329EDF6F7004D153F /* SubmitPinRouter.swift */; };
+		D0F6E79729EE00C3004D153F /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6E79629EE00C3004D153F /* TabBarCoordinator.swift */; };
+		D0F6E79829EE00C3004D153F /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6E79629EE00C3004D153F /* TabBarCoordinator.swift */; };
 		D0FE98AA29D43B7E00E1C983 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0FE98A829D43B7E00E1C983 /* Localizable.strings */; };
 		D0FE98AB29D43B8000E1C983 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0FE98A829D43B7E00E1C983 /* Localizable.strings */; };
 		D0FE98AF29D43E6D00E1C983 /* ContactsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE98AE29D43E6D00E1C983 /* ContactsManager.swift */; };
@@ -334,6 +344,11 @@
 		D0F6E78029EDF2A2004D153F /* PinCodeInputStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinCodeInputStatusView.swift; sourceTree = "<group>"; };
 		D0F6E78329EDF2B1004D153F /* PinCodeStatusLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinCodeStatusLoadingView.swift; sourceTree = "<group>"; };
 		D0F6E78629EDF37D004D153F /* FaceIdButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceIdButton.swift; sourceTree = "<group>"; };
+		D0F6E78929EDF505004D153F /* AuthorizationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationCoordinator.swift; sourceTree = "<group>"; };
+		D0F6E78D29EDF61A004D153F /* SubmitPinCodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitPinCodeViewModel.swift; sourceTree = "<group>"; };
+		D0F6E79029EDF688004D153F /* SubmitPinCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitPinCodeView.swift; sourceTree = "<group>"; };
+		D0F6E79329EDF6F7004D153F /* SubmitPinRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitPinRouter.swift; sourceTree = "<group>"; };
+		D0F6E79629EE00C3004D153F /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
 		D0FE98A929D43B7E00E1C983 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = Localizable.strings; sourceTree = "<group>"; };
 		D0FE98AE29D43E6D00E1C983 /* ContactsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsManager.swift; sourceTree = "<group>"; };
 		D0FE98B129D44B2200E1C983 /* saveMoneyDev-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "saveMoneyDev-Info.plist"; sourceTree = "<group>"; };
@@ -728,6 +743,7 @@
 		D087506E29D1967100454A4B /* PublicZone */ = {
 			isa = PBXGroup;
 			children = (
+				D0F6E78C29EDF5FF004D153F /* AuthorizationModule */,
 				D03F497029EC792B0024B5C5 /* RegistrationModule */,
 			);
 			path = PublicZone;
@@ -894,6 +910,16 @@
 			path = PinCodeControl;
 			sourceTree = "<group>";
 		};
+		D0F6E78C29EDF5FF004D153F /* AuthorizationModule */ = {
+			isa = PBXGroup;
+			children = (
+				D0F6E78D29EDF61A004D153F /* SubmitPinCodeViewModel.swift */,
+				D0F6E79029EDF688004D153F /* SubmitPinCodeView.swift */,
+				D0F6E79329EDF6F7004D153F /* SubmitPinRouter.swift */,
+			);
+			path = AuthorizationModule;
+			sourceTree = "<group>";
+		};
 		D0FE98A629D43B4B00E1C983 /* ru.lproj */ = {
 			isa = PBXGroup;
 			children = (
@@ -959,6 +985,7 @@
 			isa = PBXGroup;
 			children = (
 				D0102B8629EDB71300997BC5 /* RegistrationCoordinator.swift */,
+				D0F6E78929EDF505004D153F /* AuthorizationCoordinator.swift */,
 			);
 			path = PublicCoordinators;
 			sourceTree = "<group>";
@@ -966,6 +993,7 @@
 		D0FE98C229D46BC600E1C983 /* TabBarCoordinator */ = {
 			isa = PBXGroup;
 			children = (
+				D0F6E79629EE00C3004D153F /* TabBarCoordinator.swift */,
 			);
 			path = TabBarCoordinator;
 			sourceTree = "<group>";
@@ -1282,6 +1310,7 @@
 				D03F495329EC6CE50024B5C5 /* KeychainManagerProtocol.swift in Sources */,
 				D06B07C629D434A40062968D /* Button + Extensions.swift in Sources */,
 				D0FE98E429D72C4300E1C983 /* PieChartView.swift in Sources */,
+				D0F6E79829EE00C3004D153F /* TabBarCoordinator.swift in Sources */,
 				D0102B8829EDB71300997BC5 /* RegistrationCoordinator.swift in Sources */,
 				D03F495929EC6D160024B5C5 /* AuthManager.swift in Sources */,
 				D06B07C929D435E90062968D /* String + Extensions.swift in Sources */,
@@ -1298,6 +1327,7 @@
 				D0DA42A329E363F800A947F8 /* TabSection.swift in Sources */,
 				D0F6E76929EDDB2D004D153F /* PhoneTextField.swift in Sources */,
 				D06B07B429D2F0A60062968D /* AnalizeCategory.swift in Sources */,
+				D0F6E78B29EDF505004D153F /* AuthorizationCoordinator.swift in Sources */,
 				D03F496929EC6E4A0024B5C5 /* AuthorizationState.swift in Sources */,
 				D0FE98F129D84E2100E1C983 /* CategoryListView.swift in Sources */,
 				D0F6E78529EDF2B1004D153F /* PinCodeStatusLoadingView.swift in Sources */,
@@ -1307,6 +1337,7 @@
 				D03F496F29EC700B0024B5C5 /* ServerResponse.swift in Sources */,
 				D0FE990829DAD06F00E1C983 /* AddPaymentView.swift in Sources */,
 				D0FE98CC29D471BB00E1C983 /* ContactsViewModel.swift in Sources */,
+				D0F6E79229EDF688004D153F /* SubmitPinCodeView.swift in Sources */,
 				D03F498429EC81600024B5C5 /* RegistrationResponse.swift in Sources */,
 				D0FE98B029D43E6D00E1C983 /* ContactsManager.swift in Sources */,
 				D0F6E77F29EDF297004D153F /* PinCodePadCellView.swift in Sources */,
@@ -1315,8 +1346,10 @@
 				D087507629D1970300454A4B /* MainView.swift in Sources */,
 				D0FE98E129D5D97400E1C983 /* PieSliceView.swift in Sources */,
 				D03F495C29EC6D280024B5C5 /* HTTPClient.swift in Sources */,
+				D0F6E79529EDF6F7004D153F /* SubmitPinRouter.swift in Sources */,
 				D0FE98EE29D848B000E1C983 /* TabSectionView.swift in Sources */,
 				D0102B7C29EDA84D00997BC5 /* PinCodeManager.swift in Sources */,
+				D0F6E78F29EDF61A004D153F /* SubmitPinCodeViewModel.swift in Sources */,
 				D087505A29D1773F00454A4B /* Strings.swift in Sources */,
 				D0F6E77129EDEF8D004D153F /* CreatePinView.swift in Sources */,
 				D0F6E77729EDEFFE004D153F /* CreatePinRouter.swift in Sources */,
@@ -1407,6 +1440,7 @@
 				D03F495229EC6CE50024B5C5 /* KeychainManagerProtocol.swift in Sources */,
 				D087503929D1740F00454A4B /* saveMoneyApp.swift in Sources */,
 				D0FE98E329D72C4300E1C983 /* PieChartView.swift in Sources */,
+				D0F6E79729EE00C3004D153F /* TabBarCoordinator.swift in Sources */,
 				D0102B8729EDB71300997BC5 /* RegistrationCoordinator.swift in Sources */,
 				D03F495829EC6D160024B5C5 /* AuthManager.swift in Sources */,
 				D06B07C829D435E90062968D /* String + Extensions.swift in Sources */,
@@ -1423,6 +1457,7 @@
 				D0DA42A229E363F800A947F8 /* TabSection.swift in Sources */,
 				D0F6E76A29EDDE5D004D153F /* PhoneTextField.swift in Sources */,
 				D06B07C129D433C50062968D /* AddContactButton.swift in Sources */,
+				D0F6E78A29EDF505004D153F /* AuthorizationCoordinator.swift in Sources */,
 				D03F496829EC6E4A0024B5C5 /* AuthorizationState.swift in Sources */,
 				D0FE98F029D84E2100E1C983 /* CategoryListView.swift in Sources */,
 				D0F6E78429EDF2B1004D153F /* PinCodeStatusLoadingView.swift in Sources */,
@@ -1432,6 +1467,7 @@
 				D03F496E29EC700B0024B5C5 /* ServerResponse.swift in Sources */,
 				D0FE990729DAD06F00E1C983 /* AddPaymentView.swift in Sources */,
 				D06B07B729D2F1000062968D /* User.swift in Sources */,
+				D0F6E79129EDF688004D153F /* SubmitPinCodeView.swift in Sources */,
 				D03F498329EC81600024B5C5 /* RegistrationResponse.swift in Sources */,
 				D0FE98B429D453A100E1C983 /* AddContactViewModel.swift in Sources */,
 				D0F6E77E29EDF297004D153F /* PinCodePadCellView.swift in Sources */,
@@ -1440,8 +1476,10 @@
 				D0FE98B729D453AA00E1C983 /* AddContactView.swift in Sources */,
 				D0DA429829DE00F600A947F8 /* KeyboardControlView.swift in Sources */,
 				D03F495B29EC6D280024B5C5 /* HTTPClient.swift in Sources */,
+				D0F6E79429EDF6F7004D153F /* SubmitPinRouter.swift in Sources */,
 				D0FE98E029D5D97400E1C983 /* PieSliceView.swift in Sources */,
 				D0102B7B29EDA84D00997BC5 /* PinCodeManager.swift in Sources */,
+				D0F6E78E29EDF61A004D153F /* SubmitPinCodeViewModel.swift in Sources */,
 				D0FE98ED29D848B000E1C983 /* TabSectionView.swift in Sources */,
 				D0F6E77029EDEF8D004D153F /* CreatePinView.swift in Sources */,
 				D0F6E77629EDEFFE004D153F /* CreatePinRouter.swift in Sources */,

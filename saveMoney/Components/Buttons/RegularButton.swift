@@ -25,6 +25,25 @@ struct RegularButton: View {
     }
 }
 
+struct SigningButton: View {
+    
+    let title: Strings
+    let sendableModel: SigningState
+    let onTapAction: PassthroughSubject<SigningState, Never>
+    
+    var body: some View {
+        Button(actionPublisher: onTapAction,
+               sendableModel: sendableModel) {
+            Text(title)
+                .frame(width: UIScreen.main.bounds.width - 32,
+                       height: 44)
+                .background(ColorsPalette.shared.beige)
+                .cornerRadius(8)
+        }
+        .tint(.white)
+    }
+}
+
 #if DEBUG
 struct RegularButton_Previews: PreviewProvider {
     static var previews: some View {

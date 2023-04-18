@@ -13,7 +13,7 @@ final class RegistrationCoordinator: NavigationCoordinatable {
     var stack = Stinsen.NavigationStack<RegistrationCoordinator>(initial: \.createProfile)
     
     @Root var createProfile = makeCreateProfile
-    @Route(.push) var createPin = makeCreatePin
+    @Route(.fullScreen) var createPin = makeCreatePin
     
     let authorizationState: CurrentValueSubject<AuthorizationState, Never>
     private let keychainManager: PinManagerProtocol
@@ -42,5 +42,6 @@ extension RegistrationCoordinator {
         let viewModel = CreatePinViewModel(keychainManager: keychainManager,
                                            token: token,
                                            router: self)
+        CreatePinView(viewModel: viewModel)
     }
 }

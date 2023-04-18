@@ -13,6 +13,7 @@
 // MARK: - RegistrationModule & AuthModule
 "signUp" = "Регистрация";
 "signIn" = "Войти";
+"haveNoAccount" = "Нет аккаунта? Зарегистрируйтесь!";
 "emailPlaceholder" = "Введите e-mail";
 "surnamePlaceholder" = "Введите фамилию";
 "namePlaceholder" = "Введите имя";
@@ -21,6 +22,7 @@
 "incorrectData" = "Данные введенны неправильно!";
 "pinSavedSuccess" = "PIN-код успешно сохранен";
 "createPin" = "Создайте PIN-код";
+"enterPin" = "Введите PIN-код";
 
 // MARK: - Services
 "accessDenied" = "Доступ запрещен";

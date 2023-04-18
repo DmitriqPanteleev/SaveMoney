@@ -39,6 +39,7 @@ private extension CreateProfileViewModel {
         bindSurname()
         bindName()
         bindPhone()
+        bindSignState()
         bindSaveTap()
     }
     
@@ -119,18 +120,30 @@ private extension CreateProfileViewModel {
     
     func bindSaveTap() {
         let request = input.onSaveTap
-            .handleEvents(receiveOutput: { [weak self] in
+            .handleEvents(receiveOutput: { [weak self] _ in
                 self?.output.screenState = .processing
             })
-            .map { [unowned self] in
-                Future {
-                    try await self.apiService.registration(email: self.output.email,
-                                                           password: self.output.password,
-                                                           name: self.output.name,
-                                                           surname: self.output.surname,
-                                                           phone: self.output.phone.toServerPhone())
+            .map { [unowned self] state in
+                switch state {
+                case .signIn:
+                    return Future {
+                        try await self.apiService.registration(email: self.output.email,
+                                                               password: self.output.password,
+                                                               name: self.output.name,
+                                                               surname: self.output.surname,
+                                                               phone: self.output.phone.toServerPhone())
+                    }
+                    .materialize()
+                case .signUp:
+                    return Future {
+                        try await self.apiService.registration(email: self.output.email,
+                                                               password: self.output.password,
+                                                               name: self.output.name,
+                                                               surname: self.output.surname,
+                                                               phone: self.output.phone.toServerPhone())
+                    }
+                    .materialize()
                 }
-                .materialize()
             }
             .switchToLatest()
             .share()
@@ -156,11 +169,19 @@ private extension CreateProfileViewModel {
                 }
             }
             .store(in: &cancellable)
-            
+        
         request
             .values()
             .sink { [weak self] response in
                 self?.router?.pushToCreatePin(with: Token(accessToken: response.token))
+            }
+            .store(in: &cancellable)
+    }
+    
+    func bindSignState() {
+        input.onChangeTab
+            .sink { [weak self] in
+                self?.output.signState = $0
             }
             .store(in: &cancellable)
     }
@@ -174,11 +195,14 @@ extension CreateProfileViewModel {
         let onChangeName = PassthroughSubject<String, Never>()
         let onChangePhone = PassthroughSubject<String, Never>()
         
-        let onSaveTap = PassthroughSubject<Void, Never>()
+        let onChangeTab = PassthroughSubject<SigningState, Never>()
+        let onSaveTap = PassthroughSubject<SigningState, Never>()
     }
     
     struct Output {
         var screenState: LoadableViewState = .content
+        var signState: SigningState = .signIn
+        var selectionState = 0
         
         var email = ""
         var password = ""
@@ -195,5 +219,19 @@ extension CreateProfileViewModel {
         var isShowingErrorAlert = false
         
         var errorMessage = ""
+    }
+}
+
+enum SigningState: Hashable {
+    case signIn
+    case signUp
+    
+    var buttonMessage: Strings {
+        switch self {
+        case .signIn:
+            return .signIn
+        case .signUp:
+            return .signUp
+        }
     }
 }

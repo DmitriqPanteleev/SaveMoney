@@ -14,7 +14,7 @@ struct CreateProfileView: View {
     var body: some View {
         LoadableView(state: viewModel.output.screenState,
                      content: content)
-        .navigationTitle(Text(.signUp))
+        .navigationTitle(Text(viewModel.output.signState.buttonMessage))
         .alert(isPresented: $viewModel.output.isShowingErrorAlert,
                content: alertContent)
     }
@@ -22,14 +22,32 @@ struct CreateProfileView: View {
 
 private extension CreateProfileView {
     func content() -> some View {
+        TabView(selection: $viewModel.output.signState) {
+            signInTab
+                .tag(SigningState.signIn)
+            signUpTab
+                .tag(SigningState.signUp)
+        }
+        .tabViewStyle(.page(indexDisplayMode: .never))
+        .bottomButton(buttonContent: signUpButtonView)
+        .animation(.easeInOut(duration: 0.25),
+                   value: viewModel.output.signState)
+        .padding(.top, 20)
+    }
+    
+    var signUpTab: some View {
         VStack(spacing: 24) {
             accountData
             personalData
             Spacer()
         }
         .padding(.horizontal)
-        .padding(.top, 20)
-        .bottomButton(buttonContent: saveButtonView)
+    }
+    
+    var signInTab: some View {
+        accountData
+            .padding(.horizontal)
+            .padding(.bottom, 50)
     }
     
     var accountData: some View {
@@ -91,16 +109,38 @@ private extension CreateProfileView {
                        onChangePhone: viewModel.input.onChangePhone)
     }
     
-    func saveButtonView() -> some View {
-        RegularButton(title: .signUp,
-                      onTapAction: viewModel.input.onSaveTap)
-        .disabled(!(viewModel.output.emailState == .success && viewModel.output.passwordState == .success && viewModel.output.surnameState == .success && viewModel.output.nameState == .success))
-        .opacity((viewModel.output.emailState == .success && viewModel.output.passwordState == .success && viewModel.output.surnameState == .success && viewModel.output.nameState == .success) ? 1.0 : 0.5)
-        .animation(.easeInOut(duration: 0.25))
+    func signUpButtonView() -> some View {
+        VStack(spacing: 16){
+            registrButton
+            SigningButton(title: viewModel.output.signState == .signIn ? .signIn : .signUp,
+                          sendableModel: viewModel.output.signState == .signIn ? .signIn : .signUp,
+                          onTapAction: viewModel.input.onSaveTap)
+            .disabled(!isButtonEnabled)
+            .opacity(isButtonEnabled ? 1.0 : 0.5)
+            .animation(.easeInOut(duration: 0.25))
+        }
+    }
+    
+    @ViewBuilder var registrButton: some View {
+        if viewModel.output.signState == .signIn{
+            Button(actionPublisher: viewModel.input.onChangeTab,
+                   sendableModel: .signUp) {
+                Text(.haveNoAccount)
+                    .font(.caption)
+                    .underline()
+            }
+            .tint(ColorsPalette.shared.lightOrange)
+        }
     }
     
     func alertContent() -> Alert {
         Alert(title: Text(viewModel.output.errorMessage))
+    }
+}
+
+private extension CreateProfileView {
+    var isButtonEnabled: Bool {
+        viewModel.output.emailState == .success && viewModel.output.passwordState == .success && viewModel.output.surnameState == .success && viewModel.output.nameState == .success && viewModel.output.phoneState == .success
     }
 }
 
