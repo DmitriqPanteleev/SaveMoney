@@ -12,8 +12,8 @@ import CombineExt
 final class CreateProfileViewModel: ObservableObject {
     
     // MARK: Services
-    let apiService: RegistrationApiProtocol
-    weak var router: CreateProfileRouter?
+    private let apiService: CommonSignApiProtocol
+    private weak var router: CreateProfileRouter?
     
     // MARK: - Variables
     let input: Input
@@ -21,7 +21,7 @@ final class CreateProfileViewModel: ObservableObject {
     
     private var cancellable = Set<AnyCancellable>()
     
-    init(apiService: RegistrationApiProtocol, router: CreateProfileRouter?) {
+    init(apiService: CommonSignApiProtocol, router: CreateProfileRouter?) {
         self.apiService = apiService
         self.router = router
         
@@ -125,7 +125,7 @@ private extension CreateProfileViewModel {
             })
             .map { [unowned self] state in
                 switch state {
-                case .signIn:
+                case .signUp:
                     return Future {
                         try await self.apiService.registration(email: self.output.email,
                                                                password: self.output.password,
@@ -134,13 +134,10 @@ private extension CreateProfileViewModel {
                                                                phone: self.output.phone.toServerPhone())
                     }
                     .materialize()
-                case .signUp:
+                case .signIn:
                     return Future {
-                        try await self.apiService.registration(email: self.output.email,
-                                                               password: self.output.password,
-                                                               name: self.output.name,
-                                                               surname: self.output.surname,
-                                                               phone: self.output.phone.toServerPhone())
+                        try await self.apiService.login(email: self.output.email,
+                                                        password: self.output.password)
                     }
                     .materialize()
                 }

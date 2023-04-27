@@ -13,8 +13,9 @@ struct AddPaymentView: View {
     @StateObject var viewModel: AddPaymentViewModel
     
     var body: some View {
-        content()
-            .overlay(content: keyboardPanel)
+        LoadableView(state: viewModel.output.screenState,
+                     content: content,
+                     onAppearDidLoad: viewModel.input.onAppear)
     }
 }
 
@@ -26,6 +27,7 @@ private extension AddPaymentView {
             Spacer()
         }
         .padding(.horizontal)
+        .overlay(content: keyboardPanel)
     }
     
     var topBlock: some View {
@@ -39,15 +41,29 @@ private extension AddPaymentView {
             .foregroundColor(.black)
             .font(.system(size: 42, weight: .semibold))
             
-            Text(viewModel.output.description)
-            .foregroundColor(.appGray)
-            .font(.system(size: 12))
-            .padding(.horizontal, 32)
-            .lineLimit(1)
+            description
         }
         .padding(.vertical, 72)
     }
     
+    @ViewBuilder var description: some View {
+        if let description = viewModel.output.description {
+            Text(description)
+            .foregroundColor(.appGray)
+            .font(.system(size: 12))
+            .padding(.horizontal, 32)
+            .lineLimit(1)
+        } else {
+            Button(action: {}) {
+                Text("Введите описание")
+                .foregroundColor(.appGray)
+                .font(.system(size: 12))
+                .padding(.horizontal, 32)
+                .lineLimit(1)
+            }
+            .tint(.appGray)
+        }
+    }
     var categoriesControl: some View {
         CategoryPickerView(models: viewModel.output.categories,
                            onCategoryChange: viewModel.input.onCategoryChange)
@@ -68,7 +84,7 @@ private extension AddPaymentView {
 #if DEBUG
 struct AddPaymentView_Previews: PreviewProvider {
     static var previews: some View {
-        AddPaymentView(viewModel: AddPaymentViewModel(isEditing: false))
+        AddPaymentView(viewModel: AddPaymentViewModel(isEditing: false, categoryApiService: CategoryApiService(client: HTTPClientImpl()), apiService: PaymentApiService(client: HTTPClientImpl())))
     }
 }
 #endif

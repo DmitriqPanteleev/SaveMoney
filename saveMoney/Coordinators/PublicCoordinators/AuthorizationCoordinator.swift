@@ -14,14 +14,12 @@ final class AuthorizationCoordinator: NavigationCoordinatable {
     @Root var pinCode = makePinCode
     
     private let keychainManager: KeychainManger
-    private let biometricService: BiometricAuthenticationService
+    private let biometricService = DIContainer.shared.container.resolve(BiometricAuthenticationService.self)!
     let authorizationState: CurrentValueSubject<AuthorizationState, Never>
     
     init(keychainManager: KeychainManger,
-         biometricService: BiometricAuthenticationService,
          authorizationState: CurrentValueSubject<AuthorizationState, Never>) {
         self.keychainManager = keychainManager
-        self.biometricService = biometricService
         self.authorizationState = authorizationState
     }
     

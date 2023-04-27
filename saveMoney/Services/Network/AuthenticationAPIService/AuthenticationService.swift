@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol AuthApiProtocol {
+protocol LoginApiProtocol {
     func login(email: String, password: String) async throws -> RegistrationModel
 }
 
@@ -20,12 +20,16 @@ protocol RegistrationApiProtocol {
     
 }
 
+protocol CommonSignApiProtocol: LoginApiProtocol, RegistrationApiProtocol {
+    
+}
+
 protocol ProfileApiProtocol {
     func changePassword(newPassword: String) async throws
     func logOut() async throws -> String
 }
 
-struct AuthenticationService {
+struct AuthenticationApiService {
     let client: HTTPClient
     
     init(client: HTTPClient) {
@@ -33,7 +37,7 @@ struct AuthenticationService {
     }
 }
 
-extension AuthenticationService: AuthApiProtocol {
+extension AuthenticationApiService: LoginApiProtocol {
     func login(email: String, password: String) async throws -> RegistrationModel {
         let response = try await self.client.sendRequest(endpoint: AuthenticationEndpoint.login(email: email, password: password),
                                 responseModel: RegistrationResponse.self)
@@ -41,7 +45,7 @@ extension AuthenticationService: AuthApiProtocol {
     }
 }
 
-extension AuthenticationService: RegistrationApiProtocol {
+extension AuthenticationApiService: RegistrationApiProtocol {
     func registration(email: String,
                       password: String,
                       name: String,
@@ -58,7 +62,7 @@ extension AuthenticationService: RegistrationApiProtocol {
     }
 }
 
-extension AuthenticationService: ProfileApiProtocol {
+extension AuthenticationApiService: ProfileApiProtocol {
     func changePassword(newPassword: String) async throws {
         let _ = try await self.client.sendRequest(endpoint: AuthenticationEndpoint.changePassword(newPassword: newPassword),
                                           responseModel: EmptyResponse.self)
@@ -69,6 +73,6 @@ extension AuthenticationService: ProfileApiProtocol {
                                                     responseModel: ServerResponse<LogoutResponse>.self).data.message
         return msg ?? ""
     }
-    
-    
 }
+
+extension AuthenticationApiService: CommonSignApiProtocol { }

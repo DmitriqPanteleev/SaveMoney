@@ -16,24 +16,19 @@ final class AppCoordinator: NavigationCoordinatable {
     @Root var registration = makeRegistration
     @Root var tabBar = makeTabBar
     
-    private let authorizationState = CurrentValueSubject<AuthorizationState, Never>(.unauthorized)
-    private let keychainService = KeychainManger(serviceName: KeychainKeyStorage.get())
-    private let biometricService = BiometricAuthenticationService()
+    private let authorizationState = DIContainer.shared.container.resolve(CurrentValueSubject<AuthorizationState, Never>.self)!
+    private let keychainService = DIContainer.shared.container.resolve(KeychainManger.self)!
     private var cancellable = Set<AnyCancellable>()
     
     init() {
         if let _ = keychainService.token {
-            stack = NavigationStack(initial: \AppCoordinator.tabBar)
-        } else {
-            if let pin = keychainService.userPinCode {
-                if pin.isEmpty {
-                    stack = NavigationStack(initial: \AppCoordinator.registration)
-                } else {
-                    stack = NavigationStack(initial: \AppCoordinator.authorization)
-                }
+            if let _ = keychainService.userPinCode {
+                stack = NavigationStack(initial: \AppCoordinator.authorization)
             } else {
-                stack = NavigationStack(initial: \AppCoordinator.registration)
+                stack = NavigationStack(initial: \AppCoordinator.tabBar)
             }
+        } else {
+                stack = NavigationStack(initial: \AppCoordinator.registration)
         }
         
         authorizationState
@@ -68,7 +63,6 @@ final class AppCoordinator: NavigationCoordinatable {
 extension AppCoordinator {
     func makeAuthorization() -> NavigationViewCoordinator<AuthorizationCoordinator> {
         NavigationViewCoordinator(AuthorizationCoordinator(keychainManager: keychainService,
-                                                           biometricService: biometricService,
                                                            authorizationState: authorizationState))
     }
     
@@ -77,7 +71,7 @@ extension AppCoordinator {
                                                           keychainManager: keychainService))
     }
     
-    func makeTabBar() -> some View {
-        Text("Таббар")
+    func makeTabBar() -> NavigationViewCoordinator<TabBarCoordinator> {
+        NavigationViewCoordinator(TabBarCoordinator())
     }
 }

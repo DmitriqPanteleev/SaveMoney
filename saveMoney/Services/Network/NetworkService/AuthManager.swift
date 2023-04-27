@@ -38,22 +38,14 @@ actor AuthManager {
         if let handle = refreshTask {
             return try await handle.value
         }
-        
-        guard let accessToken: String = keychainManager.token,
-              let expiresIn: Double = keychainManager.tokenExpiresIn,
-              let refreshToken: String =  keychainManager.refreshToken else {
+        guard let accessToken: String = keychainManager.token else {
+            print("HAVE NO TOKEN")
             return nil
         }
         
-        let token = AuthToken(accessToken: accessToken,
-                              refreshToken: refreshToken,
-                              expiresIn: expiresIn)
-        
-        if token.isValid {
-            return token
-        }
-
-        return try await self.refreshToken()
+        let token = AuthToken(accessToken: accessToken)
+        print(token)
+        return token
     }
     
     func refreshToken() async throws -> AuthToken {
@@ -71,8 +63,6 @@ actor AuthManager {
                 let token = try await service.refresh(withRefreshToken: refreshToken, accessToken: accessToken)
                 
                 keychainManager.token = token.accessToken
-                keychainManager.tokenExpiresIn = token.expiresIn
-                keychainManager.refreshToken = token.refreshToken
                 try await Task.sleep(nanoseconds: 500000000)
                 return token
             } catch {

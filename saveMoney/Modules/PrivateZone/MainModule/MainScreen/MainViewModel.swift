@@ -9,6 +9,8 @@ import Foundation
 import Combine
 
 final class MainViewModel: ObservableObject {
+    // MARK: - Services
+    private weak var router: MainRouter?
     
     // MARK: - Variables
     let input: Input
@@ -16,7 +18,9 @@ final class MainViewModel: ObservableObject {
     
     private var cancellable = Set<AnyCancellable>()
     
-    init() {
+    init(router: MainRouter?) {
+        self.router = router
+        
         self.input = Input()
         self.output = Output()
         
@@ -27,10 +31,19 @@ final class MainViewModel: ObservableObject {
 private extension MainViewModel {
     func bind() {
         bindOnAppear()
+        bindAddPaymentTap()
     }
     
     func bindOnAppear() {
         
+    }
+    
+    func bindAddPaymentTap() {
+        input.onAddPaymentTap
+            .sink { [weak self] in
+                self?.router?.pushToAddPayment()
+            }
+            .store(in: &cancellable)
     }
 }
 
@@ -38,9 +51,6 @@ extension MainViewModel {
     struct Input {
         let onAppear = PassthroughSubject<Void, Never>()
         let onChangeInterval = PassthroughSubject<AnalitycInterval, Never>()
-        // для смены дня, недели и тд
-        // false - тап налево, true - там направо
-        let onChangeStep = PassthroughSubject<Bool, Never>()
         let onChangeTab = PassthroughSubject<TabSection, Never>()
         let onCategoryTap = PassthroughSubject<AnalizeCategory, Never>()
         let onAddCategoryTap = PassthroughSubject<Void, Never>()

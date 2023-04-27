@@ -16,7 +16,7 @@ final class AppearanceManager {
     
     private static func setupTabBar() {
         let appearance = UITabBarAppearance()
-        appearance.configureWithTransparentBackground()
+        appearance.configureWithDefaultBackground()
         appearance.backgroundColor = UIColor(.white)
         appearance.stackedLayoutAppearance.normal.iconColor = UIColor(.gray)
         UITabBar.appearance().standardAppearance = appearance

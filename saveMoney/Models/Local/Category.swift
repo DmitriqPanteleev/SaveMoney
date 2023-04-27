@@ -20,28 +20,28 @@ struct Category: Identifiable, Hashable {
     static func mock() -> Category {
         Category(id: 1,
                  name: "Еда",
-                 colorString: "38243D",
+                 colorString: "E0C279",
                  isCustom: false)
     }
     
     static func mock2() -> Category {
         Category(id: 2,
                  name: "Жилье",
-                 colorString: "AD70BD",
+                 colorString: "E0B075",
                  isCustom: false)
     }
     
     static func mock3() -> Category {
         Category(id: 3,
                  name: "Связь и интернет",
-                 colorString: "C3B2C8",
+                 colorString: "615434",
                  isCustom: false)
     }
     
     static func mock4() -> Category {
         Category(id: 4,
                  name: "Автомобиль",
-                 colorString: "7E518A",
+                 colorString: "615D51",
                  isCustom: true)
     }
 }

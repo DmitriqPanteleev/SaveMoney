@@ -38,13 +38,16 @@ extension View {
     }
     
     func shadowBorder(backgroundColor: Color = .white,
-                      cornerRadius: CGFloat = 20) -> some View {
+                      cornerRadius: CGFloat = 20,
+                      shadowOpacity: CGFloat = 0.08) -> some View {
         self
             .padding(.horizontal)
             .padding(.vertical, 10)
             .background(backgroundColor)
             .cornerRadius(cornerRadius)
-            .shadow(color: .black.opacity(0.08), radius: 4, y: 2)
+            .shadow(color: .black.opacity(shadowOpacity),
+                    radius: 4,
+                    y: 2)
     }
 }
 
@@ -83,7 +86,6 @@ struct Popup<T: View>: ViewModifier {
 }
 
 extension View {
-    
     func popUp<Content: View>(isPresented: Binding<Bool>,
                               content: @escaping () -> Content) -> some View {
         self

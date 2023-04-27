@@ -44,8 +44,11 @@ class HTTPClientAuthImpl: HTTPClient {
     private func request(from endpoint: Endpoint) async throws -> URLRequest {
         var urlComponents = URLComponents()
         urlComponents.scheme = endpoint.scheme
+        urlComponents.port = 49460
         urlComponents.host = endpoint.host
         urlComponents.path = endpoint.path
+        
+        print(urlComponents)
         
         if let queryDict = endpoint.query {
             urlComponents.queryItems = []
@@ -68,7 +71,8 @@ class HTTPClientAuthImpl: HTTPClient {
         var header = endpoint.header ?? [:]
         
         if let accessToken = token?.accessToken {
-            header["Authorization"] = "JWT " + accessToken
+            print(accessToken)
+            header["token"] = accessToken
         }
         
         request.allHTTPHeaderFields = header

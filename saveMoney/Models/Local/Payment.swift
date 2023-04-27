@@ -35,6 +35,16 @@ struct Payment: Identifiable {
                 categoryColor: .black)
     }
     
+    static func emptyWithSum(_ sum: Int, _ date: Date) -> Payment {
+        Payment(id: UUID().hashValue,
+                description: "",
+                date: date,
+                sum: sum,
+                categoryId: 1,
+                categoryName: "",
+                categoryColor: .black)
+    }
+    
     static func mock() -> Payment {
         Payment(id: 1,
                 description: "На булочки",
@@ -42,7 +52,7 @@ struct Payment: Identifiable {
                 sum: 200,
                 categoryId: 1,
                 categoryName: "Еда",
-                categoryColor: .init(hex: "38243D"))
+                categoryColor: .init(hex: "E0C279"))
     }
     
     static func mock2() -> Payment {
@@ -52,7 +62,7 @@ struct Payment: Identifiable {
                 sum: 800,
                 categoryId: 1,
                 categoryName: "Еда",
-                categoryColor: .init(hex: "38243D"))
+                categoryColor: .init(hex: "E0C279"))
     }
     
     static func mock3() -> Payment {
@@ -62,6 +72,6 @@ struct Payment: Identifiable {
                 sum: 2200,
                 categoryId: 2,
                 categoryName: "Жилье",
-                categoryColor: .init(hex: "AD70BD"))
+                categoryColor: .init(hex: "E0B075"))
     }
 }

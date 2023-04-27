@@ -17,7 +17,7 @@ final class RegistrationCoordinator: NavigationCoordinatable {
     
     let authorizationState: CurrentValueSubject<AuthorizationState, Never>
     private let keychainManager: PinManagerProtocol
-    private let apiService = AuthenticationService(client: HTTPClientImpl())
+    private let apiService = DIContainer.shared.container.resolve(AuthenticationApiService.self)!
     
     init(authorizationState: CurrentValueSubject<AuthorizationState, Never>,
          keychainManager: PinManagerProtocol) {

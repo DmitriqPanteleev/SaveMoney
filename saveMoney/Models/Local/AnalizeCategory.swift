@@ -34,27 +34,27 @@ struct AnalizeCategory: Identifiable, Comparable, Hashable {
         AnalizeCategory(id: 1,
                         name: "Еда",
                         sum: 10000,
-                        colorString: "38243D")
+                        colorString: "E0C279")
     }
     
     static func mock2() -> AnalizeCategory {
         AnalizeCategory(id: 2,
                         name: "Жилье",
                         sum: 20000,
-                        colorString: "AD70BD")
+                        colorString: "E0B075")
     }
     
     static func mock3() -> AnalizeCategory {
         AnalizeCategory(id: 3,
                         name: "Связь и интернет",
                         sum: 2000,
-                        colorString: "C3B2C8")
+                        colorString: "615434")
     }
     
     static func mock4() -> AnalizeCategory {
         AnalizeCategory(id: 4,
                         name: "Автомобиль",
                         sum: 7000,
-                        colorString: "7E518A")
+                        colorString: "615D51")
     }
 }

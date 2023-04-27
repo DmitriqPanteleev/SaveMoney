@@ -64,7 +64,7 @@ final class Refresher: Refreshable {
         
         var header = endpoint.header ?? [:]
         
-        header["Authorization"] = "JWT " + accessToken
+        header["token"] = accessToken
         
         request.allHTTPHeaderFields = header
         

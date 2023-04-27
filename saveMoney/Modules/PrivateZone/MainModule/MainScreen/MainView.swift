@@ -22,18 +22,17 @@ private extension MainView {
     @ViewBuilder func content() -> some View {
         VStack(spacing: 24) {
             headerView
-                .padding(.bottom, 12)
             intervalsView
             pieChartView
             categoriesList
             paymentListView
         }
-        .padding(.top, 16)
+        .padding(.top, 8)
     }
     
     var headerView: some View {
         ZStack(alignment: .center) {
-            tabSectionView
+            //tabSectionView
             trailingItems
         }
     }
@@ -54,7 +53,7 @@ private extension MainView {
                 .frame(width: 20,
                        height: 20)
         }
-        .tint(ColorsPalette.shared.beige)
+        .tint(ColorsPalette.shared.lightOrange)
     }
     
     var tabSectionView: some View {
@@ -69,17 +68,12 @@ private extension MainView {
     
     var pieChartView: some View {
         ZStack(alignment: .bottomTrailing) {
-            HStack(spacing: 16) {
-                chevronLeft
-                PieChartView(values: categoriesToSums(),
-                             names: categoriesToNames(),
-                             formatter: formatterForChart,
-                             colors: categoriesToColors(),
-                             backgroundColor: .white)
-                .padding(.horizontal)
-                chevronRight
-            }
-            analyticsButton
+            PieChartView(values: categoriesToSums(),
+                         names: categoriesToNames(),
+                         formatter: formatterForChart,
+                         colors: categoriesToColors(),
+                         backgroundColor: .white)
+            .padding(.horizontal, 36)
         }
         .padding(.horizontal, 16)
     }
@@ -116,44 +110,6 @@ private extension MainView {
                        height: 24)
         }
         .tint(ColorsPalette.shared.beige)
-    }
-    
-    var analyticsButton: some View {
-        Button(actionPublisher: viewModel.input.onAnalyticsTap) {
-            Image(systemName: "waveform.and.magnifyingglass")
-                .resizable()
-                .scaledToFit()
-                .foregroundColor(ColorsPalette.shared.lightOrange)
-                .frame(width: 24, height: 24)
-                .padding(.leading, 10)
-                .padding([.vertical, .trailing], 8)
-                .background(Color.white)
-                .cornerRadius(24)
-                .shadow(color: .gray.opacity(0.5),
-                        radius: 4,
-                        y: 2)
-        }
-        .tint(.gray)
-    }
-    
-    var chevronLeft: some View {
-        Button(actionPublisher: viewModel.input.onChangeStep,
-        sendableModel: false) {
-            Image(systemName: "chevron.left")
-                .resizable()
-                .frame(width: 10, height: 40)
-                .foregroundColor(.gray)
-        }
-    }
-    
-    var chevronRight: some View {
-        Button(actionPublisher: viewModel.input.onChangeStep,
-        sendableModel: true) {
-            Image(systemName: "chevron.right")
-                .resizable()
-                .frame(width: 10, height: 40)
-                .foregroundColor(.gray)
-        }
     }
 }
 
@@ -193,7 +149,7 @@ private extension MainView {
 #if DEBUG
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView(viewModel: MainViewModel())
+        MainView(viewModel: MainViewModel(router: nil))
     }
 }
 #endif

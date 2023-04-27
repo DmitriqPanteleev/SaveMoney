@@ -140,14 +140,14 @@ private extension CreateProfileView {
 
 private extension CreateProfileView {
     var isButtonEnabled: Bool {
-        viewModel.output.emailState == .success && viewModel.output.passwordState == .success && viewModel.output.surnameState == .success && viewModel.output.nameState == .success && viewModel.output.phoneState == .success
+        viewModel.output.signState == .signUp ? viewModel.output.emailState == .success && viewModel.output.passwordState == .success && viewModel.output.surnameState == .success && viewModel.output.nameState == .success && viewModel.output.phoneState == .success : viewModel.output.emailState == .success && viewModel.output.passwordState == .success
     }
 }
 
 #if DEBUG
 struct CreateProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        CreateProfileView(viewModel: CreateProfileViewModel(apiService: AuthenticationService(client: HTTPClientImpl()), router: nil))
+        CreateProfileView(viewModel: CreateProfileViewModel(apiService: AuthenticationApiService(client: HTTPClientImpl()), router: nil))
     }
 }
 #endif
