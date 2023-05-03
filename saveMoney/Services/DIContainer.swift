@@ -82,6 +82,11 @@ final class DIContainer {
             return CategoryApiService(client: client)
         }
         
+        container.register(AnalyticApiService.self) { r in
+            let client = r.resolve(HTTPClientAuthImpl.self)!
+            return AnalyticApiService(client: client)
+        }
+        
         container.register(BiometricAuthenticationService.self) { r in
             return BiometricAuthenticationService()
         }

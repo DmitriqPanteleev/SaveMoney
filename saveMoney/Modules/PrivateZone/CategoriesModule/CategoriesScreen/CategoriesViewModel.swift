@@ -34,6 +34,7 @@ final class CategoriesViewModel: ObservableObject {
 private extension CategoriesViewModel {
     func bind() {
         bindOnAppear()
+        bindAddAndEditCategory()
     }
     
     func bindOnAppear() {
@@ -66,11 +67,55 @@ private extension CategoriesViewModel {
             }
             .store(in: &cancellable)
     }
+    
+    func bindAddAndEditCategory() {
+        input.onAddCategory
+            .sink { [weak self] in
+                self?.router?.pushToAddCategory()
+            }
+            .store(in: &cancellable)
+        
+        input.onEditCategory
+            .sink { [weak self] in
+                self?.router?.pushToEditCategory(categoryId: $0)
+            }
+            .store(in: &cancellable)
+    }
+    
+    func bindDeleteCategory() {
+        let request = input.onDeleteCategory
+            .map { [unowned self] id in
+                Future {
+                    try await self.apiService.deleteCategory(id: id)
+                }
+                .materialize()
+            }
+            .switchToLatest()
+            .share()
+            .receive(on: DispatchQueue.main)
+        
+        request
+            .failures()
+            .sink { [weak self] error in
+                print(error)
+            }
+            .store(in: &cancellable)
+        
+        request
+            .values()
+            .sink { [weak self] in
+                self?.input.onAppear.send()
+            }
+            .store(in: &cancellable)
+    }
 }
 
 extension CategoriesViewModel {
     struct Input {
         let onAppear = PassthroughSubject<Void, Never>()
+        let onAddCategory = PassthroughSubject<Void, Never>()
+        let onEditCategory = PassthroughSubject<Int, Never>()
+        let onDeleteCategory = PassthroughSubject<Int, Never>()
     }
     
     struct Output {

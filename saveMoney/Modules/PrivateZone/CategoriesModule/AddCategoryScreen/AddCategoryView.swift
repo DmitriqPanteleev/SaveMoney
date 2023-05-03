@@ -9,10 +9,7 @@ import SwiftUI
 import Combine
 
 struct AddCategoryView: View {
-    @State var name = "Техника"
-    @State var color: CGColor = .init(red: 0.5,
-                                      green: 0.3,
-                                      blue: 0.81, alpha: 1)
+    @StateObject var viewModel: AddCategoryViewModel
     
     var body: some View {
         content()
@@ -25,15 +22,19 @@ private extension AddCategoryView {
         VStack(alignment: .leading, spacing: 8) {
             Text("Введите название категории: ")
             AppTextField(placeholder: "",
-                         text: $name,
+                         text: $viewModel.output.name,
                          style: .description,
-                         onChangeText: PassthroughSubject<String, Never>())
+                         onChangeText: viewModel.input.onChangeName)
             .padding(.bottom, 16)
-            ColorPicker(selection: $color) {
+            
+            ColorPicker(selection: $viewModel.output.color) {
                 Text("Выберите цвет категории")
             }
+            .onChange(of: viewModel.output.color,
+                      perform: sendNewColor)
             Spacer()
-            RegularButton(title: .add, onTapAction: PassthroughSubject<Void, Never>())
+            RegularButton(title: .add,
+                          onTapAction: viewModel.input.onSaveTap)
         }
         .padding(.top, 24)
         .padding(.horizontal)
@@ -41,8 +42,17 @@ private extension AddCategoryView {
     }
 }
 
-struct AddCategoryView_Previews: PreviewProvider {
-    static var previews: some View {
-        AddCategoryView()
+private extension AddCategoryView {
+    func sendNewColor(_ color: CGColor) {
+        viewModel.input.onChangeColor.send(color)
     }
 }
+
+#if DEBUG
+struct AddCategoryView_Previews: PreviewProvider {
+    static var previews: some View {
+        AddCategoryView(viewModel: AddCategoryViewModel(apiService: CategoryApiService(client: HTTPClientImpl()),
+                                                        router: nil))
+    }
+}
+#endif

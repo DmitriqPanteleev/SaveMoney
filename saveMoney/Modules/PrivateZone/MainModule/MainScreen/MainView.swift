@@ -22,7 +22,6 @@ private extension MainView {
     @ViewBuilder func content() -> some View {
         VStack(spacing: 24) {
             headerView
-            intervalsView
             pieChartView
             categoriesList
             paymentListView
@@ -58,12 +57,6 @@ private extension MainView {
     
     var tabSectionView: some View {
         TabSectionView(currentSection: viewModel.output.tabSection)
-    }
-    
-    var intervalsView: some View {
-        IntervalHorizontalView(currentInterval: viewModel.output.interval,
-                               accentColor: ColorsPalette.shared.beige)
-        .padding(.horizontal)
     }
     
     var pieChartView: some View {

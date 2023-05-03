@@ -25,9 +25,9 @@ struct ServerPayment: Codable {
     }
     
     enum CategoryCodingKeys: String, CodingKey {
-        case categoryId
-        case categoryName
-        case categoryColor
+        case categoryId = "id"
+        case categoryName = "name"
+        case categoryColor = "color"
     }
     
     init(from decoder: Decoder) throws {

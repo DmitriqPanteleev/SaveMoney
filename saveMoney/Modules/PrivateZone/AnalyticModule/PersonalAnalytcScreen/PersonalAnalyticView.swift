@@ -9,42 +9,44 @@ import SwiftUI
 import Charts
 
 struct PersonalAnalyticView: View {
-    let categories: [AnalizeCategory]
-    let payments: [Payment]
-    let food: [Payment]
-    let auto: [Payment]
-    let network: [Payment]
     
-    @State var currentInterval: AnalitycInterval = .month
+    @StateObject var viewModel: PersonalAnalyticViewModel
     
     var body: some View {
-        content()
-            .navigationTitle(Text("Аналитика"))
+        VStack {
+            IntervalHorizontalView(currentInterval: viewModel.output.interval,
+                                   accentColor: ColorsPalette.shared.beige,
+                                   onChangeInterval: viewModel.input.onIntervalTap)
+            .padding(.horizontal)
+            
+            Spacer()
+            LoadableView(state: viewModel.output.screenState,
+                         content: content,
+                         onAppearDidLoad: viewModel.input.onAppear,
+                         repeatButtonTap: viewModel.input.onAppear)
+            Spacer()
+        }
+        .navigationTitle(Text("Аналитика"))
     }
 }
 
 private extension PersonalAnalyticView {
-    func content() -> some View {
+    @ViewBuilder func content() -> some View {
+        if viewModel.output.payments.isEmpty {
+            Text("Пока нет трат")
+        } else {
+            successContent
+        }
+    }
+    
+    var successContent: some View {
         VStack {
             ScrollView {
-                IntervalHorizontalView(currentInterval: currentInterval,
-                                       accentColor: ColorsPalette.shared.beige)
-                .padding(.horizontal)
                 bar
                     .shadowBorder()
                     .padding(.horizontal)
-                    .padding(.top, 24)
                     .padding(.bottom, 24)
-                lineChart
-                    .shadowBorder()
-                    .padding(.horizontal)
-                foodview
-                    .shadowBorder()
-                    .padding(.horizontal)
-                autoview
-                    .shadowBorder()
-                    .padding(.horizontal)
-                networkview
+                charts
             }
         }
         .padding(.top, 24)
@@ -53,7 +55,7 @@ private extension PersonalAnalyticView {
     var bar: some View {
         VStack(alignment: .leading, spacing: 16) {
             Text("Траты по категориям:")
-            Chart(categories, id: \.id) { item in
+            Chart(viewModel.output.categories) { item in
                 BarMark(
                     x: .value("Категория", item.name),
                     y: .value("Сумма", item.sum)
@@ -72,7 +74,7 @@ private extension PersonalAnalyticView {
                 Text("Больше всего трат: ")
                     .font(.caption)
                     .bold()
-                Text("Жилье")
+                Text(maxCategory)
                     .font(.caption)
                 Spacer()
             }
@@ -81,85 +83,72 @@ private extension PersonalAnalyticView {
                 Text("Меньше всего трат: ")
                     .font(.caption)
                     .bold()
-                Text(categories.first(where: { c in
-                    c.name == "Связь и интернет"
-                })!.name)
+                Text(minCategory)
                     .font(.caption)
                 Spacer()
             }
         }
     }
     
-    var lineChart: some View {
-        VStack(alignment: .leading, spacing: 16) {
-            Text("Траты на Жилье:")
-            Chart {
-                ForEach(payments, id: \.id) { item in
-                        LineMark(
-                            x: .value("Date", item.date),
-                            y: .value("Profit B", item.sum),
-                            series: .value("Company", "B")
-                        )
-                        .foregroundStyle(item.categoryColor)
-                    }
-            }
+    var charts: some View {
+        ForEach(paymentCategories, id: \.self) { category in
+            lineChart(viewModel.output.payments.filter {
+                $0.categoryName == category
+            })
+                .shadowBorder()
+                .padding(.horizontal)
         }
     }
     
-    var foodview: some View {
-        VStack(alignment: .leading, spacing: 16) {
-            Text("Траты на Еда:")
-            Chart {
-                ForEach(food, id: \.id) { item in
-                        LineMark(
-                            x: .value("Date", item.date),
-                            y: .value("Profit B", item.sum),
-                            series: .value("Company", "B")
-                        )
-                        .foregroundStyle(item.categoryColor)
-                    }
+    func lineChart(_ payments: [Payment]) -> some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Text("\(payments.first!.categoryName):")
+            if payments.count < 2 {
+                HStack {
+                    Text("Мало данных")
+                        .font(.caption)
+                        .bold()
+                    Spacer()
+                }
+            } else {
+                Chart {
+                    ForEach(payments, id: \.id) { item in
+                            LineMark(
+                                x: .value("Date", item.date),
+                                y: .value("Profit B", item.sum),
+                                series: .value("Company", "B")
+                            )
+                            .foregroundStyle(item.categoryColor)
+                        }
+                }
+                .padding(.top, 8)
             }
         }
-    }
-    
-    var autoview: some View {
-        VStack(alignment: .leading, spacing: 16) {
-            Text("Траты на Автомобиль:")
-            Chart {
-                ForEach(auto, id: \.id) { item in
-                        LineMark(
-                            x: .value("Date", item.date),
-                            y: .value("Profit B", item.sum),
-                            series: .value("Company", "B")
-                        )
-                        .foregroundStyle(item.categoryColor)
-                    }
-            }
-        }
-    }
-    
-    var networkview: some View {
-        VStack(alignment: .leading, spacing: 16) {
-            Text("Траты на Связь и интернет:")
-            Chart {
-                ForEach(network, id: \.id) { item in
-                        LineMark(
-                            x: .value("Date", item.date),
-                            y: .value("Profit B", item.sum),
-                            series: .value("Company", "B")
-                        )
-                        .foregroundStyle(item.categoryColor)
-                    }
-            }
-        }
-        
     }
 }
 
-#if DEBUG
-struct PersonalAnalyticView_Previews: PreviewProvider {
-    static var previews: some View {
-        PersonalAnalyticView(categories: [.mock(), .mock2(), .mock3(), .mock4()], payments: [.emptyWithSum(2000, .init(timeIntervalSince1970: 1680395737)),.emptyWithSum(1000, .init(timeIntervalSince1970: 1680568537)),.emptyWithSum(3000, .init(timeIntervalSince1970: 1680827737)),.emptyWithSum(3400, .init(timeIntervalSince1970: 1681173337)),.emptyWithSum(2130, .init(timeIntervalSince1970: 1681432537)),.emptyWithSum(10000, .init(timeIntervalSince1970: 1681778137))], food: [.emptyWithSum(300, .init(timeIntervalSince1970: 1680395737)),.emptyWithSum(200, .init(timeIntervalSince1970: 1680568537)),.emptyWithSum(400, .init(timeIntervalSince1970: 1680827737)),.emptyWithSum(700, .init(timeIntervalSince1970: 1681173337)),.emptyWithSum(250, .init(timeIntervalSince1970: 1681432537)),.emptyWithSum(870, .init(timeIntervalSince1970: 1681778137))], auto: [.emptyWithSum(500, .init(timeIntervalSince1970: 1680395737)),.emptyWithSum(1000, .init(timeIntervalSince1970: 1680568537)),.emptyWithSum(300, .init(timeIntervalSince1970: 1680827737)),.emptyWithSum(500, .init(timeIntervalSince1970: 1681173337)),.emptyWithSum(500, .init(timeIntervalSince1970: 1681432537)),.emptyWithSum(500, .init(timeIntervalSince1970: 1681778137))], network: [.emptyWithSum(2000, .init(timeIntervalSince1970: 1680395737)),.emptyWithSum(1000, .init(timeIntervalSince1970: 1680568537))])
+private extension PersonalAnalyticView {
+    var maxCategory: String {
+        viewModel.output.categories.sorted { fst, snd in
+            fst > snd
+        }.first?.name ?? ""
+    }
+    
+    var minCategory: String {
+        viewModel.output.categories.sorted { fst, snd in
+            fst < snd
+        }.first?.name ?? ""
+    }
+    
+    var paymentCategories: [String] {
+        viewModel.output.payments.map{ $0.categoryName }
     }
 }
-#endif
+
+//#if DEBUG
+//struct PersonalAnalyticView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        PersonalAnalyticView(viewModel: PersonalAnalyticViewModel(apiService: AnalyticApiService(client: HTTPClientAuthImpl(authManager: AuthManager(keychainManager: KeychainManger(serviceName: ), refreshService: Refresher, authorizationState: <#T##CurrentValueSubject<AuthorizationState, Never>#>)))))
+//    }
+//}
+//#endif

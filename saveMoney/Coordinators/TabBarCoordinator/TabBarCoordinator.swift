@@ -20,11 +20,13 @@ final class TabBarCoordinator: TabCoordinatable {
     @Route(tabItem: makeAnalyticsTab) var analytics = makeAnalytics
     
     private let categoryApiService = DIContainer.shared.container.resolve(CategoryApiService.self)!
-#if DEBUG
+    private let analyticApiService = DIContainer.shared.container.resolve(AnalyticApiService.self)!
+    
+    #if DEBUG
     deinit {
         print("Coordinator \(self) deinited")
     }
-#endif
+    #endif
     
     func customize(_ view: AnyView) -> some View {
         view
@@ -45,7 +47,7 @@ extension TabBarCoordinator {
     }
     
     func makeAnalytics() -> NavigationViewCoordinator<AnalyticsCoordinator> {
-        NavigationViewCoordinator(AnalyticsCoordinator())
+        NavigationViewCoordinator(AnalyticsCoordinator(apiService: analyticApiService))
     }
     
     @ViewBuilder func makeAnalyticsTab(isActive: Bool) -> some View {

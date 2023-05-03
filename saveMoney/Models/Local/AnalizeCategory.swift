@@ -12,7 +12,7 @@ struct AnalizeCategory: Identifiable, Comparable, Hashable {
     let name: String
     let sum: Int
     let colorString: String
-    // дата на моей стороне
+    let date: Date
     
     var formattedSum: String {
         "\(sum) ₽"
@@ -34,27 +34,31 @@ struct AnalizeCategory: Identifiable, Comparable, Hashable {
         AnalizeCategory(id: 1,
                         name: "Еда",
                         sum: 10000,
-                        colorString: "E0C279")
+                        colorString: "E0C279",
+                        date: .distantFuture)
     }
     
     static func mock2() -> AnalizeCategory {
         AnalizeCategory(id: 2,
                         name: "Жилье",
                         sum: 20000,
-                        colorString: "E0B075")
+                        colorString: "E0B075",
+                        date: .distantFuture)
     }
     
     static func mock3() -> AnalizeCategory {
         AnalizeCategory(id: 3,
                         name: "Связь и интернет",
                         sum: 2000,
-                        colorString: "615434")
+                        colorString: "615434",
+                        date: .distantFuture)
     }
     
     static func mock4() -> AnalizeCategory {
         AnalizeCategory(id: 4,
                         name: "Автомобиль",
                         sum: 7000,
-                        colorString: "615D51")
+                        colorString: "615D51",
+                        date: .distantFuture)
     }
 }

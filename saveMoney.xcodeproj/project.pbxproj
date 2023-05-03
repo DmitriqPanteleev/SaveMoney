@@ -154,6 +154,24 @@
 		D087508629D19F3800454A4B /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D087508429D19F3800454A4B /* ContactsView.swift */; };
 		D0A02ED229F0C47F0013364B /* AnalyticsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A02ED129F0C47F0013364B /* AnalyticsCoordinator.swift */; };
 		D0A02ED329F0C50B0013364B /* AnalyticsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A02ED129F0C47F0013364B /* AnalyticsCoordinator.swift */; };
+		D0B87F8829FB198300300098 /* AddCategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B87F8729FB198300300098 /* AddCategoryViewModel.swift */; };
+		D0B87F8929FB198300300098 /* AddCategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B87F8729FB198300300098 /* AddCategoryViewModel.swift */; };
+		D0B87F8B29FB1A1900300098 /* AddCategoryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B87F8A29FB1A1900300098 /* AddCategoryRouter.swift */; };
+		D0B87F8C29FB1A1900300098 /* AddCategoryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B87F8A29FB1A1900300098 /* AddCategoryRouter.swift */; };
+		D0B87F8E29FD325200300098 /* PersonalAnalyticViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B87F8D29FD325200300098 /* PersonalAnalyticViewModel.swift */; };
+		D0B87F8F29FD325200300098 /* PersonalAnalyticViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B87F8D29FD325200300098 /* PersonalAnalyticViewModel.swift */; };
+		D0B87F9229FD335B00300098 /* AnalyticEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B87F9129FD335B00300098 /* AnalyticEndpoint.swift */; };
+		D0B87F9329FD335B00300098 /* AnalyticEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B87F9129FD335B00300098 /* AnalyticEndpoint.swift */; };
+		D0B87F9529FD336600300098 /* AnalyticApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B87F9429FD336600300098 /* AnalyticApiService.swift */; };
+		D0B87F9629FD336600300098 /* AnalyticApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B87F9429FD336600300098 /* AnalyticApiService.swift */; };
+		D0B87F9829FD38EA00300098 /* ServerAnalyticCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B87F9729FD38EA00300098 /* ServerAnalyticCategory.swift */; };
+		D0B87F9929FD38EA00300098 /* ServerAnalyticCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B87F9729FD38EA00300098 /* ServerAnalyticCategory.swift */; };
+		D0B87F9B29FD403A00300098 /* AnalizeCategoryModelMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B87F9A29FD403A00300098 /* AnalizeCategoryModelMapper.swift */; };
+		D0B87F9C29FD403A00300098 /* AnalizeCategoryModelMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B87F9A29FD403A00300098 /* AnalizeCategoryModelMapper.swift */; };
+		D0B87F9E29FD596A00300098 /* TimeIntervals.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B87F9D29FD596A00300098 /* TimeIntervals.swift */; };
+		D0B87F9F29FD596A00300098 /* TimeIntervals.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B87F9D29FD596A00300098 /* TimeIntervals.swift */; };
+		D0B87FA129FD8E2400300098 /* Array + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B87FA029FD8E2400300098 /* Array + Extensions.swift */; };
+		D0B87FA229FD8E2400300098 /* Array + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B87FA029FD8E2400300098 /* Array + Extensions.swift */; };
 		D0DA429329DDF64F00A947F8 /* KeyboardControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DA429229DDF64F00A947F8 /* KeyboardControlView.swift */; };
 		D0DA429629DE00F200A947F8 /* AppKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DA429529DE00F200A947F8 /* AppKeyboardView.swift */; };
 		D0DA429729DE00F200A947F8 /* AppKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DA429529DE00F200A947F8 /* AppKeyboardView.swift */; };
@@ -222,8 +240,6 @@
 		D0F6E7C529F05D07004D153F /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6E7C329F05D07004D153F /* DIContainer.swift */; };
 		D0F6E7C729F07006004D153F /* Date + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6E7C629F07006004D153F /* Date + Extensions.swift */; };
 		D0F6E7C829F07006004D153F /* Date + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6E7C629F07006004D153F /* Date + Extensions.swift */; };
-		D0F6E7CA29F08BB4004D153F /* AuthorizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6E7C929F08BB4004D153F /* AuthorizationView.swift */; };
-		D0F6E7CB29F08BB4004D153F /* AuthorizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6E7C929F08BB4004D153F /* AuthorizationView.swift */; };
 		D0F6E7D029F0B000004D153F /* CategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6E7CF29F0B000004D153F /* CategoriesView.swift */; };
 		D0F6E7D129F0B000004D153F /* CategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6E7CF29F0B000004D153F /* CategoriesView.swift */; };
 		D0F6E7D329F0B2F0004D153F /* CategoriesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6E7D229F0B2F0004D153F /* CategoriesCoordinator.swift */; };
@@ -378,6 +394,15 @@
 		D087507E29D19E9400454A4B /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		D087508429D19F3800454A4B /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
 		D0A02ED129F0C47F0013364B /* AnalyticsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsCoordinator.swift; sourceTree = "<group>"; };
+		D0B87F8729FB198300300098 /* AddCategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCategoryViewModel.swift; sourceTree = "<group>"; };
+		D0B87F8A29FB1A1900300098 /* AddCategoryRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCategoryRouter.swift; sourceTree = "<group>"; };
+		D0B87F8D29FD325200300098 /* PersonalAnalyticViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalAnalyticViewModel.swift; sourceTree = "<group>"; };
+		D0B87F9129FD335B00300098 /* AnalyticEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticEndpoint.swift; sourceTree = "<group>"; };
+		D0B87F9429FD336600300098 /* AnalyticApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticApiService.swift; sourceTree = "<group>"; };
+		D0B87F9729FD38EA00300098 /* ServerAnalyticCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerAnalyticCategory.swift; sourceTree = "<group>"; };
+		D0B87F9A29FD403A00300098 /* AnalizeCategoryModelMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalizeCategoryModelMapper.swift; sourceTree = "<group>"; };
+		D0B87F9D29FD596A00300098 /* TimeIntervals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeIntervals.swift; sourceTree = "<group>"; };
+		D0B87FA029FD8E2400300098 /* Array + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array + Extensions.swift"; sourceTree = "<group>"; };
 		D0DA429229DDF64F00A947F8 /* KeyboardControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardControlView.swift; sourceTree = "<group>"; };
 		D0DA429529DE00F200A947F8 /* AppKeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppKeyboardView.swift; sourceTree = "<group>"; };
 		D0DA429D29E3634300A947F8 /* TransactionTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTabView.swift; sourceTree = "<group>"; };
@@ -412,7 +437,6 @@
 		D0F6E7C029F05A12004D153F /* ContactModelMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactModelMapper.swift; sourceTree = "<group>"; };
 		D0F6E7C329F05D07004D153F /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 		D0F6E7C629F07006004D153F /* Date + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date + Extensions.swift"; sourceTree = "<group>"; };
-		D0F6E7C929F08BB4004D153F /* AuthorizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationView.swift; sourceTree = "<group>"; };
 		D0F6E7CF29F0B000004D153F /* CategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesView.swift; sourceTree = "<group>"; };
 		D0F6E7D229F0B2F0004D153F /* CategoriesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCoordinator.swift; sourceTree = "<group>"; };
 		D0F6E7D529F0B3C6004D153F /* AddCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCategoryView.swift; sourceTree = "<group>"; };
@@ -666,6 +690,7 @@
 				D0FE990929DAEAAE00E1C983 /* Int + Extensions.swift */,
 				D0141AD629DC314100ABCBDA /* View + Extensions.swift */,
 				D0F6E7C629F07006004D153F /* Date + Extensions.swift */,
+				D0B87FA029FD8E2400300098 /* Array + Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -738,6 +763,7 @@
 				D03F492C29EC2F180024B5C5 /* Colors */,
 				D06B07C329D434940062968D /* Extensions */,
 				D06B07D329D437590062968D /* Language.swift */,
+				D0B87F9D29FD596A00300098 /* TimeIntervals.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -820,7 +846,7 @@
 			isa = PBXGroup;
 			children = (
 				D0F6E7D829F0B765004D153F /* AnalyticModule */,
-				D0F6E7CC29F0AF7D004D153F /* CategoriesMoodule */,
+				D0F6E7CC29F0AF7D004D153F /* CategoriesModule */,
 				D087507029D1968400454A4B /* MainModule */,
 				D087507129D1969000454A4B /* FamilyModule */,
 				D087507229D1969F00454A4B /* PartyModule */,
@@ -833,11 +859,9 @@
 			isa = PBXGroup;
 			children = (
 				D0FE990229DAD04B00E1C983 /* AddPaymentScreen */,
-				D0FE98F829DA019800E1C983 /* AddCategoryScreen */,
 				D0FE98B229D4538D00E1C983 /* AddContactScreen */,
 				D087508329D19F1E00454A4B /* ContactsScreen */,
 				D087507329D196D500454A4B /* MainScreen */,
-				D0F6E7C929F08BB4004D153F /* AuthorizationView.swift */,
 			);
 			path = MainModule;
 			sourceTree = "<group>";
@@ -895,6 +919,7 @@
 				D0F6E7A329EF3253004D153F /* ServerPayment.swift */,
 				D0F6E7B029EF4BE6004D153F /* ServerCategory.swift */,
 				D0F6E7BD29F059B8004D153F /* ServerContact.swift */,
+				D0B87F9729FD38EA00300098 /* ServerAnalyticCategory.swift */,
 			);
 			path = Server;
 			sourceTree = "<group>";
@@ -908,6 +933,15 @@
 				D0FE98CD29D4726000E1C983 /* ContactsRouter.swift */,
 			);
 			path = ContactsScreen;
+			sourceTree = "<group>";
+		};
+		D0B87F9029FD334200300098 /* AnalyticAPIService */ = {
+			isa = PBXGroup;
+			children = (
+				D0B87F9129FD335B00300098 /* AnalyticEndpoint.swift */,
+				D0B87F9429FD336600300098 /* AnalyticApiService.swift */,
+			);
+			path = AnalyticAPIService;
 			sourceTree = "<group>";
 		};
 		D0CD3F4829EC2D8B00AEEC97 /* CustomViews */ = {
@@ -1020,13 +1054,13 @@
 			path = ContactsAPIService;
 			sourceTree = "<group>";
 		};
-		D0F6E7CC29F0AF7D004D153F /* CategoriesMoodule */ = {
+		D0F6E7CC29F0AF7D004D153F /* CategoriesModule */ = {
 			isa = PBXGroup;
 			children = (
 				D0F6E7CE29F0AFA3004D153F /* AddCategoryScreen */,
 				D0F6E7CD29F0AF90004D153F /* CategoriesScreen */,
 			);
-			path = CategoriesMoodule;
+			path = CategoriesModule;
 			sourceTree = "<group>";
 		};
 		D0F6E7CD29F0AF90004D153F /* CategoriesScreen */ = {
@@ -1043,6 +1077,8 @@
 			isa = PBXGroup;
 			children = (
 				D0F6E7D529F0B3C6004D153F /* AddCategoryView.swift */,
+				D0B87F8729FB198300300098 /* AddCategoryViewModel.swift */,
+				D0B87F8A29FB1A1900300098 /* AddCategoryRouter.swift */,
 			);
 			path = AddCategoryScreen;
 			sourceTree = "<group>";
@@ -1059,6 +1095,7 @@
 			isa = PBXGroup;
 			children = (
 				D0F6E7DA29F0B7F1004D153F /* PersonalAnalyticView.swift */,
+				D0B87F8D29FD325200300098 /* PersonalAnalyticViewModel.swift */,
 			);
 			path = PersonalAnalytcScreen;
 			sourceTree = "<group>";
@@ -1092,6 +1129,7 @@
 		D0FE98AD29D43E5A00E1C983 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				D0B87F9029FD334200300098 /* AnalyticAPIService */,
 				D0F6E7B629EFE44F004D153F /* ContactsAPIService */,
 				D0F6E7A929EF4715004D153F /* CategoryAPIService */,
 				D0F6E79C29EEDD4F004D153F /* PaymentAPIService */,
@@ -1176,6 +1214,7 @@
 				D0F6E7A629EF3C9D004D153F /* PaymentModelMapper.swift */,
 				D0F6E7B329EF4C12004D153F /* CategoryModelMapper.swift */,
 				D0F6E7C029F05A12004D153F /* ContactModelMapper.swift */,
+				D0B87F9A29FD403A00300098 /* AnalizeCategoryModelMapper.swift */,
 			);
 			path = Mappers;
 			sourceTree = "<group>";
@@ -1207,13 +1246,6 @@
 				D0FE98FC29DA08A400E1C983 /* IntervalHorizontalView.swift */,
 			);
 			path = Components;
-			sourceTree = "<group>";
-		};
-		D0FE98F829DA019800E1C983 /* AddCategoryScreen */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = AddCategoryScreen;
 			sourceTree = "<group>";
 		};
 		D0FE990229DAD04B00E1C983 /* AddPaymentScreen */ = {
@@ -1458,7 +1490,7 @@
 				D0102B8B29EDB96A00997BC5 /* CreateProfileRouter.swift in Sources */,
 				D03F495329EC6CE50024B5C5 /* KeychainManagerProtocol.swift in Sources */,
 				D06B07C629D434A40062968D /* Button + Extensions.swift in Sources */,
-				D0F6E7CB29F08BB4004D153F /* AuthorizationView.swift in Sources */,
+				D0B87F9929FD38EA00300098 /* ServerAnalyticCategory.swift in Sources */,
 				D0FE98E429D72C4300E1C983 /* PieChartView.swift in Sources */,
 				D0F6E79829EE00C3004D153F /* TabBarCoordinator.swift in Sources */,
 				D0102B8829EDB71300997BC5 /* RegistrationCoordinator.swift in Sources */,
@@ -1487,12 +1519,14 @@
 				D0F6E7B229EF4BE6004D153F /* ServerCategory.swift in Sources */,
 				D0FE98FE29DA08A400E1C983 /* IntervalHorizontalView.swift in Sources */,
 				D087506029D193BC00454A4B /* AppDelegate.swift in Sources */,
+				D0B87F9C29FD403A00300098 /* AnalizeCategoryModelMapper.swift in Sources */,
 				D03F496C29EC6E6A0024B5C5 /* Token.swift in Sources */,
 				D03F496F29EC700B0024B5C5 /* ServerResponse.swift in Sources */,
 				D0FE990829DAD06F00E1C983 /* AddPaymentView.swift in Sources */,
 				D0FE98CC29D471BB00E1C983 /* ContactsViewModel.swift in Sources */,
 				D0F6E79229EDF688004D153F /* SubmitPinCodeView.swift in Sources */,
 				D0F6E79F29EF1FEB004D153F /* PaymentApiService.swift in Sources */,
+				D0B87F9629FD336600300098 /* AnalyticApiService.swift in Sources */,
 				D03F498429EC81600024B5C5 /* RegistrationResponse.swift in Sources */,
 				D0FE98B029D43E6D00E1C983 /* ContactsManager.swift in Sources */,
 				D0F6E77F29EDF297004D153F /* PinCodePadCellView.swift in Sources */,
@@ -1503,6 +1537,7 @@
 				D0FE98E129D5D97400E1C983 /* PieSliceView.swift in Sources */,
 				D03F495C29EC6D280024B5C5 /* HTTPClient.swift in Sources */,
 				D0F6E7A229EF1FF8004D153F /* PaymentEndpoint.swift in Sources */,
+				D0B87FA229FD8E2400300098 /* Array + Extensions.swift in Sources */,
 				D0F6E79529EDF6F7004D153F /* SubmitPinRouter.swift in Sources */,
 				D0F6E7B529EF4C12004D153F /* CategoryModelMapper.swift in Sources */,
 				D0FE98EE29D848B000E1C983 /* TabSectionView.swift in Sources */,
@@ -1513,12 +1548,16 @@
 				D0F6E7AF29EF4839004D153F /* CategoryApiService.swift in Sources */,
 				D0F6E77129EDEF8D004D153F /* CreatePinView.swift in Sources */,
 				D0A02ED229F0C47F0013364B /* AnalyticsCoordinator.swift in Sources */,
+				D0B87F9329FD335B00300098 /* AnalyticEndpoint.swift in Sources */,
 				D0F6E77729EDEFFE004D153F /* CreatePinRouter.swift in Sources */,
 				D03F497B29EC7B1F0024B5C5 /* AuthenticationService.swift in Sources */,
+				D0B87F8C29FB1A1900300098 /* AddCategoryRouter.swift in Sources */,
 				D0102B7629EDA73A00997BC5 /* KeychainKeyStorage.swift in Sources */,
 				D0FE98BF29D466BF00E1C983 /* DeviceContactCellView.swift in Sources */,
 				D0FE990529DAD06300E1C983 /* AddPaymentViewModel.swift in Sources */,
+				D0B87F8929FB198300300098 /* AddCategoryViewModel.swift in Sources */,
 				D0FE98B829D453AA00E1C983 /* AddContactView.swift in Sources */,
+				D0B87F8F29FD325200300098 /* PersonalAnalyticViewModel.swift in Sources */,
 				D087500D29D1731900454A4B /* saveMoneyApp.swift in Sources */,
 				D0FE98CF29D4726000E1C983 /* ContactsRouter.swift in Sources */,
 				D087507F29D19E9400454A4B /* Category.swift in Sources */,
@@ -1537,6 +1576,7 @@
 				D06B07B829D2F1000062968D /* User.swift in Sources */,
 				D0F6E7A829EF3C9D004D153F /* PaymentModelMapper.swift in Sources */,
 				D06B07CF29D436BD0062968D /* AppImage.swift in Sources */,
+				D0B87F9F29FD596A00300098 /* TimeIntervals.swift in Sources */,
 				D03F492B29EC2E5A0024B5C5 /* LoadableViewState.swift in Sources */,
 				D087508629D19F3800454A4B /* ContactsView.swift in Sources */,
 			);
@@ -1609,9 +1649,9 @@
 				D0102B8A29EDB96A00997BC5 /* CreateProfileRouter.swift in Sources */,
 				D03F495229EC6CE50024B5C5 /* KeychainManagerProtocol.swift in Sources */,
 				D087503929D1740F00454A4B /* saveMoneyApp.swift in Sources */,
-				D0F6E7CA29F08BB4004D153F /* AuthorizationView.swift in Sources */,
 				D0FE98E329D72C4300E1C983 /* PieChartView.swift in Sources */,
 				D0F6E79729EE00C3004D153F /* TabBarCoordinator.swift in Sources */,
+				D0B87F9829FD38EA00300098 /* ServerAnalyticCategory.swift in Sources */,
 				D0102B8729EDB71300997BC5 /* RegistrationCoordinator.swift in Sources */,
 				D03F495829EC6D160024B5C5 /* AuthManager.swift in Sources */,
 				D06B07C829D435E90062968D /* String + Extensions.swift in Sources */,
@@ -1640,12 +1680,14 @@
 				D0FE98BE29D466BF00E1C983 /* DeviceContactCellView.swift in Sources */,
 				D03F496B29EC6E6A0024B5C5 /* Token.swift in Sources */,
 				D03F496E29EC700B0024B5C5 /* ServerResponse.swift in Sources */,
+				D0B87F9B29FD403A00300098 /* AnalizeCategoryModelMapper.swift in Sources */,
 				D0FE990729DAD06F00E1C983 /* AddPaymentView.swift in Sources */,
 				D06B07B729D2F1000062968D /* User.swift in Sources */,
 				D04E89A929FA9F1B00E217E9 /* CategoriesViewModel.swift in Sources */,
 				D0F6E79129EDF688004D153F /* SubmitPinCodeView.swift in Sources */,
 				D0F6E79E29EF1FEB004D153F /* PaymentApiService.swift in Sources */,
 				D03F498329EC81600024B5C5 /* RegistrationResponse.swift in Sources */,
+				D0B87F9529FD336600300098 /* AnalyticApiService.swift in Sources */,
 				D0FE98B429D453A100E1C983 /* AddContactViewModel.swift in Sources */,
 				D0F6E77E29EDF297004D153F /* PinCodePadCellView.swift in Sources */,
 				D03F493129EC30A90024B5C5 /* LoadingView.swift in Sources */,
@@ -1656,6 +1698,7 @@
 				D03F495B29EC6D280024B5C5 /* HTTPClient.swift in Sources */,
 				D0F6E7A129EF1FF8004D153F /* PaymentEndpoint.swift in Sources */,
 				D0F6E79429EDF6F7004D153F /* SubmitPinRouter.swift in Sources */,
+				D0B87FA129FD8E2400300098 /* Array + Extensions.swift in Sources */,
 				D0F6E7B429EF4C12004D153F /* CategoryModelMapper.swift in Sources */,
 				D0FE98E029D5D97400E1C983 /* PieSliceView.swift in Sources */,
 				D0102B7B29EDA84D00997BC5 /* PinCodeManager.swift in Sources */,
@@ -1666,12 +1709,16 @@
 				D0F6E77029EDEF8D004D153F /* CreatePinView.swift in Sources */,
 				D0A02ED329F0C50B0013364B /* AnalyticsCoordinator.swift in Sources */,
 				D0F6E77629EDEFFE004D153F /* CreatePinRouter.swift in Sources */,
+				D0B87F9229FD335B00300098 /* AnalyticEndpoint.swift in Sources */,
 				D03F497A29EC7B1F0024B5C5 /* AuthenticationService.swift in Sources */,
 				D0102B7529EDA73A00997BC5 /* KeychainKeyStorage.swift in Sources */,
+				D0B87F8B29FB1A1900300098 /* AddCategoryRouter.swift in Sources */,
 				D06B07BA29D2F1C00062968D /* Party.swift in Sources */,
 				D06B07C529D434A40062968D /* Button + Extensions.swift in Sources */,
 				D0FE990429DAD06300E1C983 /* AddPaymentViewModel.swift in Sources */,
+				D0B87F8829FB198300300098 /* AddCategoryViewModel.swift in Sources */,
 				D087508029D19E9700454A4B /* Category.swift in Sources */,
+				D0B87F8E29FD325200300098 /* PersonalAnalyticViewModel.swift in Sources */,
 				D0FE98C829D46C3300E1C983 /* ContactsCoordinator.swift in Sources */,
 				D06B07CE29D436BD0062968D /* AppImage.swift in Sources */,
 				D0F6E77A29EDF284004D153F /* PinCodePadView.swift in Sources */,
@@ -1690,6 +1737,7 @@
 				D0FE98BA29D45AFC00E1C983 /* Future + Extensions.swift in Sources */,
 				D0F6E7A729EF3C9D004D153F /* PaymentModelMapper.swift in Sources */,
 				D087508129D19E9900454A4B /* Payment.swift in Sources */,
+				D0B87F9E29FD596A00300098 /* TimeIntervals.swift in Sources */,
 				D03F492A29EC2E5A0024B5C5 /* LoadableViewState.swift in Sources */,
 				D087508529D19F3800454A4B /* ContactsView.swift in Sources */,
 			);

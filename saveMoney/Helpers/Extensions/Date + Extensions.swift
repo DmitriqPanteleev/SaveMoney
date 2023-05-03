@@ -15,4 +15,12 @@ extension Date {
         formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
         return formatter.string(from: self)
     }
+    
+    var toString: String {
+        let formatter = DateFormatter()
+        formatter.timeZone = .current
+        formatter.locale = Locale(identifier: "ru")
+        formatter.dateFormat = "yyyy-MM-dd"
+        return formatter.string(from: self)
+    }
 }

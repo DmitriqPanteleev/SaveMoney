@@ -6,17 +6,23 @@
 //
 
 import SwiftUI
+import Combine
 
 struct IntervalHorizontalView: View {
     
     @State var currentInterval: AnalitycInterval
+    
     let accentColor: Color
+    let onChangeInterval: PassthroughSubject<AnalitycInterval, Never>
     
     var body: some View {
         HStack(spacing: 10) {
             ForEach(AnalitycInterval.allCases,
                     id: \.self,
                     content: intervalCell)
+        }
+        .onChange(of: currentInterval) { newValue in
+            onChangeInterval.send(newValue)
         }
     }
 }
@@ -74,6 +80,6 @@ private extension IntervalHorizontalView {
 struct IntervalHorizontalView_Previews: PreviewProvider {
     static var previews: some View {
         IntervalHorizontalView(currentInterval: .day,
-                               accentColor: .appGreen)
+                               accentColor: .appGreen, onChangeInterval: PassthroughSubject<AnalitycInterval, Never>())
     }
 }

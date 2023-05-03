@@ -14,9 +14,9 @@ final class CategoriesCoordinator: NavigationCoordinatable {
     @Root var start = makeStart
     @Route(.push) var addCategory = makeAddCategory
     
-    private let categoryApiService: AllCategoryApiProtocol
+    private let categoryApiService: CategoryApiService
     
-    init(categoryApiService: AllCategoryApiProtocol) {
+    init(categoryApiService: CategoryApiService) {
         self.categoryApiService = categoryApiService
     }
     
@@ -35,6 +35,8 @@ extension CategoriesCoordinator {
     }
     
     @ViewBuilder func makeAddCategory() -> some View {
-        AddCategoryView()
+        let viewModel = AddCategoryViewModel(apiService: categoryApiService,
+                                             router: self)
+        AddCategoryView(viewModel: viewModel)
     }
 }
