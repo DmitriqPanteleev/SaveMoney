@@ -11,7 +11,7 @@ import CombineExt
 
 final class PersonalAnalyticViewModel: ObservableObject {
     // MARK: - Services
-    private let apiService: AllAnalyticApiProtocol
+    private let apiService: AnalizeApiProtocol
     
     // MARK: - Variables
     let input: Input
@@ -19,7 +19,7 @@ final class PersonalAnalyticViewModel: ObservableObject {
     
     private var cancellable = Set<AnyCancellable>()
     
-    init(apiService: AllAnalyticApiProtocol) {
+    init(apiService: AnalizeApiProtocol) {
         self.apiService = apiService
         
         self.input = Input()

@@ -14,3 +14,9 @@ struct ServerResponse<T: Codable>: Codable {
 struct LogoutResponse: Codable {
     let message: String?
 }
+
+struct PaymentResponse<T: Codable>: Codable {
+    let data: T
+    let start: String
+    let end: String
+}

@@ -10,6 +10,7 @@ import Combine
 
 struct KeyboardControlView: View {
     
+    @Binding var isShowing: Bool
     @Binding var sum: String
     
     let onTypeChange: PassthroughSubject<TabSection, Never>
@@ -18,21 +19,30 @@ struct KeyboardControlView: View {
     
     
     var body: some View {
-        VStack(spacing: 16) {
-            Spacer()
-            HStack(spacing: 10) {
-                textFieldView
-                doneButton
-            }
-            paymentTypeControlView
-            appKeyboardView
-        }
-        .padding(.bottom)
-        .padding(.horizontal, 24)
+        content
+            .transition(.move(edge: .bottom))
+            .animation(.default, value: isShowing)
     }
 }
 
 private extension KeyboardControlView {
+    
+    @ViewBuilder var content: some View {
+        if isShowing {
+            VStack(spacing: 16) {
+                Spacer()
+                HStack(spacing: 10) {
+                    textFieldView
+                    doneButton
+                }
+                paymentTypeControlView
+                appKeyboardView
+            }
+            .padding(.bottom)
+            .padding(.horizontal, 24)
+        }
+    }
+    
     var doneButton: some View {
         Button(actionPublisher: onDoneTap) {
             Image(systemName: "checkmark")
@@ -40,7 +50,7 @@ private extension KeyboardControlView {
                 .scaledToFit()
                 .frame(width: 16, height: 16)
                 .padding(10)
-                .background(Color.purple)
+                .background(ColorsPalette.shared.lightOrange)
                 .cornerRadius(30)
         }
         .tint(Color.white)
@@ -75,7 +85,8 @@ private extension KeyboardControlView {
 #if DEBUG
 struct KeyboardControlView_Previews: PreviewProvider {
     static var previews: some View {
-        KeyboardControlView(sum: .constant(""),
+        KeyboardControlView(isShowing: .constant(true),
+                            sum: .constant(""),
                             onTypeChange: PassthroughSubject<TabSection, Never>(),
                             onSumChange: PassthroughSubject<String, Never>(),
                             onDoneTap: PassthroughSubject<Void, Never>())

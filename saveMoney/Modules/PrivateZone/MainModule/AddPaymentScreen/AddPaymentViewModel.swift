@@ -12,6 +12,7 @@ final class AddPaymentViewModel: ObservableObject {
     // MARK: - Services
     private let apiService: PaymentAddEditApiProtocol
     private let categoryApiService: AllCategoryApiProtocol
+    private weak var router: AddPaymentRouter?
     
     // MARK: - Variables
     let input: Input
@@ -22,11 +23,13 @@ final class AddPaymentViewModel: ObservableObject {
     init(isEditing: Bool,
          payment: Payment? = nil,
          categoryApiService: AllCategoryApiProtocol,
-         apiService: PaymentAddEditApiProtocol) {
+         apiService: PaymentAddEditApiProtocol,
+         router: AddPaymentRouter?) {
         self.apiService = apiService
         self.categoryApiService = categoryApiService
-        self.input = Input()
+        self.router = router
         
+        self.input = Input()
         if let model = payment {
             self.output = Output(description: model.description,
                                  date: model.date,
@@ -43,9 +46,12 @@ final class AddPaymentViewModel: ObservableObject {
 
 private extension AddPaymentViewModel {
     func bind() {
-        //bindOnAppear()
+        bindOnAppear()
         bindDescription()
         bindSum()
+        bindDateChange()
+        bindCategoryChange()
+        bindSaveTap()
     }
     
     func bindOnAppear() {
@@ -80,6 +86,25 @@ private extension AddPaymentViewModel {
     }
     
     func bindDescription() {
+        
+        input.onTextFieldTap
+            .handleEvents(receiveOutput: { [weak self] in
+                guard let self = self else { return }
+                if self.output.isShowingDatePicker || output.isShowingAppKeyboard {
+                    self.output.isShowingDatePicker = false
+                    self.output.isShowingAppKeyboard = false
+                } else {
+                    self.output.isShowingDatePicker = false
+                    self.output.isShowingAppKeyboard = true
+                }
+            })
+            .sink { [weak self] in
+                if self?.output.description == "Введите описание" {
+                    self?.output.description = ""
+                }
+            }
+            .store(in: &cancellable)
+        
         input.onDescriptionChange
             .sink { [weak self] text in
                 self?.output.description = text
@@ -87,10 +112,35 @@ private extension AddPaymentViewModel {
             .store(in: &cancellable)
     }
     
+    func bindDateChange() {
+        input.onDateChange
+            .handleEvents(receiveOutput: { [weak self] _ in
+                self?.output.isShowingAppKeyboard = false
+            })
+            .delay(for: 0.1, scheduler: DispatchQueue.main)
+            .sink { [weak self] date in
+                self?.output.isShowingDatePicker = true
+            }
+            .store(in: &cancellable)
+    }
+    
     func bindSum() {
         input.onSumChange
+            .handleEvents(receiveOutput: { [weak self] _ in
+                self?.output.isShowingDatePicker = false
+            })
+            .delay(for: 0.1, scheduler: DispatchQueue.main)
             .sink { [weak self] text in
                 self?.output.sum += text
+                self?.output.isShowingAppKeyboard = true
+            }
+            .store(in: &cancellable)
+    }
+    
+    func bindCategoryChange() {
+        input.onCategoryChange
+            .sink { [weak self] id in
+                self?.output.categoryId = id
             }
             .store(in: &cancellable)
     }
@@ -127,14 +177,15 @@ private extension AddPaymentViewModel {
         request
             .failures()
             .sink { [weak self] error in
-                
+                print(error)
+                self?.output.screenState = .error(message: error.localizedDescription)
             }
             .store(in: &cancellable)
         
         request
             .values()
-            .sink {
-                // TODO: route back
+            .sink { [weak self] in
+                self?.router?.pop()
             }
             .store(in: &cancellable)
     }
@@ -143,19 +194,24 @@ private extension AddPaymentViewModel {
 extension AddPaymentViewModel {
     struct Input {
         let onAppear = PassthroughSubject<Void, Never>()
+        
         let onDescriptionChange = PassthroughSubject<String, Never>()
         let onDescriptionInfo = PassthroughSubject<Void, Never>()
+        let onTextFieldTap = PassthroughSubject<Void, Never>()
+        
         let onTabSectionChange = PassthroughSubject<TabSection, Never>()
+        
         let onSumChange = PassthroughSubject<String, Never>()
         let onDateChange = PassthroughSubject<Date, Never>()
         let onCategoryChange = PassthroughSubject<Int, Never>()
+        
         let onSaveButtonTap = PassthroughSubject<Void, Never>()
     }
     
     struct Output {
         var screenState: LoadableViewState = .content
         
-        var description: String? = "Потратил на еду"
+        var description: String = "Введите описание"
         var date: Date = .now
         var sum = "1000"
         var categoryId = 0
@@ -163,8 +219,8 @@ extension AddPaymentViewModel {
         var paymentId: Int?
         var isEditing: Bool
         
-        //        var dismissKeyboard = false
-        //        var dismissAppKeyboard = false
+        var isShowingAppKeyboard = true
+        var isShowingDatePicker = false
         
         var categories: [Category] = [.mock(), .mock2(), .mock3(), .mock4()]
     }

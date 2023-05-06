@@ -23,4 +23,24 @@ extension Date {
         formatter.dateFormat = "yyyy-MM-dd"
         return formatter.string(from: self)
     }
+    
+    static var startOfMonth: String {
+        let comp: DateComponents = Calendar.current.dateComponents([.year, .month], from: Date())
+        let startOfMonth = Calendar.current.date(from: comp)!
+        print(startOfMonth.toString)
+        return startOfMonth.toString
+    }
+    
+    static var endOfMonth: String {
+        let comp: DateComponents = Calendar.current.dateComponents([.year, .month], from: Date())
+        let startOfMonth = Calendar.current.date(from: comp)!
+        
+        var comps = DateComponents()
+        comps.month = 1
+        comps.day = -1
+        
+        let endOfMonth = Calendar.current.date(byAdding: comps, to: startOfMonth)!
+        print(endOfMonth.toString)
+        return endOfMonth.toString
+    }
 }

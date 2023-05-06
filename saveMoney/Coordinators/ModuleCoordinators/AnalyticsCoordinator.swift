@@ -13,9 +13,9 @@ final class AnalyticsCoordinator: NavigationCoordinatable {
     
     @Root var start = makeStart
     
-    private let apiService: AllAnalyticApiProtocol
+    private let apiService: AnalizeApiProtocol
     
-    init(apiService: AllAnalyticApiProtocol) {
+    init(apiService: AnalizeApiProtocol) {
         self.apiService = apiService
     }
     

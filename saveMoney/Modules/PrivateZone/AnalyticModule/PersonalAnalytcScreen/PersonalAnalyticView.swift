@@ -18,6 +18,7 @@ struct PersonalAnalyticView: View {
                                    accentColor: ColorsPalette.shared.beige,
                                    onChangeInterval: viewModel.input.onIntervalTap)
             .padding(.horizontal)
+            .padding(.top)
             
             Spacer()
             LoadableView(state: viewModel.output.screenState,
@@ -130,18 +131,18 @@ private extension PersonalAnalyticView {
 private extension PersonalAnalyticView {
     var maxCategory: String {
         viewModel.output.categories.sorted { fst, snd in
-            fst > snd
+            fst.sum > snd.sum
         }.first?.name ?? ""
     }
     
     var minCategory: String {
         viewModel.output.categories.sorted { fst, snd in
-            fst < snd
+            fst.sum < snd.sum
         }.first?.name ?? ""
     }
     
     var paymentCategories: [String] {
-        viewModel.output.payments.map{ $0.categoryName }
+        viewModel.output.payments.map{ $0.categoryName }.unique()
     }
 }
 

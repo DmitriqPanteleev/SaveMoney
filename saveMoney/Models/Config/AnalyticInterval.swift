@@ -1,13 +1,18 @@
 //
-//  TimeIntervals.swift
+//  AnalyticInterval.swift
 //  saveMoney
 //
-//  Created by Дмитрий Пантелеев on 29.04.2023.
+//  Created by Дмитрий Пантелеев on 03.05.2023.
 //
 
 import Foundation
 
-extension AnalitycInterval {
+enum AnalitycInterval {
+    case day
+    case week
+    case month
+    case year
+    
     var countDateFrom: String {
         switch self {
         case .day:
@@ -19,5 +24,9 @@ extension AnalitycInterval {
         case .year:
             return (Calendar.current as NSCalendar).date(byAdding: .year, value: -1, to: Date(), options: [])!.toString
         }
+    }
+    
+    static var allCases: [AnalitycInterval] {
+        [.day, .week, .month, .year]
     }
 }

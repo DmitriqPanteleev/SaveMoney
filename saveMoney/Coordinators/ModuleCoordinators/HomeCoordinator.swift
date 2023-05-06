@@ -17,9 +17,12 @@ final class HomeCoordinator: NavigationCoordinatable {
     
     private let paymentApiService = DIContainer.shared.container.resolve(PaymentApiService.self)!
     private let categoryApiService: AllCategoryApiProtocol
+    private let analyticApiService: AnalizeApiProtocol
     
-    init(categoryApiService: AllCategoryApiProtocol) {
+    init(categoryApiService: AllCategoryApiProtocol,
+         analyticApiService: AnalizeApiProtocol) {
         self.categoryApiService = categoryApiService
+        self.analyticApiService = analyticApiService
     }
     
 #if DEBUG
@@ -31,14 +34,16 @@ final class HomeCoordinator: NavigationCoordinatable {
 
 extension HomeCoordinator {
     @ViewBuilder func makeStart() -> some View {
-        let viewModel = MainViewModel(router: self)
+        let viewModel = MainViewModel(apiService: analyticApiService, router: self)
         MainView(viewModel: viewModel)
     }
     
     @ViewBuilder func makeAddPayment() -> some View {
         let viewModel = AddPaymentViewModel(isEditing: false,
+                                            payment: nil,
                                             categoryApiService: categoryApiService,
-                                            apiService: paymentApiService)
+                                            apiService: paymentApiService,
+                                            router: self)
         AddPaymentView(viewModel: viewModel)
     }
 }

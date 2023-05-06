@@ -19,14 +19,17 @@ struct CategoryPickerView: View {
     let onCategoryChange: PassthroughSubject<Int, Never>
     
     var body: some View {
-        ZStack(alignment: .center) {
-            Color.clear
-                .frame(height: 1)
-                .readSize { size in
-                    availableWidth = size.width
-                }
-            
-            flexibleView
+        ScrollView {
+            ZStack(alignment: .center) {
+                Color.clear
+                    .frame(height: 1)
+                    .readSize { size in
+                        availableWidth = size.width
+                    }
+                
+                flexibleView
+            }
+            .padding(.vertical, 20)
         }
     }
 }
@@ -71,26 +74,36 @@ private extension CategoryPickerView {
             }
             
             HStack(spacing: 8) {
-                ForEach(models.dropFirst(3).prefix(2)) { element in
-                    categoryCell(element)
-                        .fixedSize()
-                        .readSize { size in
-                            elementsSize[element] = size
-                        }
-                }
-                Button(action: expandView) {
-                    HStack {
-                        Text("Еще")
+                if models.count > 6 {
+                    ForEach(models.dropFirst(3).prefix(2)) { element in
+                        categoryCell(element)
+                            .fixedSize()
+                            .readSize { size in
+                                elementsSize[element] = size
+                            }
                     }
-                    .padding(10)
-                    .frame(width: 110, height: 40)
-                    .background(Color.gray.opacity(0.2))
-                    .cornerRadius(8)
-                    .shadow(color: .black.opacity(0.1),
-                            radius: 15,
-                            y: 4)
+                    Button(action: expandView) {
+                        HStack {
+                            Text("Еще")
+                        }
+                        .padding(10)
+                        .frame(width: 110, height: 40)
+                        .background(Color.gray.opacity(0.2))
+                        .cornerRadius(8)
+                        .shadow(color: .black.opacity(0.1),
+                                radius: 15,
+                                y: 4)
+                    }
+                    .tint(Color.appGray)
+                } else {
+                    ForEach(models.dropFirst(3).prefix(3)) { element in
+                        categoryCell(element)
+                            .fixedSize()
+                            .readSize { size in
+                                elementsSize[element] = size
+                            }
+                    }
                 }
-                .tint(Color.appGray)
             }
         }
     }

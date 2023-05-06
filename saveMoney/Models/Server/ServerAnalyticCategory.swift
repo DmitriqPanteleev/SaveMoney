@@ -11,8 +11,7 @@ struct ServerAnalyticCategory: Codable {
     let id: Int
     let name: String?
     let color: String?
-    let date: String?
-    let sum: Double?
+    let sum: String?
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -29,14 +28,13 @@ struct ServerAnalyticCategory: Codable {
     }
     
     init(from decoder: Decoder) throws {
-        var container = try decoder.container(keyedBy: CodingKeys.self)
+        let container = try decoder.container(keyedBy: CodingKeys.self)
         self.id = try container.decode(Int.self, forKey: .id)
-        var nested = try container.nestedContainer(keyedBy: CategoryCodingKeys.self,
+        self.sum = try container.decode(String.self, forKey: .sum)
+        let nested = try container.nestedContainer(keyedBy: CategoryCodingKeys.self,
                                                    forKey: .category)
         self.name = try nested.decode(String.self, forKey: .name)
         self.color = try nested.decode(String.self, forKey: .color)
-        self.date = try container.decode(String.self, forKey: .date)
-        self.sum = try container.decode(Double.self, forKey: .sum)
     }
     
     func encode(to encoder: Encoder) throws {
@@ -46,7 +44,6 @@ struct ServerAnalyticCategory: Codable {
                                                forKey: .category)
         try nested.encode(self.name, forKey: .name)
         try nested.encode(self.color, forKey: .color)
-        try container.encode(self.date, forKey: .date)
         try container.encode(self.sum, forKey: .sum)
     }
 }

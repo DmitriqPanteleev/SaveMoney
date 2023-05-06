@@ -11,9 +11,8 @@ final class AnalizeCategoryModelMapper: BaseModelMapper<ServerAnalyticCategory, 
     override func toLocal(serverEntity: ServerAnalyticCategory) -> AnalizeCategory {
         AnalizeCategory(id: serverEntity.id,
                         name: serverEntity.name.orEmpty(),
-                        sum: Int(serverEntity.sum ?? -1.0),
-                        colorString: serverEntity.color.orEmpty(),
-                        date: serverEntity.date.orEmpty().toDate() ?? .distantFuture)
+                        sum: Int(Double(serverEntity.sum.orEmpty()) ?? -1.0),
+                        colorString: serverEntity.color.orEmpty())
         // TODO: - можно получше распределить работу в самой модельке
     }
 }

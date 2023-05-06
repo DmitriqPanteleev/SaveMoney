@@ -13,15 +13,16 @@ struct MainView: View {
     @StateObject var viewModel: MainViewModel
     
     var body: some View {
-        LoadableView(state: .content,
-                     content: content)
+        LoadableView(state: viewModel.output.screenState,
+                     content: content,
+                     onAppearDidLoad: viewModel.input.onAppear)
+        .navigationTitle(Text("Главная"))
     }
 }
 
 private extension MainView {
     @ViewBuilder func content() -> some View {
         VStack(spacing: 24) {
-            headerView
             pieChartView
             categoriesList
             paymentListView
@@ -29,35 +30,31 @@ private extension MainView {
         .padding(.top, 8)
     }
     
-    var headerView: some View {
-        ZStack(alignment: .center) {
-            //tabSectionView
-            trailingItems
-        }
-    }
+    //    var headerView: some View {
+    //        ZStack(alignment: .center) {
+    //            //tabSectionView
+    //            trailingItems
+    //        }
+    //    }
+    //
+    //    var trailingItems: some View {
+    //        VStack {
+    //            settingsButtonView
+    //        }
+    //        .frame(maxWidth: .infinity, alignment: .trailing)
+    //        .padding(.horizontal)
+    //    }
     
-    var trailingItems: some View {
-        VStack {
-            settingsButtonView
-        }
-        .frame(maxWidth: .infinity, alignment: .trailing)
-        .padding(.horizontal)
-    }
-    
-    var settingsButtonView: some View {
-        Button(actionPublisher: viewModel.input.onSettingsTap) {
-            Image(systemName: "gearshape")
-                .resizable()
-                .scaledToFit()
-                .frame(width: 20,
-                       height: 20)
-        }
-        .tint(ColorsPalette.shared.lightOrange)
-    }
-    
-    var tabSectionView: some View {
-        TabSectionView(currentSection: viewModel.output.tabSection)
-    }
+    //    var settingsButtonView: some View {
+    //        Button(actionPublisher: viewModel.input.onSettingsTap) {
+    //            Image(systemName: "gearshape")
+    //                .resizable()
+    //                .scaledToFit()
+    //                .frame(width: 20,
+    //                       height: 20)
+    //        }
+    //        .tint(ColorsPalette.shared.lightOrange)
+    //    }
     
     var pieChartView: some View {
         ZStack(alignment: .bottomTrailing) {
@@ -73,7 +70,7 @@ private extension MainView {
     
     var categoriesList: some View {
         CategoryHorizontalListView(models: viewModel.output.categories,
-                                   onDetailAnalizeTap: viewModel.input.onAnalyticsTap)
+                                   onDetailAnalizeTap: viewModel.input.onCategoryTap)
         .padding(.horizontal)
         .padding(.top, 24)
     }
@@ -139,10 +136,10 @@ private extension MainView {
     }
 }
 
-#if DEBUG
-struct MainView_Previews: PreviewProvider {
-    static var previews: some View {
-        MainView(viewModel: MainViewModel(router: nil))
-    }
-}
-#endif
+//#if DEBUG
+//struct MainView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        MainView(viewModel: MainViewModel(apiService: <#AnalizeApiProtocol#>, router: nil))
+//    }
+//}
+//#endif

@@ -15,8 +15,9 @@ protocol PaymentEditApiProtocol {
     func editPayment(paymentId: Int, categoryId: Int, description: String?, date: String, sum: Double) async throws
 }
 
-protocol PaymentGetApiProtocol {
+protocol AnalizeApiProtocol {
     func getAllPaymens(from date: String, to endDate: String) async throws -> [Payment]
+    func getAnalizeCategories(dateFrom: String, dateTo: String) async throws -> [AnalizeCategory]
 }
 
 protocol PaymentAddEditApiProtocol: PaymentAddApiProtocol, PaymentEditApiProtocol { }
@@ -50,12 +51,20 @@ extension PaymentApiService: PaymentEditApiProtocol {
     }
 }
 
-extension PaymentApiService: PaymentGetApiProtocol {
+extension PaymentApiService: AnalizeApiProtocol {
     func getAllPaymens(from date: String, to endDate: String) async throws -> [Payment] {
         let data = try await self.client.sendRequest(endpoint: PaymentEndpoint.getAll(dateFrom: date,
                                                                                       dateTo: endDate),
-                                                     responseModel: ServerResponse<[ServerPayment]>.self).data
+                                                     responseModel: PaymentResponse<[ServerPayment]>.self).data
         return PaymentModelMapper().toLocal(list: data)
+    }
+    
+    func getAnalizeCategories(dateFrom: String, dateTo: String) async throws -> [AnalizeCategory] {
+        let data = try await self.client.sendRequest(endpoint: AnalyticEndpoint.getAnalizeCategories(dateFrom: dateFrom,
+                                                                                                     dateTo: dateTo),
+                                                     responseModel: PaymentResponse<[ServerAnalyticCategory]>.self).data
+        
+        return AnalizeCategoryModelMapper().toLocal(list: data)
     }
 }
 

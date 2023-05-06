@@ -11,6 +11,7 @@ enum PaymentEndpoint {
     case getAll(dateFrom: String, dateTo: String)
     case add(categoryId: Int, description: String?, date: String, sum: Double)
     case edit(paymentId: Int, categoryId: Int, description: String?, date: String, sum: Double)
+    case getAnalizeCategories(dateFrom: String, dateTo: String)
 }
 
 extension PaymentEndpoint: Endpoint {
@@ -19,15 +20,17 @@ extension PaymentEndpoint: Endpoint {
         case .getAll:
             return "/api/payment/all"
         case .add:
-            return "/api/payment/"
+            return "/api/payment/create"
         case .edit(let paymentId,_,_,_,_):
             return "/api/payment/\(paymentId)"
+        case .getAnalizeCategories:
+            return "/api/payment/analiz"
         }
     }
     
     var method: RequestMethod {
         switch self {
-        case .getAll:
+        case .getAll, .getAnalizeCategories:
             return .get
         case .add:
             return .post
@@ -38,7 +41,7 @@ extension PaymentEndpoint: Endpoint {
     
     var query: [String : String]? {
         switch self {
-        case .getAll(let dateFrom, let dateTo):
+        case .getAll(let dateFrom, let dateTo), .getAnalizeCategories(let dateFrom, let dateTo):
             return [
                 "dateStart": dateFrom,
                 "dateEnd": dateTo
