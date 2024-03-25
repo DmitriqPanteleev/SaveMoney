@@ -6,4 +6,25 @@
   
 */
 
-"add" = "Add";
+// MARK: - Simple
+"add" = "Добавить";
+"retry" = "Повторить";
+
+// MARK: - RegistrationModule & AuthModule
+"signUp" = "Регистрация";
+"signIn" = "Войти";
+"haveNoAccount" = "Нет аккаунта? Зарегистрируйтесь!";
+"emailPlaceholder" = "Введите e-mail";
+"surnamePlaceholder" = "Введите фамилию";
+"namePlaceholder" = "Введите имя";
+"passwordPlaceholder" = "Введите пароль";
+"phonePlaceholder" = "Введите телефон";
+"incorrectData" = "Данные введенны неправильно!";
+"pinSavedSuccess" = "PIN-код успешно сохранен";
+"createPin" = "Создайте PIN-код";
+"enterPin" = "Введите PIN-код";
+
+// MARK: - Services
+"accessDenied" = "Доступ запрещен";
+"openSettingsAndEnrollFaceId" = "Откройте параметры приложения и включите доступ к FaceID";
+"faceNotRecognized" = "Лицо не распознано";

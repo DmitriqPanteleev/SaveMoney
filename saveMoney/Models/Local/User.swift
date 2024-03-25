@@ -13,4 +13,12 @@ struct User: Identifiable {
     let surname: String
     let email: String
     let phone: String
+    
+    static func mock() -> User {
+        User(id: 1,
+             name: "Дмитрий",
+             surname: "Пантелеев",
+             email: "panteleev@gmail.com",
+             phone: "89271653040")
+    }
 }

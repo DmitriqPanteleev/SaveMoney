@@ -5,17 +5,19 @@
 //  Created by Дмитрий Пантелеев on 27.03.2023.
 //
 
-import Foundation
+import SwiftUI
 
-struct Payment {
+struct Payment: Identifiable {
     let id: Int
     let description: String
-    let date: Date?
+    let date: Date
     let sum: Int
-    let category: String
+    let categoryId: Int
+    let categoryName: String
+    let categoryColor: Color
     
     var formattedSum: String {
-        "\(sum) ₽"
+        "\(sum.separatedNumber) ₽"
     }
     
     // TODO: - date formatters
@@ -23,33 +25,53 @@ struct Payment {
         ""
     }
     
-//    func mock1() -> Payment {
-//        Payment(id: 1,
-//                description: "Купил телефон",
-//                sum: 40000)
-//    }
-//
-//    func mock2() -> Payment {
-//        Payment(id: 2,
-//                description: "Новый свитер",
-//                sum: 3000)
-//    }
-//
-//    func mock3() -> Payment {
-//        Payment(id: 3,
-//                description: "Продукты",
-//                sum: 1500)
-//    }
-//
-//    func mock4() -> Payment {
-//        Payment(id: 4,
-//                description: "Пекарня",
-//                sum: 500)
-//    }
-//
-//    func mock5() -> Payment {
-//        Payment(id: 5,
-//                description: "Посуда",
-//                sum: 4000)
-//    }
+    static func empty() -> Payment {
+        Payment(id: UUID().hashValue,
+                description: "",
+                date: .now,
+                sum: 0,
+                categoryId: 1,
+                categoryName: "",
+                categoryColor: .black)
+    }
+    
+    static func emptyWithSum(_ sum: Int, _ date: Date) -> Payment {
+        Payment(id: UUID().hashValue,
+                description: "",
+                date: date,
+                sum: sum,
+                categoryId: 1,
+                categoryName: "",
+                categoryColor: .black)
+    }
+    
+    static func mock() -> Payment {
+        Payment(id: 1,
+                description: "На булочки",
+                date: .now,
+                sum: 200,
+                categoryId: 1,
+                categoryName: "Еда",
+                categoryColor: .init(hex: "E0C279"))
+    }
+    
+    static func mock2() -> Payment {
+        Payment(id: 2,
+                description: "",
+                date: .now,
+                sum: 800,
+                categoryId: 1,
+                categoryName: "Еда",
+                categoryColor: .init(hex: "E0C279"))
+    }
+    
+    static func mock3() -> Payment {
+        Payment(id: 3,
+                description: "ЖКХ",
+                date: .now,
+                sum: 2200,
+                categoryId: 2,
+                categoryName: "Жилье",
+                categoryColor: .init(hex: "E0B075"))
+    }
 }

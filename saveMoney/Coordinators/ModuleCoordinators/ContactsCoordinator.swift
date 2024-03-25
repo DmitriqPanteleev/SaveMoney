@@ -15,13 +15,14 @@ final class ContactsCoordinator: NavigationCoordinatable {
     @Root var contactBook = makeContactBook
     @Route(.modal) var deviceContacts = makeAddContact
     
-    private let contactsManager: ContactsManager
+    private let contactsManager = DIContainer.shared.container.resolve(ContactsManager.self)!
     private let onUpdateTrigger = PassthroughSubject<Void, Never>() // TODO: инскапуслируем?
     
-    init(contactsManager: ContactsManager) {
-        self.contactsManager = contactsManager
+#if DEBUG
+    deinit {
+        print("Coordinator \(self) deinited")
     }
-    
+#endif
 }
 
 extension ContactsCoordinator {
